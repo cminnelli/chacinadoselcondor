@@ -5,20 +5,6 @@ const port = process.env.PORT || 3000
 var path = require("path");
 var fs = require("fs");
 var mail = require("./node_aux/nodeMailer.js")
-//var mailingenio = "cminnelli@gmail.com";
-var mailingenio = "contacto.ingeniotecnico@gmail.com";
-
-var user = "ingeniotecnico"
-var ps = "ingenio2017."
-
-/*MONGO Y MONGOOSE*/
-//var mongoose = require("mongoose");
-//mongoose.connect("mongodb://admin:ingenio88@ds243085.mlab.com:43085/ingeniotecnico");
-// /*mongoose.connect("mongodb://localhost:27017/autos");  MODO LOCAL  */
-
-/*MODELOS DE MONGOOSE*/
-var joboffer = require("./models/jobofferbd_bd.js") 
-var linkedinUser = require("./models/linkedin_bd.js") 
 
 
 /*BODY PARSER MIDDLEWARE*/
@@ -33,12 +19,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 /*APP ROUTES*/
 app.listen(port, function(req , res){
-	console.log("Listening ingenio tecnico IT in port: " + port);
+	console.log("Listening Chacinados el Condor en puerto: " + port);
 })
 
 
 app.get("/" , function(req , res){
-
 	res.sendFile(path.join(__dirname ,"index.html"));
 
 })
