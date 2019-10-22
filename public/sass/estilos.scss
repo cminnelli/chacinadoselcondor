@@ -4,20 +4,121 @@
 @import url('../css/animate.css');
 
 $titulos: "#37363D";
+$queso:darkkhaki;
+$embutidos: #F3AB89;
+$frutos:#E47A73;
+$vino:#545988;
 
 .row{
 	padding: 0px;
 }
+*{
+	font-family: "Rubik";
+}
+@mixin productoItem($color){
+
+	width: 80%;
+	margin:0 auto;
+	padding:15px;
+	// position: relative;
+	margin-bottom:15px;		
+	background-color: $color !important;	
+	border-radius: 10px;	
+	.prodImg{
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		height: 80px;
+		width: 80px;
+		position: absolute;
+		// margin:0 auto;
+	}
+	.productoCabecera{
+		text-align: left;
+		.productoNombre{
+			margin:0px;
+			text-transform: uppercase;
+			font-weight: 800;
+			color:lightgoldenrodyellow;
+			font-size:30px;
+			letter-spacing: 1.4px;
+		}
+		.productoMarca{
+			font-size:18px;
+		}
+	}
+	.productoDes{
+		text-align: left;
+		.descripcion{
+			color:whitesmoke;
+			font-size:16px;
+
+		}
+	}
+	.productoAtributos{
+		text-align: left;
+
+		.badge-new{
+			background-color:darken($color,20%);
+			color:whitesmoke;
+			padding:10px;
+			font-size: 14px;
+			letter-spacing: 1.3px;
+		}
+		p{
+			display: inline-block;
+		}
+		.celiaco{
+			height: 15px;
+		}
+	}
+}
+
+
 
 .productos{
-	padding:10px;
+	padding:50px;
 	.categoriaModulo{
 		margin-bottom:100px;
 		.categoriaList{
 			list-style: none;
+
 			.categoriaItem{
+				height: 150px;
 				display: inline-block;
 				padding:5px;
+				position: relative;
+				margin-bottom: 10px;
+				background-repeat: none;
+				background-size: 100%;
+				&#que{
+					background-image:url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+				}
+
+				&#vin{
+					background-image:url("https://images.pexels.com/photos/162788/parmigiano-reggiano-cheese-italy-italian-162788.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+				}
+
+				&#ace{
+					background-image:url("https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+				}
+				
+				&#fru{
+					background-image:url("https://images.pexels.com/photos/39351/purple-grapes-vineyard-napa-valley-napa-vineyard-39351.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+				}
+				&#oli{
+					background-image:url("https://as2.ftcdn.net/jpg/02/85/08/03/500_F_285080333_8DWV02PZxl2mVEcywjonFBFXesbiRmdP.jpg");
+				}
+
+				
+				.nombre{
+					font-size: 30px;
+					position: absolute;
+					top:50%;
+					left:50%;
+					transform: translate(-50% , -50%);
+					color:whitesmoke;
+				}
 			}
 			
 		}
@@ -27,40 +128,17 @@ $titulos: "#37363D";
 		.productoList{
 			list-style: none;
 			.productoItem{
-				width: 80%;
-				margin:0 auto;
-				padding:15px;
-				position: relative;
-				margin-bottom:80px;
-				.prodImg{
-					top:0px;
-					left:50%;
-					transform: translate(-50%,-50%);
-					height: 100px;
-					width: 100px;
-					position: absolute;
-					margin:0 auto;
+				&.que{
+					@include productoItem($queso);
 				}
-				.productoCabecera{
-					text-align: center;
-					.productoNombre{
-						margin-top:50px;
-						font-weight: 700;
-						color:#37363D;
-						font-size:28px;
-					}
+				&.vin{
+					@include productoItem($vino);
 				}
-				.productoDes{
-					text-align: center;
-					.descripcion{
-						color:darkgrey;
-					}
+				&.emb{
+					@include productoItem($frutos);
 				}
-				.productoAtributos{
-						text-align: center;
-					p{
-						display: inline-block;
-					}
+				&.fru{
+					@include productoItem($embutidos);
 				}
 			}
 		}

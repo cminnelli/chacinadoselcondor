@@ -11,7 +11,7 @@
 
 
 		<link href='imagenes/web/LOGO3.png' rel='shortcut icon' type='image/png'>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+		<script src="libs/wow/dist/wow.js"></script>
 		<link rel="stylesheet" href="css/animate.css">
 
 
@@ -55,38 +55,59 @@
 
 		<script>
 			 new WOW().init()
+
 		</script>
 		<style type="text/css">
 
 		</style>
 
-		<section class="productos content-fluid">	
+		<section class="productos content" >	
+
 			<div class="categoriaModulo">
-				<ul class="categoriaList">
-					<li class="categoriaItem" wow fadeIn ng-repeat="x in categorias" ng-click="showProducts(x)">{{x}}</li>
+				<ul class="row categoriaList">
+					
+					<li id="{{x.catId}}" data-wow-delay="1s" wow fadeInLeft class="col-xs-12 col-md-3 categoriaItem" wow fadeIn ng-repeat="x in categorias" ng-click="showProducts(x)">
+						<article class="categoriaWrapp">
+								<h2 class="nombre">{{x.nombre}}</h2>
+						</article>
+					</li>						
 				</ul>					
 			</div>
 
 			<div class="productoModulo">
 
 					<ul class="productoList row">
-						<li class="productoItem col-xs-12 col-md-6 col-md-3 shadow bg-white rounded" ng-repeat="p in productos">
-							<article>
-								<img class="prodImg rounded-circle" src="{{p.img}}">
-								<div class="productoCabecera">
-									<h3 class="productoNombre">{{p.nombre}}</h3>									
-								</div>
-								<div class="productoDes">
-									<p class="descripcion">{{p.des}}</p>
-								</div>
-								<div class="productoAtributos">
-	
-									<span class="badge badge-primary">{{p.peso}}</span>
-									<span class="badge badge-primary">{{p.curacion}}</span>
-									<span class="badge badge-primary">{{p.color}}</span>							
+						<li data-wow-delay="0.2s" data-wow-duration="1200ms" wow  class="{{p.catId}} zoomIn productoItem wow fadeInUpcol-xs-12 col-md-4 col-xs-6 shadow" ng-repeat="p in productos">
+
+							<article class="row">
+								<div class="col-sm-3">
+									<img class="prodImg rounded-circle shadow bg-white rounded" src="{{p.img}}">
 									
 								</div>
+								<div class="col-sm-9">
+									<div class="productoCabecera">
+										<h3 class="productoNombre">{{p.nombre}}</h3>
+										<h4 class="productoMarca">#{{p.marca}}</h4>									
+									</div>
+									<div class="productoDes">
+										<p class="descripcion">{{p.des}}</p>
+									</div>
+									<div class="productoAtributos">
+		
+										<span class="badge badge-new">{{p.um}}</span>
+										<span class="badge badge-new">{{p.curacion}}</span>
+										<span class="badge badge-new">{{p.color}}</span>
+										<span class="badge badge-new" ng-show="p.celiaco">
+											<img class="celiaco" src="http://fumdellum.com/wp-content/uploads/2015/07/CELIACOS-FUM-LARGE.png">
+										</span>
+<!-- 										<span class="badge badge-new" ng-show="p.sal">
+											<img class="celiaco" src="https://www.clipartmax.com/png/middle/255-2552674_game-changing-powerpoint-design-hack-icons-are-the-sault-ste-marie-greyhounds.png">
+										</span>		 -->						
+										
+									</div>									
+								</div>
 							</article>
+
 						</li>
 					</ul>
 					

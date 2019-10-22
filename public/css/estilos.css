@@ -5,8 +5,12 @@
   padding: 0px;
 }
 
+* {
+  font-family: "Rubik";
+}
+
 .productos {
-  padding: 10px;
+  padding: 50px;
 }
 .productos .categoriaModulo {
   margin-bottom: 100px;
@@ -15,48 +19,251 @@
   list-style: none;
 }
 .productos .categoriaModulo .categoriaList .categoriaItem {
+  height: 150px;
   display: inline-block;
   padding: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  background-repeat: none;
+  background-size: 100%;
+}
+.productos .categoriaModulo .categoriaList .categoriaItem#que {
+  background-image: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+.productos .categoriaModulo .categoriaList .categoriaItem#vin {
+  background-image: url("https://images.pexels.com/photos/162788/parmigiano-reggiano-cheese-italy-italian-162788.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+.productos .categoriaModulo .categoriaList .categoriaItem#ace {
+  background-image: url("https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+.productos .categoriaModulo .categoriaList .categoriaItem#fru {
+  background-image: url("https://images.pexels.com/photos/39351/purple-grapes-vineyard-napa-valley-napa-vineyard-39351.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+.productos .categoriaModulo .categoriaList .categoriaItem#oli {
+  background-image: url("https://as2.ftcdn.net/jpg/02/85/08/03/500_F_285080333_8DWV02PZxl2mVEcywjonFBFXesbiRmdP.jpg");
+}
+.productos .categoriaModulo .categoriaList .categoriaItem .nombre {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
 }
 .productos .productoModulo .productoList {
   list-style: none;
 }
-.productos .productoModulo .productoList .productoItem {
+.productos .productoModulo .productoList .productoItem.que {
   width: 80%;
   margin: 0 auto;
   padding: 15px;
-  position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 15px;
+  background-color: darkkhaki !important;
+  border-radius: 10px;
 }
-.productos .productoModulo .productoList .productoItem .prodImg {
-  top: 0px;
+.productos .productoModulo .productoList .productoItem.que .prodImg {
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   position: absolute;
-  margin: 0 auto;
 }
-.productos .productoModulo .productoList .productoItem .productoCabecera {
-  text-align: center;
+.productos .productoModulo .productoList .productoItem.que .productoCabecera {
+  text-align: left;
 }
-.productos .productoModulo .productoList .productoItem .productoCabecera .productoNombre {
-  margin-top: 50px;
-  font-weight: 700;
-  color: #37363D;
-  font-size: 28px;
+.productos .productoModulo .productoList .productoItem.que .productoCabecera .productoNombre {
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: lightgoldenrodyellow;
+  font-size: 30px;
+  letter-spacing: 1.4px;
 }
-.productos .productoModulo .productoList .productoItem .productoDes {
-  text-align: center;
+.productos .productoModulo .productoList .productoItem.que .productoCabecera .productoMarca {
+  font-size: 18px;
 }
-.productos .productoModulo .productoList .productoItem .productoDes .descripcion {
-  color: darkgrey;
+.productos .productoModulo .productoList .productoItem.que .productoDes {
+  text-align: left;
 }
-.productos .productoModulo .productoList .productoItem .productoAtributos {
-  text-align: center;
+.productos .productoModulo .productoList .productoItem.que .productoDes .descripcion {
+  color: whitesmoke;
+  font-size: 16px;
 }
-.productos .productoModulo .productoList .productoItem .productoAtributos p {
+.productos .productoModulo .productoList .productoItem.que .productoAtributos {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.que .productoAtributos .badge-new {
+  background-color: #86813c;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.productos .productoModulo .productoList .productoItem.que .productoAtributos p {
   display: inline-block;
+}
+.productos .productoModulo .productoList .productoItem.que .productoAtributos .celiaco {
+  height: 15px;
+}
+.productos .productoModulo .productoList .productoItem.vin {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #545988 !important;
+  border-radius: 10px;
+}
+.productos .productoModulo .productoList .productoItem.vin .prodImg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoCabecera {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoNombre {
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: lightgoldenrodyellow;
+  font-size: 30px;
+  letter-spacing: 1.4px;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoMarca {
+  font-size: 18px;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoDes {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoDes .descripcion {
+  color: whitesmoke;
+  font-size: 16px;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoAtributos {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoAtributos .badge-new {
+  background-color: #2d3049;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoAtributos p {
+  display: inline-block;
+}
+.productos .productoModulo .productoList .productoItem.vin .productoAtributos .celiaco {
+  height: 15px;
+}
+.productos .productoModulo .productoList .productoItem.emb {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #E47A73 !important;
+  border-radius: 10px;
+}
+.productos .productoModulo .productoList .productoItem.emb .prodImg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoCabecera {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoNombre {
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: lightgoldenrodyellow;
+  font-size: 30px;
+  letter-spacing: 1.4px;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoMarca {
+  font-size: 18px;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoDes {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoDes .descripcion {
+  color: whitesmoke;
+  font-size: 16px;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoAtributos {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoAtributos .badge-new {
+  background-color: #ca3127;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoAtributos p {
+  display: inline-block;
+}
+.productos .productoModulo .productoList .productoItem.emb .productoAtributos .celiaco {
+  height: 15px;
+}
+.productos .productoModulo .productoList .productoItem.fru {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #F3AB89 !important;
+  border-radius: 10px;
+}
+.productos .productoModulo .productoList .productoItem.fru .prodImg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoCabecera {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoNombre {
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: lightgoldenrodyellow;
+  font-size: 30px;
+  letter-spacing: 1.4px;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoMarca {
+  font-size: 18px;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoDes {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoDes .descripcion {
+  color: whitesmoke;
+  font-size: 16px;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoAtributos {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoAtributos .badge-new {
+  background-color: #ea692c;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoAtributos p {
+  display: inline-block;
+}
+.productos .productoModulo .productoList .productoItem.fru .productoAtributos .celiaco {
+  height: 15px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
