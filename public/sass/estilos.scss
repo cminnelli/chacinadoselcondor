@@ -15,9 +15,17 @@ $vino:#545988;
 *{
 	font-family: "Rubik";
 }
+
+// @media only screen and (max-width: 600px) {
+//   .itsolutions .portada .portada_wrapper_texto .banner .output h1 {
+//     font-size: 25px;
+//   }
+// }
+
+
 @mixin productoItem($color){
 
-	width: 80%;
+	width: 98%;
 	margin:0 auto;
 	padding:15px;
 	// position: relative;
@@ -75,7 +83,6 @@ $vino:#545988;
 }
 
 
-
 .productos{
 	padding:50px;
 	.categoriaModulo{
@@ -84,13 +91,45 @@ $vino:#545988;
 			list-style: none;
 
 			.categoriaItem{
-				height: 150px;
+				position: relative;
+				border-radius: 5px;
+				height: 140px;
 				display: inline-block;
-				padding:5px;
+				padding:0px 0px;
 				position: relative;
 				margin-bottom: 10px;
 				background-repeat: none;
-				background-size: 100%;
+				background-size: 110%;
+				 transition: 1s;
+				 @media only screen and (min-width: 600px) {
+					height: 180px;
+				 }
+
+				&:hover{
+				     background-size: 100%;
+				     transition: 1s;
+				}	
+				&:hover .nombre{
+					font-size:23px;
+					transition:1s;
+				}	
+
+				&:hover .transparencia{
+					transition: 1s;
+					background-color:rgba(0,0,0,0.4); 
+					cursor:pointer;
+				}	
+
+				.transparencia{
+					position: absolute;
+					border-radius: 5px;
+					height: 100%;
+					width: 100%;
+					background-color:rgba(0,0,0,0.55); 
+					z-index: 0;
+
+				}
+
 				&#que{
 					background-image:url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 				}
@@ -112,12 +151,18 @@ $vino:#545988;
 
 				
 				.nombre{
-					font-size: 30px;
+
+					font-size: 20px;
 					position: absolute;
 					top:50%;
 					left:50%;
 					transform: translate(-50% , -50%);
 					color:whitesmoke;
+					z-index: 9999;
+					transition:1s;
+					&:hover{
+	
+					}
 				}
 			}
 			

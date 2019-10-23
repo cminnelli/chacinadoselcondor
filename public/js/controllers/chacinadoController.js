@@ -3,6 +3,7 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 
 	console.log("iniciando controlador chacinado");
 
+	var timeInit = 0.2;
 	$scope.categorias = [ 
 	{nombre:"Quesos" , catId:"que" ,  img:""},
 	{nombre:"Vinos y bebidas" , catId:"vin" , img:""},
@@ -13,6 +14,14 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 	]
 
 	$scope.categoriasEleccion = [];
+
+	$scope.tiempowow = function(){
+		timeInit = timeInit * 1.2;
+		// alert(timeInit)
+		var t = timeInit;
+		var tm = t * 1.2;
+		return String(tm) + "s"
+	}
 
 	$scope.productos = [
 		{nombre:"Guda" , marca:"Sancor",  um:"10kg" , color:"Beige",  cat:"Quesos" , catId:"que" , des:"Queso de cabra y con un tinte beige, excelente gusto y un tono de salida tendiendo al blablablabala lorem ipsum" , img:"https://previews.123rf.com/images/simicv/simicv1809/simicv180900035/109202324-sliced-fresh-emmental-cheese-on-white-background-cow-cheese.jpg" , celiaco:true },
@@ -35,7 +44,7 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 
 	$scope.showProducts= function(cat){
 		$scope.categoriasEleccion = $scope.productos.filter(function(item){
-			return item.cat == cat;
+			return item.cat == cat.nombre;
 		})
 		console.log($scope.categoriasEleccion)
 	}

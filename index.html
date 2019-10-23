@@ -57,19 +57,20 @@
 			 new WOW().init()
 
 		</script>
-		<style type="text/css">
 
-		</style>
 
 		<section class="productos content" >	
 
 			<div class="categoriaModulo">
 				<ul class="row categoriaList">
-					
-					<li id="{{x.catId}}" data-wow-delay="1s" wow fadeInLeft class="col-xs-12 col-md-3 categoriaItem" wow fadeIn ng-repeat="x in categorias" ng-click="showProducts(x)">
+
+					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="wow fadeInLeft col-xs-12 col-md-3 categoriaItem"   ng-click="showProducts(x)" ng-repeat="x in categorias">
+
 						<article class="categoriaWrapp">
 								<h2 class="nombre">{{x.nombre}}</h2>
+								<!-- <h2 class="nombre">{{tiempowow()}}</h2> -->
 						</article>
+						<div class="transparencia"></div>
 					</li>						
 				</ul>					
 			</div>
@@ -77,7 +78,7 @@
 			<div class="productoModulo">
 
 					<ul class="productoList row">
-						<li data-wow-delay="0.2s" data-wow-duration="1200ms" wow  class="{{p.catId}} zoomIn productoItem wow fadeInUpcol-xs-12 col-md-4 col-xs-6 shadow" ng-repeat="p in productos">
+						<li data-wow-delay="0.2s" data-wow-duration="1200ms" wow  class="zoomIn {{p.catId}} productoItem wow col-xs-12 col-md-4 col-xs-6 shadow" ng-repeat="p in categoriasEleccion">
 
 							<article class="row">
 								<div class="col-sm-3">

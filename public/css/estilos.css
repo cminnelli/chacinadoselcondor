@@ -19,13 +19,42 @@
   list-style: none;
 }
 .productos .categoriaModulo .categoriaList .categoriaItem {
-  height: 150px;
+  position: relative;
+  border-radius: 5px;
+  height: 140px;
   display: inline-block;
-  padding: 5px;
+  padding: 0px 0px;
   position: relative;
   margin-bottom: 10px;
   background-repeat: none;
+  background-size: 110%;
+  transition: 1s;
+}
+@media only screen and (min-width: 600px) {
+  .productos .categoriaModulo .categoriaList .categoriaItem {
+    height: 180px;
+  }
+}
+.productos .categoriaModulo .categoriaList .categoriaItem:hover {
   background-size: 100%;
+  transition: 1s;
+}
+.productos .categoriaModulo .categoriaList .categoriaItem:hover .nombre {
+  font-size: 23px;
+  transition: 1s;
+}
+.productos .categoriaModulo .categoriaList .categoriaItem:hover .transparencia {
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.productos .categoriaModulo .categoriaList .categoriaItem .transparencia {
+  position: absolute;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 0;
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#que {
   background-image: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
@@ -43,18 +72,20 @@
   background-image: url("https://as2.ftcdn.net/jpg/02/85/08/03/500_F_285080333_8DWV02PZxl2mVEcywjonFBFXesbiRmdP.jpg");
 }
 .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
-  font-size: 30px;
+  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: whitesmoke;
+  z-index: 9999;
+  transition: 1s;
 }
 .productos .productoModulo .productoList {
   list-style: none;
 }
 .productos .productoModulo .productoList .productoItem.que {
-  width: 80%;
+  width: 98%;
   margin: 0 auto;
   padding: 15px;
   margin-bottom: 15px;
@@ -107,7 +138,7 @@
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.vin {
-  width: 80%;
+  width: 98%;
   margin: 0 auto;
   padding: 15px;
   margin-bottom: 15px;
@@ -160,7 +191,7 @@
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.emb {
-  width: 80%;
+  width: 98%;
   margin: 0 auto;
   padding: 15px;
   margin-bottom: 15px;
@@ -213,7 +244,7 @@
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.fru {
-  width: 80%;
+  width: 98%;
   margin: 0 auto;
   padding: 15px;
   margin-bottom: 15px;
