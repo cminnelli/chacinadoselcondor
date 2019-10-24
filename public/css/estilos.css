@@ -21,13 +21,14 @@
 .productos .categoriaModulo .categoriaList .categoriaItem {
   position: relative;
   border-radius: 5px;
-  height: 140px;
+  height: 100px;
   display: inline-block;
   padding: 0px 0px;
   position: relative;
   margin-bottom: 10px;
   background-repeat: none;
   background-size: 110%;
+  text-align: center;
   transition: 1s;
 }
 @media only screen and (min-width: 600px) {
@@ -60,24 +61,28 @@
   background-image: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#vin {
-  background-image: url("https://images.pexels.com/photos/162788/parmigiano-reggiano-cheese-italy-italian-162788.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-image: url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#ace {
-  background-image: url("https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image: url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-position: 0px -325px;
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#fru {
-  background-image: url("https://images.pexels.com/photos/39351/purple-grapes-vineyard-napa-valley-napa-vineyard-39351.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image: url("https://images.pexels.com/photos/255428/pexels-photo-255428.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#oli {
-  background-image: url("https://as2.ftcdn.net/jpg/02/85/08/03/500_F_285080333_8DWV02PZxl2mVEcywjonFBFXesbiRmdP.jpg");
+  background-image: url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
 .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
+  font-family: "Montserrat";
   font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
   color: whitesmoke;
+  letter-spacing: 1;
   z-index: 9999;
   transition: 1s;
 }
@@ -87,9 +92,8 @@
 .productos .productoModulo .productoList .productoItem.que {
   width: 98%;
   margin: 0 auto;
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: darkkhaki !important;
+  padding: 25px;
+  margin-bottom: 25px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.que .prodImg {
@@ -106,26 +110,29 @@
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoNombre {
   margin: 0px;
   text-transform: uppercase;
+  font-family: "Montserrat";
   font-weight: 800;
-  color: lightgoldenrodyellow;
-  font-size: 30px;
+  color: #ff8d0d;
+  font-size: 23px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoMarca {
-  font-size: 18px;
+  padding-top: 10px;
+  font-size: 19px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes .descripcion {
-  color: whitesmoke;
+  padding-top: 10px;
   font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoAtributos {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.que .productoAtributos .badge-new {
-  background-color: #86813c;
+  background-color: #ffa540;
   color: whitesmoke;
   padding: 10px;
   font-size: 14px;
@@ -140,9 +147,8 @@
 .productos .productoModulo .productoList .productoItem.vin {
   width: 98%;
   margin: 0 auto;
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: #545988 !important;
+  padding: 25px;
+  margin-bottom: 25px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.vin .prodImg {
@@ -159,26 +165,29 @@
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoNombre {
   margin: 0px;
   text-transform: uppercase;
+  font-family: "Montserrat";
   font-weight: 800;
-  color: lightgoldenrodyellow;
-  font-size: 30px;
+  color: #303f7d;
+  font-size: 23px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoMarca {
-  font-size: 18px;
+  padding-top: 10px;
+  font-size: 19px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes .descripcion {
-  color: whitesmoke;
+  padding-top: 10px;
   font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoAtributos {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoAtributos .badge-new {
-  background-color: #2d3049;
+  background-color: #3e52a2;
   color: whitesmoke;
   padding: 10px;
   font-size: 14px;
@@ -193,9 +202,8 @@
 .productos .productoModulo .productoList .productoItem.emb {
   width: 98%;
   margin: 0 auto;
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: #E47A73 !important;
+  padding: 25px;
+  margin-bottom: 25px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.emb .prodImg {
@@ -212,26 +220,29 @@
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoNombre {
   margin: 0px;
   text-transform: uppercase;
+  font-family: "Montserrat";
   font-weight: 800;
-  color: lightgoldenrodyellow;
-  font-size: 30px;
+  color: #ff4d1a;
+  font-size: 23px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoMarca {
-  font-size: 18px;
+  padding-top: 10px;
+  font-size: 19px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes .descripcion {
-  color: whitesmoke;
+  padding-top: 10px;
   font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoAtributos {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoAtributos .badge-new {
-  background-color: #ca3127;
+  background-color: #ff754d;
   color: whitesmoke;
   padding: 10px;
   font-size: 14px;
@@ -246,9 +257,8 @@
 .productos .productoModulo .productoList .productoItem.fru {
   width: 98%;
   margin: 0 auto;
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: #F3AB89 !important;
+  padding: 25px;
+  margin-bottom: 25px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.fru .prodImg {
@@ -265,26 +275,29 @@
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoNombre {
   margin: 0px;
   text-transform: uppercase;
+  font-family: "Montserrat";
   font-weight: 800;
-  color: lightgoldenrodyellow;
-  font-size: 30px;
+  color: #bc622a;
+  font-size: 23px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoMarca {
-  font-size: 18px;
+  padding-top: 10px;
+  font-size: 19px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes .descripcion {
-  color: whitesmoke;
+  padding-top: 10px;
   font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoAtributos {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoAtributos .badge-new {
-  background-color: #ea692c;
+  background-color: #d67b43;
   color: whitesmoke;
   padding: 10px;
   font-size: 14px;
@@ -294,6 +307,116 @@
   display: inline-block;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoAtributos .celiaco {
+  height: 15px;
+}
+.productos .productoModulo .productoList .productoItem.ace {
+  width: 98%;
+  margin: 0 auto;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+.productos .productoModulo .productoList .productoItem.ace .prodImg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoCabecera {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoNombre {
+  margin: 0px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: #090801;
+  font-size: 23px;
+  letter-spacing: 1.4px;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoMarca {
+  padding-top: 10px;
+  font-size: 19px;
+  color: grey;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoDes {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoDes .descripcion {
+  padding-top: 10px;
+  font-size: 16px;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoAtributos {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoAtributos .badge-new {
+  background-color: #393104;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoAtributos p {
+  display: inline-block;
+}
+.productos .productoModulo .productoList .productoItem.ace .productoAtributos .celiaco {
+  height: 15px;
+}
+.productos .productoModulo .productoList .productoItem.oli {
+  width: 98%;
+  margin: 0 auto;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+.productos .productoModulo .productoList .productoItem.oli .prodImg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoCabecera {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoNombre {
+  margin: 0px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: #5c4d02;
+  font-size: 23px;
+  letter-spacing: 1.4px;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoMarca {
+  padding-top: 10px;
+  font-size: 19px;
+  color: grey;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoDes {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoDes .descripcion {
+  padding-top: 10px;
+  font-size: 16px;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoAtributos {
+  text-align: left;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoAtributos .badge-new {
+  background-color: #8e7703;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoAtributos p {
+  display: inline-block;
+}
+.productos .productoModulo .productoList .productoItem.oli .productoAtributos .celiaco {
   height: 15px;
 }
 

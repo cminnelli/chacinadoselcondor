@@ -3,11 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC|Raleway|Rubik|Rubik+Mono+One|Space+Mono|Spectral|Spectral+SC');
 @import url('../css/animate.css');
 
-$titulos: "#37363D";
-$queso:darkkhaki;
-$embutidos: #F3AB89;
-$frutos:#E47A73;
-$vino:#545988;
+$titulos: #37363D;
+$queso:#FFD5A6;
+$embutidos: #FFC4B3;
+$frutos:#E8B697;
+$vino:#7A8ACC;
+$oliva:#F2CB05;
+$aceituna:#99840A;
 
 .row{
 	padding: 0px;
@@ -27,10 +29,10 @@ $vino:#545988;
 
 	width: 98%;
 	margin:0 auto;
-	padding:15px;
+	padding:25px;
 	// position: relative;
-	margin-bottom:15px;		
-	background-color: $color !important;	
+	margin-bottom:25px;		
+	// background-color: $color !important;	
 	border-radius: 10px;	
 	.prodImg{
 		top:50%;
@@ -46,19 +48,22 @@ $vino:#545988;
 		.productoNombre{
 			margin:0px;
 			text-transform: uppercase;
+			font-family: "Montserrat";
 			font-weight: 800;
-			color:lightgoldenrodyellow;
-			font-size:30px;
+			color:darken($color , 30%);
+			font-size:23px;
 			letter-spacing: 1.4px;
 		}
 		.productoMarca{
-			font-size:18px;
+			padding-top:10px;
+			font-size:19px;
+			color:grey;
 		}
 	}
 	.productoDes{
 		text-align: left;
 		.descripcion{
-			color:whitesmoke;
+			padding-top:10px;
 			font-size:16px;
 
 		}
@@ -91,16 +96,22 @@ $vino:#545988;
 			list-style: none;
 
 			.categoriaItem{
+
+				.articleWrap{
+
+				}
 				position: relative;
 				border-radius: 5px;
-				height: 140px;
+				height: 100px;
 				display: inline-block;
 				padding:0px 0px;
 				position: relative;
 				margin-bottom: 10px;
 				background-repeat: none;
 				background-size: 110%;
-				 transition: 1s;
+				text-align: center;
+				transition: 1s;
+				
 				 @media only screen and (min-width: 600px) {
 					height: 180px;
 				 }
@@ -135,29 +146,32 @@ $vino:#545988;
 				}
 
 				&#vin{
-					background-image:url("https://images.pexels.com/photos/162788/parmigiano-reggiano-cheese-italy-italian-162788.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+					background-image:url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 				}
 
 				&#ace{
-					background-image:url("https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+					background-image:url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+					background-position: 0px -325px; 
 				}
 				
 				&#fru{
-					background-image:url("https://images.pexels.com/photos/39351/purple-grapes-vineyard-napa-valley-napa-vineyard-39351.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+					background-image:url("https://images.pexels.com/photos/255428/pexels-photo-255428.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 				}
 				&#oli{
-					background-image:url("https://as2.ftcdn.net/jpg/02/85/08/03/500_F_285080333_8DWV02PZxl2mVEcywjonFBFXesbiRmdP.jpg");
+					background-image:url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
 				}
 
 				
 				.nombre{
-
+					font-family: "Montserrat";
 					font-size: 20px;
 					position: absolute;
 					top:50%;
 					left:50%;
 					transform: translate(-50% , -50%);
+					width: 80%;
 					color:whitesmoke;
+					letter-spacing: 1;
 					z-index: 9999;
 					transition:1s;
 					&:hover{
@@ -180,10 +194,19 @@ $vino:#545988;
 					@include productoItem($vino);
 				}
 				&.emb{
-					@include productoItem($frutos);
+					@include productoItem($embutidos);
 				}
 				&.fru{
-					@include productoItem($embutidos);
+					@include productoItem($frutos);
+					
+				}
+				&.ace{
+					@include productoItem($aceituna);
+					
+				}
+				&.oli{
+					@include productoItem($oliva);
+					
 				}
 			}
 		}
