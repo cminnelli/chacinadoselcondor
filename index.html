@@ -58,14 +58,26 @@
 
 		</script>
 
-
+		<!-- CATEGORIAS -->
 		<section class="productos content" >	
+
+<!-- 		<ul class="categoryStories">
+			<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="story wow fadeInLeft categoriaItem"   ng-click="showProducts(x)" ng-repeat="x in categorias">
+			  <img src="{{x.img}}" alt="">
+			  <svg viewbox="0 0 100 100">
+			    <circle cx="50" cy="50" r="40"/>
+			  </svg>
+			</li>
+			
+		</ul> -->
 
 			<div class="categoriaModulo">
 				<ul class="row categoriaList">
 
-					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="wow fadeInLeft col-xs-12 col-md-3 categoriaItem"   ng-click="showProducts(x)" ng-repeat="x in categorias">
-
+					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="shadow wow fadeInLeft categoriaItem"   ng-click="showProducts(x)" ng-repeat="x in categorias">
+						<svg viewbox="0 0 100 100">
+						  <circle cx="50" cy="50" r="40"/>
+						</svg>
 						<article class="categoriaWrapp">
 								<h2 class="nombre">{{x.nombre}}</h2>
 								<!-- <h2 class="nombre">{{tiempowow()}}</h2> -->
@@ -75,10 +87,11 @@
 				</ul>					
 			</div>
 
+			<!-- PRODUCTOS -->
 			<div class="productoModulo">
 
 					<ul class="productoList row">
-						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class="fadeInDown {{p.catId}} productoItem wow col-xs-12 col-md-4 col-xs-6 shadow-lg bg-white rounded" ng-repeat="p in productos">
+						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class="fadeInUp {{p.catId}} productoItem wow col-xs-12 col-md-4 col-xs-6 shadow-lg bg-white rounded" ng-repeat="p in categoriasEleccion">
 
 							<article class="row">
 								<div class="col-sm-3">
@@ -100,9 +113,9 @@
 										<span class="badge badge-new" ng-show="p.celiaco">
 											<img class="celiaco" src="http://fumdellum.com/wp-content/uploads/2015/07/CELIACOS-FUM-LARGE.png">
 										</span>
-<!-- 										<span class="badge badge-new" ng-show="p.sal">
-											<img class="celiaco" src="https://www.clipartmax.com/png/middle/255-2552674_game-changing-powerpoint-design-hack-icons-are-the-sault-ste-marie-greyhounds.png">
-										</span>		 -->						
+										<span class="badge badge-new" ng-show="p.sal">
+											<img class="celiaco" src="https://image.flaticon.com/icons/png/512/114/114928.png">
+										</span>								
 										
 									</div>									
 								</div>

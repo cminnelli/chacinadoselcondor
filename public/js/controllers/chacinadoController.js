@@ -5,11 +5,11 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 
 	var timeInit = 0.2;
 	$scope.categorias = [ 
-	{nombre:"Quesos" , catId:"que" ,  img:""},
-	{nombre:"Vinos y bebidas" , catId:"vin" , img:""},
-	{nombre:"Frutos secos" , catId:"fru" , img:""},
-	{nombre:"Aceitunas y Pickles" , catId:"ace" , img:""},
-	{nombre:"Aceite de Oliva" , catId:"oli" , img:""}
+	{nombre:"Quesos" , catId:"que" ,  img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
+	{nombre:"Vinos y bebidas" , catId:"vin" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
+	{nombre:"Frutos secos" , catId:"fru" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
+	{nombre:"Aceitunas y Pickles" , catId:"ace" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
+	{nombre:"Aceite de Oliva" , catId:"oli" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}
 
 	]
 

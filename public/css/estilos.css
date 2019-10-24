@@ -9,39 +9,95 @@
   font-family: "Rubik";
 }
 
+.categoryStories .story {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.categoryStories .story img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.categoryStories .story svg {
+  fill: none;
+  stroke: #8a3ab8;
+  stroke-width: 3px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: loading 4500ms ease-in-out infinite alternate;
+}
+@keyframes loading {
+  100% {
+    stroke: #cd476b;
+    stroke-dasharray: 10;
+    transform: rotate(200deg);
+  }
+}
+
 .productos {
   padding: 50px;
 }
 .productos .categoriaModulo {
-  margin-bottom: 100px;
+  margin-bottom: 35px;
 }
 .productos .categoriaModulo .categoriaList {
   list-style: none;
 }
+@keyframes loading {
+  100% {
+    stroke: #cd476b;
+    stroke-dasharray: 10;
+    transform: rotate(200deg);
+  }
+}
+.productos .categoriaModulo .categoriaList svg {
+  top: -14px;
+  left: -15px;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  fill: none;
+  stroke: #8a3ab8;
+  stroke-width: 3px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: loading 4500ms ease-in-out infinite alternate;
+}
 .productos .categoriaModulo .categoriaList .categoriaItem {
   position: relative;
-  border-radius: 5px;
-  height: 100px;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
   display: inline-block;
   padding: 0px 0px;
   position: relative;
   margin-bottom: 10px;
-  background-repeat: none;
-  background-size: 110%;
+  background-size: cover;
   text-align: center;
   transition: 1s;
+  margin: 0 8px;
 }
-@media only screen and (min-width: 600px) {
-  .productos .categoriaModulo .categoriaList .categoriaItem {
-    height: 180px;
-  }
-}
-.productos .categoriaModulo .categoriaList .categoriaItem:hover {
-  background-size: 100%;
+.productos .categoriaModulo .categoriaList .categoriaItem .nombre {
+  font-family: "Montserrat";
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: whitesmoke;
+  letter-spacing: 1;
+  z-index: 9999;
   transition: 1s;
 }
-.productos .categoriaModulo .categoriaList .categoriaItem:hover .nombre {
-  font-size: 23px;
+.productos .categoriaModulo .categoriaList .categoriaItem .nombre:hover {
+  transition: 1s;
+}
+.productos .categoriaModulo .categoriaList .categoriaItem:hover {
   transition: 1s;
 }
 .productos .categoriaModulo .categoriaList .categoriaItem:hover .transparencia {
@@ -51,7 +107,7 @@
 }
 .productos .categoriaModulo .categoriaList .categoriaItem .transparencia {
   position: absolute;
-  border-radius: 5px;
+  border-radius: 50%;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.55);
@@ -72,19 +128,6 @@
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#oli {
   background-image: url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
-}
-.productos .categoriaModulo .categoriaList .categoriaItem .nombre {
-  font-family: "Montserrat";
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  color: whitesmoke;
-  letter-spacing: 1;
-  z-index: 9999;
-  transition: 1s;
 }
 .productos .productoModulo .productoList {
   list-style: none;
@@ -112,12 +155,12 @@
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 800;
-  color: #ff8d0d;
-  font-size: 23px;
+  color: #d97300;
+  font-size: 25px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoMarca {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 19px;
   color: grey;
 }
@@ -167,12 +210,12 @@
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 800;
-  color: #303f7d;
-  font-size: 23px;
+  color: #222c58;
+  font-size: 25px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoMarca {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 19px;
   color: grey;
 }
@@ -222,12 +265,12 @@
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 800;
-  color: #ff4d1a;
-  font-size: 23px;
+  color: #e63300;
+  font-size: 25px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoMarca {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 19px;
   color: grey;
 }
@@ -277,12 +320,12 @@
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 800;
-  color: #bc622a;
-  font-size: 23px;
+  color: #934c20;
+  font-size: 25px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoMarca {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 19px;
   color: grey;
 }
@@ -332,12 +375,12 @@
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 800;
-  color: #090801;
-  font-size: 23px;
+  color: black;
+  font-size: 25px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoMarca {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 19px;
   color: grey;
 }
@@ -387,12 +430,12 @@
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 800;
-  color: #5c4d02;
-  font-size: 23px;
+  color: #2a2301;
+  font-size: 25px;
   letter-spacing: 1.4px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoMarca {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 19px;
   color: grey;
 }
