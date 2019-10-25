@@ -11,6 +11,12 @@ $vino:#7A8ACC;
 $oliva:#F2CB05;
 $aceituna:#99840A;
 
+$storyheight:50;
+$storyheightpx: $storyheight + px ;
+
+$breaksm: 380px;
+$breaklg: 1200px;
+
 .row{
 	padding: 0px;
 }
@@ -18,37 +24,7 @@ $aceituna:#99840A;
 	font-family: "Rubik";
 }
 
-.categoryStories{
-	.story {
-	 display: inline-block;
-	  width:100px;
-	  height:100px;
-	  overflow:hidden;
 
-	}
-	.story img {
-	  width:80px;
-	  height:80px;
-	  border-radius:50%;
-
-	}
-	.story svg {
-	  fill:none;
-	  stroke:#8a3ab8;
-	  stroke-width:3px;
-	  stroke-dasharray:1;
-	  stroke-dashoffset:0;
-	  stroke-linecap:round;
-	  animation:loading 4500ms ease-in-out infinite alternate;
-	}
-	@keyframes loading {
-	  100% {
-	    stroke:#cd476b;
-	    stroke-dasharray:10;
-	    transform:rotate(200deg);
-	  }
-	}
-}
 
 
 @mixin productoItem($color){
@@ -75,12 +51,12 @@ $aceituna:#99840A;
 			font-family: "Montserrat";
 			font-weight: 800;
 			color:darken($color , 40%);
-			font-size:25px;
-			letter-spacing: 1.4px;
+			font-size:20px;
+			letter-spacing: 1.2px;
 		}
 		.productoMarca{
 			padding-top:5px;
-			font-size:19px;
+			font-size:16px;
 			color:grey;
 		}
 	}
@@ -88,7 +64,7 @@ $aceituna:#99840A;
 		text-align: left;
 		.descripcion{
 			padding-top:10px;
-			font-size:16px;
+			font-size:13px;
 
 		}
 	}
@@ -98,8 +74,8 @@ $aceituna:#99840A;
 		.badge-new{
 			background-color:darken($color,20%);
 			color:whitesmoke;
-			padding:10px;
-			font-size: 14px;
+			padding:6px;
+			font-size: 12px;
 			letter-spacing: 1.3px;
 		}
 		p{
@@ -114,10 +90,10 @@ $aceituna:#99840A;
 
 // INICIO PRODUCTOS
 .productos{
-	padding:50px;
+	padding:10px;
 
 	.categoriaModulo{
-		margin-bottom:35px;
+		margin-bottom:75px;
 		.categoriaList{
 			list-style: none;
 
@@ -129,26 +105,34 @@ $aceituna:#99840A;
 			  }
 			}
 			svg {
-				top:-14px;
-				left:-15px;
-				height: 120px;
-				width: 120px;
+				top:-9.4px;
+				left:-8.5px;
+				height: $storyheight * 1.33 + px;
+				width: $storyheight * 1.33 + px;
 				position: absolute;
-			  fill:none;
-			  stroke:#8a3ab8;
-			  stroke-width:3px;
-			  stroke-dasharray:1;
-			  stroke-dashoffset:0;
-			  stroke-linecap:round;
-			  animation:loading 4500ms ease-in-out infinite alternate;
+			   fill:none;
+			   stroke:#8a3ab8;
+			   stroke-width:3px;
+			   stroke-dasharray:1;
+			   stroke-dashoffset:0;
+			   stroke-linecap:round;
+			   animation:loading 4500ms ease-in-out infinite alternate;
+			    @media only screen and (min-width: $breaksm) {
+					display: none;
+			    }
+
+			}
+
+			.animationInsta{
+
 			}
 
 			.categoriaItem{
 
 				position: relative;
 				border-radius: 50%;
-				height: 90px;
-				width: 90px;
+				height: $storyheightpx;
+				width: $storyheightpx;
 				display: inline-block;
 				padding:0px 0px;
 				position: relative;
@@ -156,29 +140,39 @@ $aceituna:#99840A;
 				background-size: cover;
 				text-align: center;
 				transition: 1s;
-				margin:0 8px;
-				 @media only screen and (min-width: 600px) {
-					// height: 180px;
+				margin:0 auto;
+				cursor:pointer;
+				 @media only screen and (min-width: $breaksm) {
+					border-radius: 0px;
+					width: 20%;
+					height:100px;
 				 }
 
 
 
 				 .nombre{
 				 	font-family: "Montserrat";
-				 	font-size: 15px;
+				 	font-size: 10px;
 				 	position: absolute;
-				 	top:50%;
+				 	top:125%;
 				 	left:50%;
 				 	transform: translate(-50% , -50%);
 				 	width: 80%;
-				 	color:whitesmoke;
+				 	color:grey;
 				 	letter-spacing: 1;
 				 	z-index: 9999;
 				 	transition:1s;
+				 	cursor:pointer;
+				 	 @media only screen and (min-width: $breaksm) {
+				 		border-radius: 0px;
+				 		top:50%;
+				 		color:whitesmoke;
+				 	 }
 				 	&:hover{
 				 		transition:1s;
 				 	}
 				 }
+
 				&:hover{
 				     // background-size: 100%;
 				     transition: 1s;
@@ -194,11 +188,16 @@ $aceituna:#99840A;
 				.transparencia{
 					position: absolute;
 					border-radius: 50%;
-					// padding:0px 5px;
 					height: 100%;
 					width: 100%;
-					background-color:rgba(0,0,0,0.55); 
+					background-color:rgba(0,0,0,0.3); 
 					z-index: 0;
+					cursor:pointer;
+					 @media only screen and (min-width: $breaksm) {
+						border-radius: 0px;
+						width: 100%;
+						height:100%;
+					 }
 
 				}
 

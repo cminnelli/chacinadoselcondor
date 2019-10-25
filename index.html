@@ -61,28 +61,21 @@
 		<!-- CATEGORIAS -->
 		<section class="productos content" >	
 
-<!-- 		<ul class="categoryStories">
-			<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="story wow fadeInLeft categoriaItem"   ng-click="showProducts(x)" ng-repeat="x in categorias">
-			  <img src="{{x.img}}" alt="">
-			  <svg viewbox="0 0 100 100">
-			    <circle cx="50" cy="50" r="40"/>
-			  </svg>
-			</li>
-			
-		</ul> -->
 
 			<div class="categoriaModulo">
 				<ul class="row categoriaList">
 
-					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="shadow wow fadeInLeft categoriaItem"   ng-click="showProducts(x)" ng-repeat="x in categorias">
+					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="shadow wow fadeInLeft categoriaItem"   ng-click="showProducts(x.catId)" ng-repeat="x in categorias">
+						<!-- <div class="circle"></div> -->
 						<svg viewbox="0 0 100 100">
 						  <circle cx="50" cy="50" r="40"/>
 						</svg>
-						<article class="categoriaWrapp">
-								<h2 class="nombre">{{x.nombre}}</h2>
+<!-- 						<article class="categoriaWrapp"> -->
+								<!-- <h2 class="nombre">{{x.nombre}}</h2> -->
 								<!-- <h2 class="nombre">{{tiempowow()}}</h2> -->
-						</article>
+<!-- 						</article> -->
 						<div class="transparencia"></div>
+						<p class="nombre">{{x.nombre}}</p>
 					</li>						
 				</ul>					
 			</div>
