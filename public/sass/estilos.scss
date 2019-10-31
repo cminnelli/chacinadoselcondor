@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Catamaran|Cormorant+Garamond|EB+Garamond|Inconsolata|Lato|Libre+Franklin|Montserrat|Oxygen|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Source+Serif+Pro|Varela+Round');
 @import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC|Raleway|Rubik|Rubik+Mono+One|Space+Mono|Spectral|Spectral+SC');
+@import url('https://fonts.googleapis.com/css?family=Caveat|Damion|Dancing+Script|Leckerli+One|Pacifico|Satisfy&display=swap');
 @import url('../css/animate.css');
 
 $titulos: #37363D;
@@ -25,7 +26,32 @@ $breaklg: 1200px;
 }
 
 
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
 
+.centerabs{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+
+}
+
+.my-float{
+	margin-top:16px;
+}
 
 @mixin productoItem($color){
 
@@ -33,7 +59,8 @@ $breaklg: 1200px;
 	margin:0 auto;
 	padding:25px;
 	margin-bottom:25px;	
-	border-radius: 10px;	
+	border-radius: 10px;
+
 	.prodImg{
 		top:50%;
 		left:50%;
@@ -47,16 +74,18 @@ $breaklg: 1200px;
 		text-align: left;
 		.productoNombre{
 			margin:0px;
-			text-transform: uppercase;
-			font-family: "Montserrat";
+			font-family: "Pacifico";
 			font-weight: 800;
 			color:darken($color , 40%);
-			font-size:20px;
+			font-size:25px;
 			letter-spacing: 1.2px;
+			padding-bottom: 10px;
+
 		}
 		.productoMarca{
+			text-transform: uppercase;
 			padding-top:5px;
-			font-size:16px;
+			font-size:18px;
 			color:grey;
 		}
 	}
@@ -64,7 +93,7 @@ $breaklg: 1200px;
 		text-align: left;
 		.descripcion{
 			padding-top:10px;
-			font-size:13px;
+			font-size:16px;
 
 		}
 	}
@@ -87,10 +116,57 @@ $breaklg: 1200px;
 	}
 }
 
+//INICIO PORTADA
+
+.portada{
+	height: 100vh;
+	background-image:url("https://images.pexels.com/photos/543733/pexels-photo-543733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-size: cover;
+	background-repeat:no-repeat;
+    @media only screen and (min-width: $breaksm) {
+		background-position: -100px 0px;
+    }
+	
+	.transparencia{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color:rgba(0,0,0,0.60);
+
+	}
+	.portadaWrapper{
+		height: 100%;
+		width: 100%;
+		padding:50px;
+		.logoWrapp{
+		position: relative;
+		text-align: center;
+
+			.logo{
+				transition:2s;
+				height: 185px;		
+				opacity: 0.7;
+				    @media only screen and (min-width: $breaklg) {
+						height: 300px;
+				    }
+			}
+			.slogan{
+				padding-top:40px;
+				font-family: "Satisfy";
+				font-size: 40px;
+				color:whitesmoke;
+				opacity: 0.9;
+			}
+
+		}
+
+	}
+}
+
 
 // INICIO PRODUCTOS
 .productos{
-	padding:10px;
+	padding:15px;
 
 	.categoriaModulo{
 		margin-bottom:75px;
@@ -151,8 +227,8 @@ $breaklg: 1200px;
 
 
 				 .nombre{
-				 	font-family: "Montserrat";
-				 	font-size: 10px;
+				 	font-family: "Satisfy";
+				 	font-size: 18px;
 				 	position: absolute;
 				 	top:125%;
 				 	left:50%;
@@ -258,3 +334,23 @@ $breaklg: 1200px;
 	}
 }
 
+
+
+//NEWSLETTER
+
+.newsletter{
+	height: 50vh;
+	width: 100%;
+	background-color:#F8ECA0;
+	.newswrapper{
+		padding:100px;
+		.newtext{
+			text-align: center;
+			font-family: "Pacifico";
+			font-weight: 800;
+			font-size:35px;
+			padding-bottom:10px;
+
+		}
+	}
+}

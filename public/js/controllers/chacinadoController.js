@@ -3,7 +3,10 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 
 	console.log("iniciando controlador chacinado");
 
+	$scope.categoriasEleccion = [];
+
 	var timeInit = 0.2;
+
 	$scope.categorias = [ 
 	{nombre:"Quesos" , catId:"que" ,  img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
 	{nombre:"Bebidas" , catId:"vin" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
@@ -12,16 +15,6 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 	{nombre:"Oliva" , catId:"oli" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}
 
 	]
-
-	$scope.categoriasEleccion = [];
-
-	$scope.tiempowow = function(){
-		timeInit = timeInit * 1.2;
-		// alert(timeInit)
-		var t = timeInit;
-		var tm = t * 1.2;
-		return String(tm) + "s"
-	}
 
 	$scope.productos = [
 		{nombre:"Guda" , marca:"Sancor",  um:"10kg" , color:"Beige",  cat:"Quesos" , catId:"que" , des:"Queso de cabra y con un tinte beige, excelente gusto y un tono de salida tendiendo al blablablabala lorem ipsum" , img:"https://previews.123rf.com/images/simicv/simicv1809/simicv180900035/109202324-sliced-fresh-emmental-cheese-on-white-background-cow-cheese.jpg" , celiaco:true },
@@ -35,6 +28,22 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 		{nombre:"Oliva" , marca:"El Sol",   um:"120" , color:"verde" ,  cat:"Aceitunas" , catId:"oli" , des:"aceite de oliva sin igual" , celiaco:false , sal:true , img:"https://www.frutosare.com.ar/wp-content/uploads/2017/04/nuez-con-cascara.jpg"},
 		{nombre:"Aceituna" , marca:"El Sol",   um:"120" , color:"verde" ,  cat:"Aceitunas" , catId:"ace" , des:"Las mejores aceitunas del condado" , celiaco:true , sal:true , img:"https://www.frutosare.com.ar/wp-content/uploads/2017/04/nuez-con-cascara.jpg"},
 	]
+	$scope.init = function(){
+			$scope.categoriasEleccion = $scope.productos;
+
+	}
+
+
+
+	$scope.tiempowow = function(){
+		timeInit = timeInit * 1.2;
+		// alert(timeInit)
+		var t = timeInit;
+		var tm = t * 1.2;
+		return String(tm) + "s"
+	}
+
+
 
 	$scope.propertyTest = function(bol , type){
 		if (bol==true && type =="cel"){

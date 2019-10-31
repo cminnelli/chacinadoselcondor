@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Catamaran|Cormorant+Garamond|EB+Garamond|Inconsolata|Lato|Libre+Franklin|Montserrat|Oxygen|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Source+Serif+Pro|Varela+Round");
 @import url("https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC|Raleway|Rubik|Rubik+Mono+One|Space+Mono|Spectral|Spectral+SC");
+@import url("https://fonts.googleapis.com/css?family=Caveat|Damion|Dancing+Script|Leckerli+One|Pacifico|Satisfy&display=swap");
 @import url("../css/animate.css");
 .row {
   padding: 0px;
@@ -9,8 +10,78 @@
   font-family: "Rubik";
 }
 
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.centerabs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.portada {
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/543733/pexels-photo-543733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 380px) {
+  .portada {
+    background-position: -100px 0px;
+  }
+}
+.portada .transparencia {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.portada .portadaWrapper {
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+.portada .portadaWrapper .logoWrapp {
+  position: relative;
+  text-align: center;
+}
+.portada .portadaWrapper .logoWrapp .logo {
+  transition: 2s;
+  height: 185px;
+  opacity: 0.7;
+}
+@media only screen and (min-width: 1200px) {
+  .portada .portadaWrapper .logoWrapp .logo {
+    height: 300px;
+  }
+}
+.portada .portadaWrapper .logoWrapp .slogan {
+  padding-top: 40px;
+  font-family: "Satisfy";
+  font-size: 40px;
+  color: whitesmoke;
+  opacity: 0.9;
+}
+
 .productos {
-  padding: 10px;
+  padding: 15px;
 }
 .productos .categoriaModulo {
   margin-bottom: 75px;
@@ -67,8 +138,8 @@
   }
 }
 .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
-  font-family: "Montserrat";
-  font-size: 10px;
+  font-family: "Satisfy";
+  font-size: 18px;
   position: absolute;
   top: 125%;
   left: 50%;
@@ -153,16 +224,17 @@
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoNombre {
   margin: 0px;
-  text-transform: uppercase;
-  font-family: "Montserrat";
+  font-family: "Pacifico";
   font-weight: 800;
   color: #d97300;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 1.2px;
+  padding-bottom: 10px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoMarca {
+  text-transform: uppercase;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes {
@@ -170,7 +242,7 @@
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes .descripcion {
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoAtributos {
   text-align: left;
@@ -208,16 +280,17 @@
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoNombre {
   margin: 0px;
-  text-transform: uppercase;
-  font-family: "Montserrat";
+  font-family: "Pacifico";
   font-weight: 800;
   color: #222c58;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 1.2px;
+  padding-bottom: 10px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoMarca {
+  text-transform: uppercase;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes {
@@ -225,7 +298,7 @@
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes .descripcion {
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoAtributos {
   text-align: left;
@@ -263,16 +336,17 @@
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoNombre {
   margin: 0px;
-  text-transform: uppercase;
-  font-family: "Montserrat";
+  font-family: "Pacifico";
   font-weight: 800;
   color: #e63300;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 1.2px;
+  padding-bottom: 10px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoMarca {
+  text-transform: uppercase;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes {
@@ -280,7 +354,7 @@
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes .descripcion {
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoAtributos {
   text-align: left;
@@ -318,16 +392,17 @@
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoNombre {
   margin: 0px;
-  text-transform: uppercase;
-  font-family: "Montserrat";
+  font-family: "Pacifico";
   font-weight: 800;
   color: #934c20;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 1.2px;
+  padding-bottom: 10px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoMarca {
+  text-transform: uppercase;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes {
@@ -335,7 +410,7 @@
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes .descripcion {
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoAtributos {
   text-align: left;
@@ -373,16 +448,17 @@
 }
 .productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoNombre {
   margin: 0px;
-  text-transform: uppercase;
-  font-family: "Montserrat";
+  font-family: "Pacifico";
   font-weight: 800;
   color: black;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 1.2px;
+  padding-bottom: 10px;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoMarca {
+  text-transform: uppercase;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoDes {
@@ -390,7 +466,7 @@
 }
 .productos .productoModulo .productoList .productoItem.ace .productoDes .descripcion {
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoAtributos {
   text-align: left;
@@ -428,16 +504,17 @@
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoNombre {
   margin: 0px;
-  text-transform: uppercase;
-  font-family: "Montserrat";
+  font-family: "Pacifico";
   font-weight: 800;
   color: #2a2301;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 1.2px;
+  padding-bottom: 10px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoMarca {
+  text-transform: uppercase;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoDes {
@@ -445,7 +522,7 @@
 }
 .productos .productoModulo .productoList .productoItem.oli .productoDes .descripcion {
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoAtributos {
   text-align: left;
@@ -462,6 +539,22 @@
 }
 .productos .productoModulo .productoList .productoItem.oli .productoAtributos .celiaco {
   height: 15px;
+}
+
+.newsletter {
+  height: 50vh;
+  width: 100%;
+  background-color: #F8ECA0;
+}
+.newsletter .newswrapper {
+  padding: 100px;
+}
+.newsletter .newswrapper .newtext {
+  text-align: center;
+  font-family: "Pacifico";
+  font-weight: 800;
+  font-size: 35px;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
