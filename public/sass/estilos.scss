@@ -25,6 +25,17 @@ $breaklg: 1200px;
 	font-family: "Rubik";
 }
 
+.titulosmain{
+	text-align: center;
+	font-family: "Pacifico";
+	font-weight: 800;
+	font-size:40px;
+	padding-bottom:10px;
+
+}
+.des{
+	font-size:15px;	
+}
 
 .float{
 	position:fixed;
@@ -144,8 +155,8 @@ $breaklg: 1200px;
 
 			.logo{
 				transition:2s;
-				height: 185px;		
-				opacity: 0.7;
+				height: 240px;		
+				opacity: 0.8;
 				    @media only screen and (min-width: $breaklg) {
 						height: 300px;
 				    }
@@ -153,7 +164,7 @@ $breaklg: 1200px;
 			.slogan{
 				padding-top:40px;
 				font-family: "Satisfy";
-				font-size: 40px;
+				font-size: 34px;
 				color:whitesmoke;
 				opacity: 0.9;
 			}
@@ -164,6 +175,7 @@ $breaklg: 1200px;
 }
 
 
+
 // INICIO PRODUCTOS
 .productos{
 	padding:15px;
@@ -171,6 +183,7 @@ $breaklg: 1200px;
 	.categoriaModulo{
 		margin-bottom:75px;
 		.categoriaList{
+
 			list-style: none;
 
 			@keyframes loading {
@@ -198,11 +211,6 @@ $breaklg: 1200px;
 			    }
 
 			}
-
-			.animationInsta{
-
-			}
-
 			.categoriaItem{
 
 				position: relative;
@@ -226,11 +234,11 @@ $breaklg: 1200px;
 
 
 
+
 				 .nombre{
-				 	font-family: "Satisfy";
-				 	font-size: 18px;
+				 	font-size: 14px;
 				 	position: absolute;
-				 	top:125%;
+				 	top:140%;
 				 	left:50%;
 				 	transform: translate(-50% , -50%);
 				 	width: 80%;
@@ -307,6 +315,10 @@ $breaklg: 1200px;
 	.productoModulo{
 		.productoList{
 			list-style: none;
+			padding:3px 20px;
+			    @media only screen and (min-width: $breaklg) {
+					padding:20px 180px;
+			    }
 			.productoItem{
 				&.que{
 					@include productoItem($queso);
@@ -338,19 +350,34 @@ $breaklg: 1200px;
 
 //NEWSLETTER
 
-.newsletter{
+.contacto{
 	height: 50vh;
 	width: 100%;
 	background-color:#F8ECA0;
 	.newswrapper{
-		padding:100px;
-		.newtext{
-			text-align: center;
-			font-family: "Pacifico";
-			font-weight: 800;
-			font-size:35px;
-			padding-bottom:10px;
+		padding:90px;
+		text-align: center;
+	    @media only screen and (min-width: $breaklg) {
+			width: 45%;
+			margin:0 auto;
+	    }
 
+		.mailinput{
+			width: 100%;
+			text-align: center;
+			margin-top:10px;
+			border:none;
+			border-style: none;
+			background-color: transparent;
+			border-bottom:3px solid darken(#F8ECA0,30%);
+			&:focus{
+				transition: 1s;
+				border-bottom:3px solid darken(#F8ECA0,20%);	
+				outline: none;
+			}
+		}
+		button{
+			margin-top:20px;
 		}
 	}
 }

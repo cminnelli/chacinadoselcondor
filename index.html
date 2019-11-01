@@ -55,16 +55,17 @@
 
 		<script>
 			 new WOW().init()
+
 		</script>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<a href="https://api.whatsapp.com/send?phone=54911364860472&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+		<a href="https://api.whatsapp.com/send?phone=5491136486047&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
 		<i class="fa fa-whatsapp my-float"></i>
 		</a>
 
 		<!-- CATEGORIAS -->
 
-		<section class="portada">
+		<section class="portada" id="portada" data-target="newsletter">
 
 			<div class="transparencia"></div>
 
@@ -86,10 +87,7 @@
 						<svg viewbox="0 0 100 100">
 						  <circle cx="50" cy="50" r="40"/>
 						</svg>
-<!-- 						<article class="categoriaWrapp"> -->
-								<!-- <h2 class="nombre">{{x.nombre}}</h2> -->
-								<!-- <h2 class="nombre">{{tiempowow()}}</h2> -->
-<!-- 						</article> -->
+
 						<div class="transparencia"></div>
 						<p class="nombre">{{x.nombre}}</p>
 					</li>						
@@ -97,14 +95,14 @@
 			</div>
 
 			<!-- PRODUCTOS -->
-			<div class="productoModulo">
+			<div class="productoModulo" id="categorias">
 
 					<ul class="productoList row">
-						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class="fadeInUp {{p.catId}} productoItem wow col-xs-12 col-md-4 col-xs-6 shadow-lg bg-white rounded" ng-repeat="p in categoriasEleccion">
+						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class="fadeInUp {{p.catId}} productoItem wow col-xs-12 col-md-4 col-lg-6 shadow-lg bg-white rounded" ng-repeat="p in categoriasEleccion">
 
 							<article class="row">
 								<div class="col-sm-3">
-									<img class="prodImg rounded-circle shadow bg-white rounded" src="{{p.img}}">
+									<!-- <img class="prodImg rounded-circle shadow bg-white rounded" src="{{p.img}}"> -->
 								</div>
 								<div class="col-sm-9">
 									<div class="productoCabecera">
@@ -144,14 +142,27 @@
 
 		</section>
 
-		<section class="newsletter">
-			<div class="newswrapper">
-				<h3 class="newtext">Newsletter</h3>
-				<p>Suma tu mail a la base de chacinados asi recibis todas las novedades!</p>
+		<section class="contacto">
+	
+				<div class="newswrapper col-xs-12">
+			
+						<h3 class="titulosmain">Newsletter</h3>
+						<p class="des">Suma tu mail a la base de chacinados asi recibis todas las novedades!</p>
+						<input class="mailinput" type="text" name="" placeholder="Dejanos tu email!">
+						<button class="btn btn-outline-dark btn-md"> Enviar </button>
+					
+				</div>
 
-			</div>
+
+	
 
 		</section>
+
+		<div class="footer">
+			<div class="map">
+				
+			</div>
+		</div>
 
 
 

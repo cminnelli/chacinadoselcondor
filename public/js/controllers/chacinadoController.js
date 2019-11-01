@@ -5,6 +5,8 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 
 	$scope.categoriasEleccion = [];
 
+	// alert(window.screen.height)
+	
 	var timeInit = 0.2;
 
 	$scope.categorias = [ 

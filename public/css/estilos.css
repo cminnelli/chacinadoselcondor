@@ -10,6 +10,18 @@
   font-family: "Rubik";
 }
 
+.titulosmain {
+  text-align: center;
+  font-family: "Pacifico";
+  font-weight: 800;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.des {
+  font-size: 15px;
+}
+
 .float {
   position: fixed;
   width: 60px;
@@ -64,8 +76,8 @@
 }
 .portada .portadaWrapper .logoWrapp .logo {
   transition: 2s;
-  height: 185px;
-  opacity: 0.7;
+  height: 240px;
+  opacity: 0.8;
 }
 @media only screen and (min-width: 1200px) {
   .portada .portadaWrapper .logoWrapp .logo {
@@ -75,7 +87,7 @@
 .portada .portadaWrapper .logoWrapp .slogan {
   padding-top: 40px;
   font-family: "Satisfy";
-  font-size: 40px;
+  font-size: 34px;
   color: whitesmoke;
   opacity: 0.9;
 }
@@ -138,10 +150,9 @@
   }
 }
 .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
-  font-family: "Satisfy";
-  font-size: 18px;
+  font-size: 14px;
   position: absolute;
-  top: 125%;
+  top: 140%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -203,6 +214,12 @@
 }
 .productos .productoModulo .productoList {
   list-style: none;
+  padding: 3px 20px;
+}
+@media only screen and (min-width: 1200px) {
+  .productos .productoModulo .productoList {
+    padding: 20px 180px;
+  }
 }
 .productos .productoModulo .productoList .productoItem.que {
   width: 98%;
@@ -541,20 +558,37 @@
   height: 15px;
 }
 
-.newsletter {
+.contacto {
   height: 50vh;
   width: 100%;
   background-color: #F8ECA0;
 }
-.newsletter .newswrapper {
-  padding: 100px;
-}
-.newsletter .newswrapper .newtext {
+.contacto .newswrapper {
+  padding: 90px;
   text-align: center;
-  font-family: "Pacifico";
-  font-weight: 800;
-  font-size: 35px;
-  padding-bottom: 10px;
+}
+@media only screen and (min-width: 1200px) {
+  .contacto .newswrapper {
+    width: 45%;
+    margin: 0 auto;
+  }
+}
+.contacto .newswrapper .mailinput {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  border-bottom: 3px solid #eed012;
+}
+.contacto .newswrapper .mailinput:focus {
+  transition: 1s;
+  border-bottom: 3px solid #f1d941;
+  outline: none;
+}
+.contacto .newswrapper button {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
