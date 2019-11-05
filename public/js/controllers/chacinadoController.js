@@ -6,7 +6,15 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 	$scope.categoriasEleccion = [];
 
 	// alert(window.screen.height)
-	
+	window.onscroll = function(){
+		var h = window.screen.height;
+		var y = window.scrollY;
+		console.log(y);
+		if (y > (h) && y < (h*2)){
+			console.log("Scrolling correct")
+		} 
+	}
+
 	var timeInit = 0.2;
 
 	$scope.categorias = [ 

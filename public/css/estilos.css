@@ -14,7 +14,7 @@
   text-align: center;
   font-family: "Pacifico";
   font-weight: 800;
-  font-size: 40px;
+  font-size: 34px;
   padding-bottom: 10px;
 }
 
@@ -50,7 +50,7 @@
 
 .portada {
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/543733/pexels-photo-543733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://images.unsplash.com/photo-1519411792752-25c2468cccb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=754&q=80");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -63,7 +63,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .portada .portadaWrapper {
   height: 100%;
@@ -243,23 +243,26 @@
   margin: 0px;
   font-family: "Pacifico";
   font-weight: 800;
-  color: #d97300;
+  color: #colortext;
   font-size: 25px;
   letter-spacing: 1.2px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoMarca {
   text-transform: uppercase;
   padding-top: 5px;
   font-size: 18px;
   color: grey;
+  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes .descripcion {
+  font-family: "Raleway";
   padding-top: 10px;
   font-size: 16px;
+  color: #38393C;
 }
 .productos .productoModulo .productoList .productoItem.que .productoAtributos {
   text-align: left;
@@ -299,23 +302,26 @@
   margin: 0px;
   font-family: "Pacifico";
   font-weight: 800;
-  color: #222c58;
+  color: #colortext;
   font-size: 25px;
   letter-spacing: 1.2px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoMarca {
   text-transform: uppercase;
   padding-top: 5px;
   font-size: 18px;
   color: grey;
+  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes .descripcion {
+  font-family: "Raleway";
   padding-top: 10px;
   font-size: 16px;
+  color: #38393C;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoAtributos {
   text-align: left;
@@ -355,23 +361,26 @@
   margin: 0px;
   font-family: "Pacifico";
   font-weight: 800;
-  color: #e63300;
+  color: #colortext;
   font-size: 25px;
   letter-spacing: 1.2px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoMarca {
   text-transform: uppercase;
   padding-top: 5px;
   font-size: 18px;
   color: grey;
+  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes .descripcion {
+  font-family: "Raleway";
   padding-top: 10px;
   font-size: 16px;
+  color: #38393C;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoAtributos {
   text-align: left;
@@ -411,23 +420,26 @@
   margin: 0px;
   font-family: "Pacifico";
   font-weight: 800;
-  color: #934c20;
+  color: #colortext;
   font-size: 25px;
   letter-spacing: 1.2px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoMarca {
   text-transform: uppercase;
   padding-top: 5px;
   font-size: 18px;
   color: grey;
+  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes .descripcion {
+  font-family: "Raleway";
   padding-top: 10px;
   font-size: 16px;
+  color: #38393C;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoAtributos {
   text-align: left;
@@ -467,23 +479,26 @@
   margin: 0px;
   font-family: "Pacifico";
   font-weight: 800;
-  color: black;
+  color: #colortext;
   font-size: 25px;
   letter-spacing: 1.2px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoMarca {
   text-transform: uppercase;
   padding-top: 5px;
   font-size: 18px;
   color: grey;
+  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoDes .descripcion {
+  font-family: "Raleway";
   padding-top: 10px;
   font-size: 16px;
+  color: #38393C;
 }
 .productos .productoModulo .productoList .productoItem.ace .productoAtributos {
   text-align: left;
@@ -523,23 +538,26 @@
   margin: 0px;
   font-family: "Pacifico";
   font-weight: 800;
-  color: #2a2301;
+  color: #colortext;
   font-size: 25px;
   letter-spacing: 1.2px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoMarca {
   text-transform: uppercase;
   padding-top: 5px;
   font-size: 18px;
   color: grey;
+  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoDes {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoDes .descripcion {
+  font-family: "Raleway";
   padding-top: 10px;
   font-size: 16px;
+  color: #38393C;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoAtributos {
   text-align: left;
@@ -558,8 +576,41 @@
   height: 15px;
 }
 
+section {
+  margin-bottom: 40px;
+}
+
+.nosotros {
+  height: 100vh;
+  padding: 60px;
+  background-color: whitesmoke;
+  text-align: justify;
+  position: relative;
+}
+.nosotros .forma {
+  position: absolute;
+  height: 100px;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  top: -55px;
+  left: 0px;
+}
+.nosotros .nosotrosWrapper p {
+  line-height: 22px;
+  font-size: 18px;
+  color: grey;
+  font-family: "Quicksand";
+}
+.nosotros .nosotrosWrapper img {
+  width: 100%;
+  padding-right: 30px;
+  padding-bottom: 5px;
+}
+
 .contacto {
-  height: 50vh;
+  height: 400px;
   width: 100%;
   background-color: #F8ECA0;
 }

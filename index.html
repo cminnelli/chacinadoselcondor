@@ -65,6 +65,7 @@
 
 		<!-- CATEGORIAS -->
 
+
 		<section class="portada" id="portada" data-target="newsletter">
 
 			<div class="transparencia"></div>
@@ -76,13 +77,38 @@
 				</div>				
 			</div>
 		</section>
+
+
+		<section class="nosotros">
+			<!-- <div class="forma"></div> -->
+			<div class="row nosotrosWrapper">
+				<div class="col-xs-12 col-md-6">
+					<img src="/imagenes/web/picadas.png" alt="imagen">
+				</div>
+
+				<div class="col-xs-12 col-md-6">
+					<h3 class="titulosmain">Sobre Nosotros</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	</p>
+
+					<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	</p>
+					
+				</div>
+			</div>
+		</section>
+
 		<section class="productos content" >	
 
 
 			<div class="categoriaModulo">
+				<h3 class="titulosmain">Productos</h3>
 				<ul class="row categoriaList">
 
-					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class="shadow wow fadeInLeft categoriaItem"   ng-click="showProducts(x.catId)" ng-repeat="x in categorias">
+					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class=" wow fadeInLeft categoriaItem"   ng-click="showProducts(x.catId)" ng-repeat="x in categorias">
 						<!-- <div class="circle"></div> -->
 						<svg viewbox="0 0 100 100">
 						  <circle cx="50" cy="50" r="40"/>
@@ -98,7 +124,7 @@
 			<div class="productoModulo" id="categorias">
 
 					<ul class="productoList row">
-						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class="fadeInUp {{p.catId}} productoItem wow col-xs-12 col-md-4 col-lg-6 shadow-lg bg-white rounded" ng-repeat="p in categoriasEleccion">
+						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class="fadeInUp {{p.catId}} productoItem wow col-xs-12 col-md-4 col-lg-6" ng-repeat="p in categoriasEleccion">
 
 							<article class="row">
 								<div class="col-sm-3">
@@ -120,9 +146,9 @@
 										<span class="badge badge-new" ng-show="p.celiaco">
 											<img class="celiaco" src="http://fumdellum.com/wp-content/uploads/2015/07/CELIACOS-FUM-LARGE.png">
 										</span>
-										<span class="badge badge-new" ng-show="p.sal">
+<!-- 										<span class="badge badge-new" ng-show="p.sal">
 											<img class="celiaco" src="https://image.flaticon.com/icons/png/512/114/114928.png">
-										</span>								
+										</span>		 -->						
 										
 									</div>									
 								</div>
