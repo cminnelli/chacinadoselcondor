@@ -6,20 +6,48 @@
   padding: 0px;
 }
 
-* {
-  font-family: "Rubik";
+div {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .titulosmain {
   text-align: center;
-  font-family: "Pacifico";
+  font-family: "Caveat";
   font-weight: 800;
   font-size: 34px;
-  padding-bottom: 10px;
+  margin: 25px 0px;
+  z-index: 999999 !important;
+}
+.titulosmain.blanco {
+  color: white;
 }
 
 .des {
-  font-size: 15px;
+  font-size: 16.5px;
+  font-family: "Quicksand";
+  letter-spacing: 1.2;
+  color: grey;
+}
+.des.blanco {
+  color: white;
+}
+
+.myFix {
+  position: fixed !important;
+  transition: 2s;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+}
+
+.transparencia {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
 }
 
 .float {
@@ -54,16 +82,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 420px) {
   .portada {
     background-position: -100px 0px;
   }
-}
-.portada .transparencia {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .portada .portadaWrapper {
   height: 100%;
@@ -92,14 +114,35 @@
   opacity: 0.9;
 }
 
-.productos {
-  padding: 15px;
-}
 .productos .categoriaModulo {
-  margin-bottom: 75px;
+  height: 200px;
+  padding: 0px;
+  background: whitesmoke;
+  transition: 1s;
+  background-size: cover;
+  position: relative;
+}
+.productos .categoriaModulo.que {
+  background-image: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+.productos .categoriaModulo.vin {
+  background-image: url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+.productos .categoriaModulo.ext {
+  background-image: url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-position: 0px -325px;
+}
+.productos .categoriaModulo.fru {
+  background-image: url("https://images.pexels.com/photos/255428/pexels-photo-255428.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+.productos .categoriaModulo.oli {
+  background-image: url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
 .productos .categoriaModulo .categoriaList {
+  width: 90%;
+  margin: 0 auto;
   list-style: none;
+  padding-top: 85px;
 }
 @keyframes loading {
   100% {
@@ -122,7 +165,7 @@
   stroke-linecap: round;
   animation: loading 4500ms ease-in-out infinite alternate;
 }
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 420px) {
   .productos .categoriaModulo .categoriaList svg {
     display: none;
   }
@@ -142,7 +185,7 @@
   margin: 0 auto;
   cursor: pointer;
 }
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 420px) {
   .productos .categoriaModulo .categoriaList .categoriaItem {
     border-radius: 0px;
     width: 20%;
@@ -156,13 +199,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  color: grey;
+  color: white;
   letter-spacing: 1;
-  z-index: 9999;
+  z-index: 9999999;
   transition: 1s;
   cursor: pointer;
 }
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 420px) {
   .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
     border-radius: 0px;
     top: 50%;
@@ -189,7 +232,7 @@
   z-index: 0;
   cursor: pointer;
 }
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 420px) {
   .productos .categoriaModulo .categoriaList .categoriaItem .transparencia {
     border-radius: 0px;
     width: 100%;
@@ -202,7 +245,7 @@
 .productos .categoriaModulo .categoriaList .categoriaItem#vin {
   background-image: url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
-.productos .categoriaModulo .categoriaList .categoriaItem#ace {
+.productos .categoriaModulo .categoriaList .categoriaItem#ext {
   background-image: url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
   background-position: 0px -325px;
 }
@@ -212,9 +255,14 @@
 .productos .categoriaModulo .categoriaList .categoriaItem#oli {
   background-image: url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
+.productos .productoModulo {
+  height: 100vh;
+  padding-bottom: 450px;
+}
 .productos .productoModulo .productoList {
+  height: 100vh;
+  overflow-y: scroll;
   list-style: none;
-  padding: 3px 20px;
 }
 @media only screen and (min-width: 1200px) {
   .productos .productoModulo .productoList {
@@ -222,10 +270,7 @@
   }
 }
 .productos .productoModulo .productoList .productoItem.que {
-  width: 98%;
-  margin: 0 auto;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: 20px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.que .prodImg {
@@ -241,7 +286,7 @@
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoNombre {
   margin: 0px;
-  font-family: "Pacifico";
+  font-family: "Raleway";
   font-weight: 800;
   color: #colortext;
   font-size: 25px;
@@ -249,11 +294,11 @@
   padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera .productoMarca {
+  font-family: "Raleway";
   text-transform: uppercase;
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 15px;
   color: grey;
-  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes {
   text-align: left;
@@ -261,14 +306,14 @@
 .productos .productoModulo .productoList .productoItem.que .productoDes .descripcion {
   font-family: "Raleway";
   padding-top: 10px;
-  font-size: 16px;
-  color: #38393C;
+  font-size: 15px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.que .productoAtributos {
   text-align: left;
 }
 .productos .productoModulo .productoList .productoItem.que .productoAtributos .badge-new {
-  background-color: #ffa540;
+  background-color: #8e8e8e;
   color: whitesmoke;
   padding: 6px;
   font-size: 12px;
@@ -281,10 +326,7 @@
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.vin {
-  width: 98%;
-  margin: 0 auto;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: 20px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.vin .prodImg {
@@ -300,7 +342,7 @@
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoNombre {
   margin: 0px;
-  font-family: "Pacifico";
+  font-family: "Raleway";
   font-weight: 800;
   color: #colortext;
   font-size: 25px;
@@ -308,11 +350,11 @@
   padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera .productoMarca {
+  font-family: "Raleway";
   text-transform: uppercase;
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 15px;
   color: grey;
-  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes {
   text-align: left;
@@ -320,8 +362,8 @@
 .productos .productoModulo .productoList .productoItem.vin .productoDes .descripcion {
   font-family: "Raleway";
   padding-top: 10px;
-  font-size: 16px;
-  color: #38393C;
+  font-size: 15px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoAtributos {
   text-align: left;
@@ -340,10 +382,7 @@
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.emb {
-  width: 98%;
-  margin: 0 auto;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: 20px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.emb .prodImg {
@@ -359,7 +398,7 @@
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoNombre {
   margin: 0px;
-  font-family: "Pacifico";
+  font-family: "Raleway";
   font-weight: 800;
   color: #colortext;
   font-size: 25px;
@@ -367,11 +406,11 @@
   padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera .productoMarca {
+  font-family: "Raleway";
   text-transform: uppercase;
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 15px;
   color: grey;
-  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes {
   text-align: left;
@@ -379,8 +418,8 @@
 .productos .productoModulo .productoList .productoItem.emb .productoDes .descripcion {
   font-family: "Raleway";
   padding-top: 10px;
-  font-size: 16px;
-  color: #38393C;
+  font-size: 15px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoAtributos {
   text-align: left;
@@ -399,10 +438,7 @@
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.fru {
-  width: 98%;
-  margin: 0 auto;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: 20px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.fru .prodImg {
@@ -418,7 +454,7 @@
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoNombre {
   margin: 0px;
-  font-family: "Pacifico";
+  font-family: "Raleway";
   font-weight: 800;
   color: #colortext;
   font-size: 25px;
@@ -426,11 +462,11 @@
   padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera .productoMarca {
+  font-family: "Raleway";
   text-transform: uppercase;
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 15px;
   color: grey;
-  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes {
   text-align: left;
@@ -438,8 +474,8 @@
 .productos .productoModulo .productoList .productoItem.fru .productoDes .descripcion {
   font-family: "Raleway";
   padding-top: 10px;
-  font-size: 16px;
-  color: #38393C;
+  font-size: 15px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoAtributos {
   text-align: left;
@@ -457,14 +493,11 @@
 .productos .productoModulo .productoList .productoItem.fru .productoAtributos .celiaco {
   height: 15px;
 }
-.productos .productoModulo .productoList .productoItem.ace {
-  width: 98%;
-  margin: 0 auto;
-  padding: 25px;
-  margin-bottom: 25px;
+.productos .productoModulo .productoList .productoItem.ext {
+  padding: 20px;
   border-radius: 10px;
 }
-.productos .productoModulo .productoList .productoItem.ace .prodImg {
+.productos .productoModulo .productoList .productoItem.ext .prodImg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -472,55 +505,52 @@
   width: 80px;
   position: absolute;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoCabecera {
+.productos .productoModulo .productoList .productoItem.ext .productoCabecera {
   text-align: left;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoNombre {
+.productos .productoModulo .productoList .productoItem.ext .productoCabecera .productoNombre {
   margin: 0px;
-  font-family: "Pacifico";
+  font-family: "Raleway";
   font-weight: 800;
   color: #colortext;
   font-size: 25px;
   letter-spacing: 1.2px;
   padding-bottom: 3px;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoCabecera .productoMarca {
+.productos .productoModulo .productoList .productoItem.ext .productoCabecera .productoMarca {
+  font-family: "Raleway";
   text-transform: uppercase;
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 15px;
   color: grey;
-  font-weight: 700;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoDes {
+.productos .productoModulo .productoList .productoItem.ext .productoDes {
   text-align: left;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoDes .descripcion {
+.productos .productoModulo .productoList .productoItem.ext .productoDes .descripcion {
   font-family: "Raleway";
   padding-top: 10px;
-  font-size: 16px;
-  color: #38393C;
+  font-size: 15px;
+  color: grey;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoAtributos {
+.productos .productoModulo .productoList .productoItem.ext .productoAtributos {
   text-align: left;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoAtributos .badge-new {
+.productos .productoModulo .productoList .productoItem.ext .productoAtributos .badge-new {
   background-color: #393104;
   color: whitesmoke;
   padding: 6px;
   font-size: 12px;
   letter-spacing: 1.3px;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoAtributos p {
+.productos .productoModulo .productoList .productoItem.ext .productoAtributos p {
   display: inline-block;
 }
-.productos .productoModulo .productoList .productoItem.ace .productoAtributos .celiaco {
+.productos .productoModulo .productoList .productoItem.ext .productoAtributos .celiaco {
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.oli {
-  width: 98%;
-  margin: 0 auto;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: 20px;
   border-radius: 10px;
 }
 .productos .productoModulo .productoList .productoItem.oli .prodImg {
@@ -536,7 +566,7 @@
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoNombre {
   margin: 0px;
-  font-family: "Pacifico";
+  font-family: "Raleway";
   font-weight: 800;
   color: #colortext;
   font-size: 25px;
@@ -544,11 +574,11 @@
   padding-bottom: 3px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera .productoMarca {
+  font-family: "Raleway";
   text-transform: uppercase;
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 15px;
   color: grey;
-  font-weight: 700;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoDes {
   text-align: left;
@@ -556,8 +586,8 @@
 .productos .productoModulo .productoList .productoItem.oli .productoDes .descripcion {
   font-family: "Raleway";
   padding-top: 10px;
-  font-size: 16px;
-  color: #38393C;
+  font-size: 15px;
+  color: grey;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoAtributos {
   text-align: left;
@@ -587,6 +617,11 @@ section {
   text-align: justify;
   position: relative;
 }
+@media screen and (max-width: 420px) {
+  .nosotros {
+    height: auto;
+  }
+}
 .nosotros .forma {
   position: absolute;
   height: 100px;
@@ -596,12 +631,6 @@ section {
   background-color: whitesmoke;
   top: -55px;
   left: 0px;
-}
-.nosotros .nosotrosWrapper p {
-  line-height: 22px;
-  font-size: 18px;
-  color: grey;
-  font-family: "Quicksand";
 }
 .nosotros .nosotrosWrapper img {
   width: 100%;
@@ -613,10 +642,31 @@ section {
   height: 400px;
   width: 100%;
   background-color: #F8ECA0;
+  text-align: center;
+}
+.contacto .myIcon {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.contacto .myIcon.negro {
+  color: black;
+}
+.contacto h3 {
+  margin-bottom: 15px;
+}
+.contacto .emprende {
+  padding: 90px;
+  background-color: #FFC4B3;
+}
+.contacto .emprende p {
+  color: white;
 }
 .contacto .newswrapper {
   padding: 90px;
-  text-align: center;
+  background-color: #7A8ACC;
 }
 @media only screen and (min-width: 1200px) {
   .contacto .newswrapper {
@@ -631,11 +681,11 @@ section {
   border: none;
   border-style: none;
   background-color: transparent;
-  border-bottom: 3px solid #eed012;
+  border-bottom: 3px solid #b3b3b3;
 }
 .contacto .newswrapper .mailinput:focus {
   transition: 1s;
-  border-bottom: 3px solid #f1d941;
+  border-bottom: 3px solid #cccccc;
   outline: none;
 }
 .contacto .newswrapper button {

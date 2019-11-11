@@ -5,7 +5,7 @@
 @import url('../css/animate.css');
 
 $titulos: #37363D;
-$queso:#FFD5A6;
+$queso:#C1C1C1;
 $embutidos: #FFC4B3;
 $frutos:#E8B697;
 $vino:#7A8ACC;
@@ -17,27 +17,58 @@ $colortext:#09090B;
 $storyheight:50;
 $storyheightpx: $storyheight + px ;
 
-$breaksm: 380px;
+$breaksm: 420px;
 $breaklg: 1200px;
 
 .row{
 	padding: 0px;
 }
-*{
-	font-family: "Rubik";
+
+div{
+	padding-right: 15px;
+    padding-left: 15px;
 }
 
 .titulosmain{
 	text-align: center;
-	font-family: "Pacifico";
+	font-family: "Caveat";
 	font-weight: 800;
 	font-size:34px;
-	padding-bottom:10px;
+	margin:25px 0px;
+	z-index: 999999 !important;
+	&.blanco{
+		color:white;
+	}
 
 }
 .des{
-	font-size:15px;	
+	font-size:16.5px;	
+	font-family: "Quicksand";
+	letter-spacing: 1.2;
+	color:grey;
+	&.blanco{
+		color:white;
+	}
 }
+
+.myFix{
+	position: fixed !important;
+	transition:2s;
+	// height: 250px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+}
+
+.transparencia{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color:rgba(0,0,0,0.70);
+	z-index: 0;
+}
+
 
 .float{
 	position:fixed;
@@ -49,9 +80,9 @@ $breaklg: 1200px;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-  font-size:30px;
+    font-size:30px;
 	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+ 	z-index:100;
 }
 
 .centerabs{
@@ -68,12 +99,9 @@ $breaklg: 1200px;
 
 @mixin productoItem($color){
 
-	width: 98%;
-	margin:0 auto;
-	padding:25px;
-	margin-bottom:25px;	
+	padding:20px;
 	border-radius: 10px;
-
+	// height: 200px;
 	.prodImg{
 		top:50%;
 		left:50%;
@@ -87,7 +115,7 @@ $breaklg: 1200px;
 		text-align: left;
 		.productoNombre{
 			margin:0px;
-			font-family: "Pacifico";
+			font-family: "Raleway";
 			font-weight: 800;
 			// color:darken($color , 40%);
 			color:#colortext;
@@ -97,11 +125,11 @@ $breaklg: 1200px;
 
 		}
 		.productoMarca{
+			font-family: "Raleway";
 			text-transform: uppercase;
 			padding-top:5px;
-			font-size:18px;
+			font-size:15px;
 			color:grey;
-			font-weight: 700;
 		}
 	}
 	.productoDes{
@@ -109,8 +137,8 @@ $breaklg: 1200px;
 		.descripcion{
 			font-family: "Raleway";
 			padding-top:10px;
-			font-size:16px;
-			color:#38393C;
+			font-size:15px;
+			color:grey;
 
 		}
 	}
@@ -145,13 +173,7 @@ $breaklg: 1200px;
 		background-position: -100px 0px;
     }
 	
-	.transparencia{
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background-color:rgba(0,0,0,0.50);
 
-	}
 	.portadaWrapper{
 		height: 100%;
 		width: 100%;
@@ -185,13 +207,40 @@ $breaklg: 1200px;
 
 // INICIO PRODUCTOS
 .productos{
-	padding:15px;
 
 	.categoriaModulo{
-		margin-bottom:75px;
-		.categoriaList{
+		height: 200px;
+		padding:0px;
+	
+		background:whitesmoke;
+		transition: 1s;
+		background-size: cover;
+		position: relative;
 
+		&.que{
+			background-image:url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		}
+
+		&.vin{
+			background-image:url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		}
+
+		&.ext{
+			background-image:url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+			background-position: 0px -325px; 
+		}
+		
+		&.fru{
+			background-image:url("https://images.pexels.com/photos/255428/pexels-photo-255428.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		}
+		&.oli{
+			background-image:url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
+		}
+		.categoriaList{
+			width: 90%;
+			margin:0 auto;
 			list-style: none;
+			padding-top:85px;
 
 			@keyframes loading {
 			  100% {
@@ -249,9 +298,9 @@ $breaklg: 1200px;
 				 	left:50%;
 				 	transform: translate(-50% , -50%);
 				 	width: 80%;
-				 	color:grey;
+				 	color:white;
 				 	letter-spacing: 1;
-				 	z-index: 9999;
+				 	z-index: 9999999;
 				 	transition:1s;
 				 	cursor:pointer;
 				 	 @media only screen and (min-width: $breaksm) {
@@ -300,7 +349,7 @@ $breaklg: 1200px;
 					background-image:url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 				}
 
-				&#ace{
+				&#ext{
 					background-image:url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 					background-position: 0px -325px; 
 				}
@@ -322,14 +371,20 @@ $breaklg: 1200px;
 
 
 	.productoModulo{
+		height: 100vh;
+		padding-bottom:450px;
 
 		.productoList{
+			height: 100vh;
+			overflow-y: scroll;
 			list-style: none;
-			padding:3px 20px;
-			    @media only screen and (min-width: $breaklg) {
-					padding:20px 180px;
-			    }
+
+		    @media only screen and (min-width: $breaklg) {
+				padding:20px 180px;
+		    }
+
 			.productoItem{
+
 				&.que{
 					@include productoItem($queso);
 				}
@@ -343,7 +398,7 @@ $breaklg: 1200px;
 					@include productoItem($frutos);
 					
 				}
-				&.ace{
+				&.ext{
 					@include productoItem($aceituna);
 					
 				}
@@ -361,6 +416,11 @@ section{
 }
 	.nosotros{
 			height: 100vh;
+
+			@media screen and (max-width: $breaksm){
+			height: auto;
+			}
+
 			padding:60px;
 			background-color:whitesmoke;
 			text-align: justify;
@@ -381,12 +441,7 @@ section{
 
 		}
 		.nosotrosWrapper{
-			p{
-				line-height: 22px;
-				font-size: 18px;
-				color:grey;
-				font-family: "Quicksand";
-			}
+
 			img{
 				width: 100%;
 				padding-right:30px;
@@ -401,9 +456,32 @@ section{
 	height: 400px;
 	width: 100%;
 	background-color:#F8ECA0;
+	text-align: center;
+	.myIcon{
+		font-size: 60px;
+		color:white;
+		text-align: center;
+		padding:10px;
+		margin-bottom:15px;
+		&.negro{
+			color:black;
+		}
+	}
+	h3{
+		margin-bottom:15px;
+	}
+
+	.emprende{
+		padding:90px;
+		background-color: $embutidos;
+		p{
+			color:white;
+		}
+	}
+
 	.newswrapper{
 		padding:90px;
-		text-align: center;
+		background-color: $vino;
 	    @media only screen and (min-width: $breaklg) {
 			width: 45%;
 			margin:0 auto;
@@ -416,10 +494,10 @@ section{
 			border:none;
 			border-style: none;
 			background-color: transparent;
-			border-bottom:3px solid darken(#F8ECA0,30%);
+			border-bottom:3px solid darken(white,30%);
 			&:focus{
 				transition: 1s;
-				border-bottom:3px solid darken(#F8ECA0,20%);	
+				border-bottom:3px solid darken(white,20%);	
 				outline: none;
 			}
 		}
