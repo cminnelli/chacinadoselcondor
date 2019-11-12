@@ -3,7 +3,11 @@
 @import url("https://fonts.googleapis.com/css?family=Caveat|Damion|Dancing+Script|Leckerli+One|Pacifico|Satisfy&display=swap");
 @import url("../css/animate.css");
 .row {
-  padding: 0px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0px;
 }
 
 div {
@@ -42,6 +46,10 @@ div {
   z-index: 9999;
 }
 
+.myMargin {
+  margin-top: 150px;
+}
+
 .transparencia {
   position: absolute;
   height: 100%;
@@ -72,6 +80,13 @@ div {
   transform: translate(-50%, -50%);
 }
 
+.centerabslogo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .my-float {
   margin-top: 16px;
 }
@@ -82,7 +97,7 @@ div {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 500px) {
   .portada {
     background-position: -100px 0px;
   }
@@ -90,7 +105,7 @@ div {
 .portada .portadaWrapper {
   height: 100%;
   width: 100%;
-  padding: 50px;
+  padding: 30px;
 }
 .portada .portadaWrapper .logoWrapp {
   position: relative;
@@ -98,24 +113,30 @@ div {
 }
 .portada .portadaWrapper .logoWrapp .logo {
   transition: 2s;
-  height: 240px;
-  opacity: 0.8;
+  height: 260px;
+  opacity: 0.95;
 }
 @media only screen and (min-width: 1200px) {
   .portada .portadaWrapper .logoWrapp .logo {
     height: 300px;
   }
 }
+@media only screen and (min-width: 500px) {
+  .portada .portadaWrapper .logoWrapp .logo {
+    height: 220px;
+  }
+}
 .portada .portadaWrapper .logoWrapp .slogan {
-  padding-top: 40px;
+  padding-top: 0px;
+  font-weight: 700;
   font-family: "Satisfy";
-  font-size: 34px;
-  color: whitesmoke;
+  font-size: 30px;
+  color: black;
   opacity: 0.9;
 }
 
 .productos .categoriaModulo {
-  height: 200px;
+  height: 180px;
   padding: 0px;
   background: whitesmoke;
   transition: 1s;
@@ -139,8 +160,9 @@ div {
   background-image: url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
 .productos .categoriaModulo .categoriaList {
+  text-align: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto !important;
   list-style: none;
   padding-top: 85px;
 }
@@ -165,7 +187,7 @@ div {
   stroke-linecap: round;
   animation: loading 4500ms ease-in-out infinite alternate;
 }
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList svg {
     display: none;
   }
@@ -185,11 +207,10 @@ div {
   margin: 0 auto;
   cursor: pointer;
 }
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList .categoriaItem {
-    border-radius: 0px;
-    width: 20%;
-    height: 100px;
+    height: 66.5px;
+    width: 66.5px;
   }
 }
 .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
@@ -205,7 +226,7 @@ div {
   transition: 1s;
   cursor: pointer;
 }
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
     border-radius: 0px;
     top: 50%;
@@ -232,11 +253,10 @@ div {
   z-index: 0;
   cursor: pointer;
 }
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList .categoriaItem .transparencia {
-    border-radius: 0px;
-    width: 100%;
-    height: 100%;
+    height: 66.5px;
+    width: 66.5px;
   }
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#que {
@@ -257,29 +277,38 @@ div {
 }
 .productos .productoModulo {
   height: 100vh;
-  padding-bottom: 450px;
 }
 .productos .productoModulo .productoList {
   height: 100vh;
   overflow-y: scroll;
   list-style: none;
+  padding: 0px;
 }
 @media only screen and (min-width: 1200px) {
   .productos .productoModulo .productoList {
-    padding: 20px 180px;
+    padding: 20px 220px;
   }
 }
 .productos .productoModulo .productoList .productoItem.que {
-  padding: 20px;
+  transition: 2s;
+  width: 100%;
+  padding: 10px;
   border-radius: 10px;
+  height: auto;
+  box-shadow: 6px 21px 23px -5px #999;
+  margin-bottom: 8px;
 }
 .productos .productoModulo .productoList .productoItem.que .prodImg {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80px;
-  width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.productos .productoModulo .productoList .productoItem.que .prodImg img {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera {
   text-align: left;
@@ -326,16 +355,25 @@ div {
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.vin {
-  padding: 20px;
+  transition: 2s;
+  width: 100%;
+  padding: 10px;
   border-radius: 10px;
+  height: auto;
+  box-shadow: 6px 21px 23px -5px #999;
+  margin-bottom: 8px;
 }
 .productos .productoModulo .productoList .productoItem.vin .prodImg {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80px;
-  width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.productos .productoModulo .productoList .productoItem.vin .prodImg img {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera {
   text-align: left;
@@ -382,16 +420,25 @@ div {
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.emb {
-  padding: 20px;
+  transition: 2s;
+  width: 100%;
+  padding: 10px;
   border-radius: 10px;
+  height: auto;
+  box-shadow: 6px 21px 23px -5px #999;
+  margin-bottom: 8px;
 }
 .productos .productoModulo .productoList .productoItem.emb .prodImg {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80px;
-  width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.productos .productoModulo .productoList .productoItem.emb .prodImg img {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera {
   text-align: left;
@@ -438,16 +485,25 @@ div {
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.fru {
-  padding: 20px;
+  transition: 2s;
+  width: 100%;
+  padding: 10px;
   border-radius: 10px;
+  height: auto;
+  box-shadow: 6px 21px 23px -5px #999;
+  margin-bottom: 8px;
 }
 .productos .productoModulo .productoList .productoItem.fru .prodImg {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80px;
-  width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.productos .productoModulo .productoList .productoItem.fru .prodImg img {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera {
   text-align: left;
@@ -494,16 +550,25 @@ div {
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.ext {
-  padding: 20px;
+  transition: 2s;
+  width: 100%;
+  padding: 10px;
   border-radius: 10px;
+  height: auto;
+  box-shadow: 6px 21px 23px -5px #999;
+  margin-bottom: 8px;
 }
 .productos .productoModulo .productoList .productoItem.ext .prodImg {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80px;
-  width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.productos .productoModulo .productoList .productoItem.ext .prodImg img {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 .productos .productoModulo .productoList .productoItem.ext .productoCabecera {
   text-align: left;
@@ -550,16 +615,25 @@ div {
   height: 15px;
 }
 .productos .productoModulo .productoList .productoItem.oli {
-  padding: 20px;
+  transition: 2s;
+  width: 100%;
+  padding: 10px;
   border-radius: 10px;
+  height: auto;
+  box-shadow: 6px 21px 23px -5px #999;
+  margin-bottom: 8px;
 }
 .productos .productoModulo .productoList .productoItem.oli .prodImg {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80px;
-  width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.productos .productoModulo .productoList .productoItem.oli .prodImg img {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera {
   text-align: left;
@@ -612,12 +686,12 @@ section {
 
 .nosotros {
   height: 100vh;
-  padding: 60px;
+  padding: 40px;
   background-color: whitesmoke;
   text-align: justify;
   position: relative;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   .nosotros {
     height: auto;
   }
@@ -641,7 +715,6 @@ section {
 .contacto {
   height: 400px;
   width: 100%;
-  background-color: #F8ECA0;
   text-align: center;
 }
 .contacto .myIcon {

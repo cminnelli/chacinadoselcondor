@@ -36,7 +36,6 @@
 
 		<!-- ANGULAR SCRIPTS -->
 
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script> -->
 		<script src="/libs/angular/angular.min.js"></script>
 
 		<script src="/js/app.js"></script>
@@ -67,18 +66,41 @@
 
 
 		<section class="portada" id="portada" data-target="newsletter">
-			<div class="transparencia"></div>
+				<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+				    <div class="d-flex w-50 order-0">
+				        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+				            <span class="navbar-toggler-icon"></span>
+				        </button>
+				    </div>
+				    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+				        <ul class="navbar-nav">
+				                <li class="nav-item active">
+			                    <a class="nav-link ancla" href="#nosotros"> Nosotros</a>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link ancla" href="#productos"> productos</a>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link ancla" href="#busquedas"> Búsquedas</a>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link ancla" href="#contacto"> <i class="fas fa-wifi"></i> Contactanos</a>
+			                </li>
+				        </ul>
+				    </div>
+				</nav>	
+			<!-- <div class="transparencia"></div> -->
 
 			<div class="portadaWrapper">
-				<div class="logoWrapp centerabs ">
+				<div class="logoWrapp centerabslogo ">
 					<img class="logo" src="/imagenes/web/logo.png">
-					<h3 class="slogan"> El queso Argentino</h3>
+					<h3 class="slogan"> La calidad es la escencia</h3>
 				</div>				
 			</div>
 		</section>
 
 
-		<section class="nosotros">
+		<section class="nosotros" id="nosotros">
 			<!-- <div class="forma"></div> -->
 			<div class="row nosotrosWrapper">
 				<div class="col-xs-12 col-md-6">
@@ -86,21 +108,18 @@
 				</div>
 
 				<div class="col-xs-12 col-md-6">
-					<h3>Sobre Chacinados</h3>
-					<p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	</p>
+					<h3 class="titulosmain">Sobre Chacinados</h3>
+					<p class="des">Somos una empresa dedicada a la comercialización de productos lácteos, y embutidos caseros, muy reconocidos en ferias municipales de la provincia de buenos aires. Buscamos que cada persona gaste menos, garantizándole la excelencia de cada producto, ofreciéndole a través de su tarjeta EL CÓNDOR diferentes descuentos nunca vistos en ningún lado. Sumate y se uno mas de la familia. </p>
 
-					<p class="des">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<!-- 					<p class="des">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	</p>
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	</p> -->
 					
 				</div>
 			</div>
 		</section>
 
-		<section class="productos content" >	
+		<section class="productos content" id="productos" >	
 
 
 			<div class="categoriaModulo {{backCategory}}">
@@ -126,13 +145,14 @@
 			<div class="productoModulo" id="categorias">
 
 					<ul class="productoList row">
-						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class="fadeInUp {{p.catId}} productoItem wow col-xs-12 col-md-4 col-lg-6" ng-repeat="p in categoriasEleccion">
+						<li data-wow-delay="0.2s" data-wow-duration="2400ms" wow  class=" {{p.catId}} productoItem col-xs-12 col-md-4 col-lg-6" ng-repeat="p in categoriasEleccion">
 
 							<article class="row">
-								<div class="col-sm-3">
-									<!-- <img class="prodImg rounded-circle shadow bg-white rounded" src="{{p.img}}"> -->
+								<div class="col-3 prodImg">
+									<img src="{{p.img}}">
 								</div>
-								<div class="col-sm-9">
+
+								<div class="col-9">
 									<div class="productoCabecera">
 										<h3 class="productoNombre">{{p.nombre}} <span class="productoMarca">{{p.marca}}</span> </h3>
 																			
@@ -145,9 +165,9 @@
 										<span class="badge badge-new">{{p.um}}</span>
 										<span class="badge badge-new">{{p.curacion}}</span>
 										<span class="badge badge-new">{{p.color}}</span>
-<!-- 										<span class="badge badge-new" ng-show="p.celiaco">
+										<span class="badge badge-new" ng-show="p.celiaco">
 											<img class="celiaco" src="http://fumdellum.com/wp-content/uploads/2015/07/CELIACOS-FUM-LARGE.png">
-										</span> -->
+										</span>
 <!-- 										<span class="badge badge-new" ng-show="p.sal">
 											<img class="celiaco" src="https://image.flaticon.com/icons/png/512/114/114928.png">
 										</span>		 -->						
@@ -170,14 +190,17 @@
 
 		</section>
 
-		<section class="contacto">
+		<section class="contacto" id="contacto">
 			<div class="row">
 				<div class="emprende col-md-6 col-xs-12">
 					<i class="fas fa-store myIcon negro"></i>
 					<h3 class="blanco">Emprende con Chacinados</h3>
 					<p class="des">Sumate a nuestro proyecto, consultanos de que se trata!</p>
-
-					<button ng-click="whatsapp()" class="btn btn-dark btn-md"> Consultar por Whatsapp </button>
+					<div class="form-group">
+					  <label for="usr">nombre</label>
+					  <input type="text" class="form-control" id="usr" ng-model="myName">
+					</div>
+					<button ng-click="whatsapp(myName)" class="btn btn-dark btn-md"> Consultar por Whatsapp </button>
 										
 				</div>
 
