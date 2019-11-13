@@ -14,10 +14,13 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 			console.log("arranca")
 			$(".categoriaModulo").addClass("myFix")
 			$(".productoModulo").addClass("myMargin")
+			$(".titulosain").hide(1000); 
 
 		}else{
+			// $(".categoriaModulo").height("0px");
 			$(".categoriaModulo").removeClass("myFix");
 			$(".productoModulo").removeClass("myMargin")
+			$(".titulosmain").show(1000); 
 		}
 	}
 
@@ -33,7 +36,7 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 	]
 
 	$scope.productos = [
-		{nombre:"Guda" , marca:"Sancor",  um:"10kg" , color:"Beige",  cat:"Quesos" , catId:"que" , des:"Queso de cabra y con un tinte beige, excelente gusto y un tono de salida tendiendo al blablablabala lorem ipsum" , img:"https://previews.123rf.com/images/simicv/simicv1809/simicv180900035/109202324-sliced-fresh-emmental-cheese-on-white-background-cow-cheese.jpg" , celiaco:true },
+		{nombre:"Guda" , marca:"Sancor",  um:"10kg" , color:"Beige",  cat:"Quesos" , catId:"que" , des:"Queso de cabra y con un tinte beige, excelente gust" , img:"https://previews.123rf.com/images/simicv/simicv1809/simicv180900035/109202324-sliced-fresh-emmental-cheese-on-white-background-cow-cheese.jpg" , celiaco:true },
 		{nombre:"Mardel" , marca:"Veronica",  um:"13kg" , color:"Beige",  cat:"Quesos" , catId:"que" , des:"Degustar este queso, es el mejor queso de todos" ,  celiaco:false , sal:true ,  img:"https://tcs.imgix.net/2015/06/GOUDA-CUMIN-STACKED-TOP.jpg?auto=compress%2Cformat&ixlib=php-1.2.1"},
 		{nombre:"Regianatto" , marca:"Sancor",  um:"13kg" , color:"Purpura",  cat:"Quesos" , catId:"que" , des:"Degustar este queso, es el mejor queso de todos" ,  celiaco:false , sal:true ,  img:"https://tcs.imgix.net/2015/06/GOUDA-CUMIN-STACKED-TOP.jpg?auto=compress%2Cformat&ixlib=php-1.2.1"},
 		{nombre:"Regianatto" , marca:"Sancor",  um:"13kg" , color:"Purpura",  cat:"Quesos" , catId:"que" , des:"Degustar este queso, es el mejor queso de todos" ,  celiaco:false , sal:true ,  img:"https://tcs.imgix.net/2015/06/GOUDA-CUMIN-STACKED-TOP.jpg?auto=compress%2Cformat&ixlib=php-1.2.1"},
@@ -55,7 +58,9 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 		{nombre:"Aceituna" , marca:"El Sol",   um:"120" , color:"verde" ,  cat:"Extras" , catId:"ext" , des:"Las mejores aceitunas del condado" , celiaco:true , sal:true , img:"https://www.frutosare.com.ar/wp-content/uploads/2017/04/nuez-con-cascara.jpg"},
 	]
 	$scope.init = function(){
-			$scope.categoriasEleccion = $scope.productos;
+			$scope.categoriasEleccion = $scope.productos.filter(function(item){
+				return item.catId == "que"
+			});
 
 	}
 

@@ -11,6 +11,7 @@ $frutos:#E8B697;
 $vino:#7A8ACC;
 $oliva:#F2CB05;
 $aceituna:#99840A;
+$newblack:rgb(33, 37, 41);
 
 $colortext:#09090B;
 
@@ -26,6 +27,7 @@ $breaklg: 1200px;
     padding-right: 15px;
 	padding-left: 15px;
 	margin:0px;
+	padding:0px;
 }
 
 div{
@@ -38,7 +40,7 @@ div{
 	font-family: "Caveat";
 	font-weight: 800;
 	font-size:34px;
-	margin:25px 0px;
+	margin:10px 0px;
 	z-index: 999999 !important;
 	&.blanco{
 		color:white;
@@ -47,17 +49,53 @@ div{
 }
 .des{
 	font-size:16.5px;	
-	font-family: "Quicksand";
-	letter-spacing: 1.2;
-	color:grey;
+	font-family: "Raleway";
+	letter-spacing: 1.1;
+	color:$newblack;
+	margin:25px 0px;
 	&.blanco{
 		color:white;
+		font-weight: 700;
+	}
+}
+
+.bigIcon{
+	position: absolute;
+	font-size:370px;
+	top:50%;
+	left:32%;
+	transform: translate(-50%,-50%);
+	color:rgba(0,0,0,0.05);
+	z-index: -999;
+
+}
+.myIcon{
+	font-size: 60px;
+	color:white;
+	text-align: center;
+	padding:10px;
+	margin-bottom:15px;
+	&.negro{
+		color:$newblack;
+	}
+	&.centrado{		
+		font-size:40px;
+		margin-bottom: 0px;
+		margin:0 auto;
+		margin-bottom:0px;
+	}
+	&.mini{
+		font-size: 25px;
+		margin-bottom: 0px;
+		margin:2px 0px;
+		padding:5px;
 	}
 }
 
 .myFix{
 	position: fixed !important;
-	transition:2s;
+	transition:5s;
+	background-color: whitesmoke !important;
 	// height: 250px;
     width: 100%;
     top: 0px;
@@ -66,15 +104,17 @@ div{
 }
 
 .myMargin{
-	margin-top:150px;
+	margin-top:155px;
 }
 
 .transparencia{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color:rgba(0,0,0,0.70);
+	background-color:rgba(0,0,0,0.80);
 	z-index: 0;
+
+
 }
 
 
@@ -82,8 +122,8 @@ div{
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:20px;
+	right:20px;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
@@ -115,11 +155,11 @@ div{
 @mixin productoItem($color){
     transition: 2s;
 	width: 100%;
-	padding:10px;
+	padding:20px;
 	border-radius: 10px;
-	height: auto;
-	box-shadow: 6px 21px 23px -5px #999;
-	margin-bottom: 8px;
+	max-height: 200px;
+	margin-bottom: 12px;
+	// box-shadow: 6px 21px 23px -5px #999;
 
 	.prodImg{
 		position: relative;
@@ -131,7 +171,7 @@ div{
 		left:0px;	
 		height:120px;
 		width: 120px;
-		border-radius:50%;
+		// border-radius:50%;
 		}
 
 	}
@@ -143,7 +183,7 @@ div{
 			font-weight: 800;
 			// color:darken($color , 40%);
 			color:#colortext;
-			font-size:25px;
+			font-size:19px;
 			letter-spacing: 1.2px;
 			padding-bottom: 3px;
 
@@ -152,7 +192,7 @@ div{
 			font-family: "Raleway";
 			text-transform: uppercase;
 			padding-top:5px;
-			font-size:15px;
+			font-size:14px;
 			color:grey;
 		}
 	}
@@ -162,7 +202,7 @@ div{
 			font-family: "Raleway";
 			padding-top:10px;
 			font-size:15px;
-			color:grey;
+			color:$newblack;
 
 		}
 	}
@@ -180,7 +220,7 @@ div{
 			display: inline-block;
 		}
 		.celiaco{
-			height: 15px;
+			height: 11px;
 		}
 	}
 }
@@ -201,7 +241,7 @@ div{
 	.portadaWrapper{
 		height: 100%;
 		width: 100%;
-		padding:30px;
+		padding:120px 10px;
 		.logoWrapp{
 		position: relative;
 		text-align: center;
@@ -209,21 +249,21 @@ div{
 			.logo{
 				transition:2s;
 				height: 260px;		
-				opacity: 0.95;
-				    @media only screen and (min-width: $breaklg) {
-						height: 300px;
-				    }
-				        @media only screen and (min-width: $breaksm) {
-				    		height: 220px;
-				        }
+				opacity: 0.85;
+			    @media only screen and (min-width: $breaklg) {
+					height: 300px;
+			    }
+		        @media only screen and (min-width: $breaksm) {
+		    		height: 190px;
+		        }
 			}
 
 			.slogan{
-				padding-top:0px;
+				padding-top:30px;
 				font-weight: 700;
 				font-family: "Satisfy";
 				font-size: 30px;
-				color:black;
+				color:whitesmoke;
 				opacity: 0.9;
 			}
 
@@ -238,39 +278,45 @@ div{
 .productos{
 
 	.categoriaModulo{
-		height: 180px;
+		height: 160px;
 		padding:0px;
-	
-		background:whitesmoke;
+		box-shadow: 6px 21px 23px -5px #999;
+		background-color: rgba(250,250,250,0.80);
 		transition: 1s;
 		background-size: cover;
 		position: relative;
 
-		&.que{
-			background-image:url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
-		}
+		// &.que{
+		// 	background-image:url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		// }
 
-		&.vin{
-			background-image:url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
-		}
+		// &.vin{
+		// 	background-image:url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		// }
 
-		&.ext{
-			background-image:url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
-			background-position: 0px -325px; 
-		}
+		// &.ext{
+		// 	background-image:url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		// 	background-position: 0px -325px; 
+		// }
 		
-		&.fru{
-			background-image:url("https://images.pexels.com/photos/255428/pexels-photo-255428.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		// &.fru{
+		// 	background-image:url("https://images.pexels.com/photos/255428/pexels-photo-255428.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+		// }
+		// &.oli{
+		// 	background-image:url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
+		// }
+
+		.uten{
+			display: block;
+			text-align: center;
 		}
-		&.oli{
-			background-image:url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
-		}
+
 		.categoriaList{
 			text-align: center;
 			width: 90%;
 			margin:0 auto !important;
 			list-style: none;
-			padding-top:85px;
+			padding-top:5px;
 
 			@keyframes loading {
 			  100% {
@@ -297,6 +343,7 @@ div{
 			    }
 
 			}
+
 			.categoriaItem{
 
 				position: relative;
@@ -328,7 +375,7 @@ div{
 				 	left:50%;
 				 	transform: translate(-50% , -50%);
 				 	width: 80%;
-				 	color:white;
+				 	color:$newblack;
 				 	letter-spacing: 1;
 				 	z-index: 9999999;
 				 	transition:1s;
@@ -336,7 +383,7 @@ div{
 				 	 @media only screen and (min-width: $breaksm) {
 				 		border-radius: 0px;
 				 		top:50%;
-				 		color:whitesmoke;
+				 		color:$newblack;
 				 	 }
 				 	&:hover{
 				 		transition:1s;
@@ -363,6 +410,7 @@ div{
 					background-color:rgba(0,0,0,0.3); 
 					z-index: 0;
 					cursor:pointer;
+					box-shadow: 2px 2px 3px #999;
 					 @media only screen and (min-width: $breaksm) {
 						height: $storyheight * 1.33 + px ;
 						width: $storyheight *1.33 + px;
@@ -401,7 +449,6 @@ div{
 
 	.productoModulo{
 		height: 100vh;
-
 
 		.productoList{
 			height: 100vh;
@@ -442,21 +489,19 @@ div{
 	}
 }
 
-section{
-	margin-bottom: 40px;
-}
-	.nosotros{
-			height: 100vh;
 
+
+	.nosotros{
+		padding-top:10px;
+			height: 100vh;
 			@media screen and (max-width: $breaksm){
-			height: auto;
+			text-align: center;
 			}
 
 			padding:40px;
 			background-color:whitesmoke;
 			text-align: justify;
 			position: 	relative;
-			// overflow-y: 	hidden;
 
 		.forma{
 			position: absolute;
@@ -464,74 +509,101 @@ section{
 			margin:0 auto;
 			width: 80%;
 			border-radius: 50%;
-
 			background-color:whitesmoke;
-
 			top:-55px;
 			left:0px;
 
 		}
 		.nosotrosWrapper{
+			position: relative;
+			.imgDiv{
+				position: absolute;
+				transform: translate(-50%,-50%);
+				top: 65%;
+				left: -100px;
+				opacity: 0.45;
+				overflow-y: hidden;
+				// height: 150px;
+				img{
+					height:400px;
+					padding-right:30px;
+					padding-bottom:5px;
+				}
 
-			img{
-				width: 100%;
-				padding-right:30px;
-				padding-bottom:5px;
 			}
+			.textDiv{
+				p{
+					text-align: justify;
+				}
+			}
+
 		}
 	}
+
+.ferias{
+	height: 100vh;
+	.cabecera{
+		margin-top:20px;
+		text-align: center;
+	}
+}
+
 
 //NEWSLETTER
 
 .contacto{
 	height: 400px;
 	width: 100%;
-	// background-color:#F8ECA0;
 	text-align: center;
-	.myIcon{
-		font-size: 60px;
-		color:white;
+	i{
+		margin-top:0px;
+	}
+	.mailinput{
+		width: 100%;
 		text-align: center;
-		padding:10px;
-		margin-bottom:15px;
-		&.negro{
-			color:black;
+		margin-top:10px;
+		border:none;
+		border-style: none;
+		background-color: transparent;
+		border-bottom:3px solid $newblack;
+		color:$newblack;
+		padding:5px;
+		z-index: 999 !important;
+		&:focus{
+			transition: 1s;
+			border-bottom:3px solid $newblack;	
+			outline: none;
 		}
 	}
+
+
 	h3{
 		margin-bottom:15px;
 	}
 
 	.emprende{
-		padding:90px;
+		padding:70px;
 		background-color: $embutidos;
+		position: relative;
+		overflow: hidden;
+		z-index: 99999 !important;
 		p{
 			color:white;
 		}
 	}
 
 	.newswrapper{
-		padding:90px;
+		padding:70px;
 		background-color: $vino;
+		position: relative;
+		overflow: hidden;
+		z-index: 99999 !important;
 	    @media only screen and (min-width: $breaklg) {
 			width: 45%;
 			margin:0 auto;
 	    }
 
-		.mailinput{
-			width: 100%;
-			text-align: center;
-			margin-top:10px;
-			border:none;
-			border-style: none;
-			background-color: transparent;
-			border-bottom:3px solid darken(white,30%);
-			&:focus{
-				transition: 1s;
-				border-bottom:3px solid darken(white,20%);	
-				outline: none;
-			}
-		}
+
 		button{
 			margin-top:20px;
 		}
