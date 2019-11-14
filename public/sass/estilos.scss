@@ -250,13 +250,13 @@ div{
 
 			.logo{
 				transition:2s;
-				height: 260px;		
+				height: 230px;		
 				opacity: 0.85;
 			    @media only screen and (min-width: $breaklg) {
 					height: 300px;
 			    }
 		        @media only screen and (min-width: $breaksm) {
-		    		height: 190px;
+		    		height: 140px;
 		        }
 			}
 

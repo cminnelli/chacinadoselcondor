@@ -150,7 +150,7 @@ div {
 }
 .portada .portadaWrapper .logoWrapp .logo {
   transition: 2s;
-  height: 260px;
+  height: 230px;
   opacity: 0.85;
 }
 @media only screen and (min-width: 1200px) {
@@ -160,7 +160,7 @@ div {
 }
 @media only screen and (min-width: 500px) {
   .portada .portadaWrapper .logoWrapp .logo {
-    height: 190px;
+    height: 140px;
   }
 }
 .portada .portadaWrapper .logoWrapp .slogan {
