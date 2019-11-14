@@ -20,8 +20,7 @@ div {
   text-align: center;
   font-family: "Caveat";
   font-weight: 800;
-  font-size: 34px;
-  margin: 10px 0px;
+  font-size: 36px;
   z-index: 999999 !important;
 }
 .titulosmain.blanco {
@@ -31,9 +30,9 @@ div {
 .des {
   font-size: 16.5px;
   font-family: "Raleway";
-  letter-spacing: 1.1;
-  color: #212529;
-  margin: 25px 0px;
+  letter-spacing: 1;
+  color: black;
+  margin: 20px 0px;
 }
 .des.blanco {
   color: white;
@@ -67,9 +66,9 @@ div {
   margin-bottom: 0px;
 }
 .myIcon.mini {
-  font-size: 25px;
+  font-size: 35px;
   margin-bottom: 0px;
-  margin: 2px 0px;
+  margin: 3px 0px;
   padding: 5px;
 }
 
@@ -91,8 +90,10 @@ div {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 0;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -99;
 }
 
 .float {
@@ -107,7 +108,7 @@ div {
   text-align: center;
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
-  z-index: 100;
+  z-index: 999999;
 }
 
 .centerabs {
@@ -171,11 +172,35 @@ div {
   color: whitesmoke;
   opacity: 0.9;
 }
+.portada .portadaWrapper .social-icons {
+  padding: 35px 0px;
+  position: absolute !important;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 0px;
+}
+@media only screen and (max-width: 600px) {
+  .portada .portadaWrapper .social-icons {
+    top: 73%;
+  }
+}
+.portada .portadaWrapper .social-icons li {
+  display: inline-block;
+}
+.portada .portadaWrapper .social-icons a {
+  color: white;
+  font-size: 33px;
+  padding: 0px 5px;
+}
+.portada .portadaWrapper .social-icons a:hover {
+  transition: 1s;
+  color: white;
+}
 
 .productos .categoriaModulo {
-  height: 160px;
-  padding: 0px;
-  box-shadow: 6px 21px 23px -5px #999;
+  height: 120px;
+  padding: 5% 3px;
   background-color: rgba(250, 250, 250, 0.8);
   transition: 1s;
   background-size: cover;
@@ -751,18 +776,63 @@ div {
 }
 
 .ferias {
+  padding-top: 20px;
   height: 100vh;
-  background: url("/imagenes/web/ferias1.jpg");
+  background: url("/imagenes/web/ferias4.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -200px 0px;
   z-index: -999;
+  position: relative;
 }
 .ferias .cabecera {
   color: whitesmoke;
   margin-top: 20px;
   text-align: center;
   z-index: 99999 !important;
+}
+.ferias .cuerpo .des {
+  font-size: 26px;
+  color: #F2CB05;
+  opacity: 0.9;
+  font-family: "Caveat";
+  line-height: 24px;
+  text-align: center;
+  padding: 0px 15px;
+}
+.ferias .cuerpo .direcciones {
+  color: white;
+}
+.ferias .cuerpo .direcciones .direccionesList {
+  list-style: none;
+  text-align: left;
+  padding-left: 20px;
+}
+.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp {
+  margin-top: 40px;
+}
+.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .mapWrapp {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  height: 0;
+}
+.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .lugar {
+  font-size: 22px;
+  color: #C1C1C1;
+  font-weight: 700;
+}
+.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .localidad {
+  font-size: 16px;
+  color: white;
+}
+.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .horarios {
+  font-size: 15px;
+  color: #FFC4B3;
+  font-style: italic;
 }
 
 .contacto {
@@ -792,6 +862,7 @@ div {
 }
 .contacto h3 {
   margin-bottom: 15px;
+  font-family: "Roboto";
 }
 .contacto .emprende {
   padding: 70px;
