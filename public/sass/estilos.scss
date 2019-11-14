@@ -111,7 +111,7 @@ div{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color:rgba(0,0,0,0.80);
+	background-color:rgba(0,0,0,0.70);
 	z-index: 0;
 
 
@@ -169,8 +169,9 @@ div{
 		position: absolute;
 		top:0px;
 		left:0px;	
-		height:120px;
-		width: 120px;
+		border-radius:50px;
+		height:80px;
+		width: 80px;
 		// border-radius:50%;
 		}
 
@@ -200,6 +201,7 @@ div{
 		text-align: left;
 		.descripcion{
 			font-family: "Raleway";
+			padding:0px;
 			padding-top:10px;
 			font-size:15px;
 			color:$newblack;
@@ -542,9 +544,16 @@ div{
 
 .ferias{
 	height: 100vh;
+	background:url("/imagenes/web/ferias1.jpg"); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -200px 0px;
+	z-index: -999;
 	.cabecera{
+		color: whitesmoke;
 		margin-top:20px;
 		text-align: center;
+		z-index: 99999 !important;
 	}
 }
 

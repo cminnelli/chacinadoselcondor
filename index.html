@@ -29,7 +29,9 @@
 		<link rel="stylesheet" href="css/estilos.css">
 
 
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<!-- 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+
+<script src="https://kit.fontawesome.com/a3544d9e34.js" crossorigin="anonymous"></script>
 
 
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -59,14 +61,14 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<a href="https://api.whatsapp.com/send?phone=5491136486047&text=" class="float" target="_blank">
-		<i class="fa fa-whatsapp my-float"></i>
+		<i class="fab fa-whatsapp my-float"></i>
 		</a>
 
 		<!-- CATEGORIAS -->
 
 
 		<section class="portada" id="portada" data-target="newsletter">
-				<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<!-- 		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
 				    <div class="d-flex w-50 order-0">
 				        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
 				            <span class="navbar-toggler-icon"></span>
@@ -88,7 +90,7 @@
 			                </li>
 				        </ul>
 				    </div>
-				</nav>	
+				</nav>	 -->
 			<!-- <div class="transparencia"></div> -->
 
 			<div class="portadaWrapper">
@@ -103,17 +105,17 @@
 		<section class="nosotros" id="nosotros">
 			<!-- <div class="forma"></div> -->
 			<div class="row nosotrosWrapper">
-				<div class="col-xs-12 col-md-6">
+				<div class="imgDiv">
 					<img src="/imagenes/web/picadas.png" alt="imagen">
 				</div>
 
-				<div class="col-xs-12 col-md-6">
+				<div class="col-xs-12 col-md-6 textDiv">
+					<i class="fas fa-cheese myIcon negro"></i>
 					<h3 class="titulosmain">Sobre Chacinados</h3>
 					<p class="des">Somos una empresa dedicada a la comercialización de productos lácteos, y embutidos caseros, muy reconocidos en ferias municipales de la provincia de buenos aires. Buscamos que cada persona gaste menos, garantizándole la excelencia de cada producto, ofreciéndole a través de su tarjeta EL CÓNDOR diferentes descuentos nunca vistos en ningún lado. Sumate y se uno mas de la familia. </p>
+					<br>
+	
 
-<!-- 					<p class="des">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	</p> -->
 					
 				</div>
 			</div>
@@ -121,13 +123,13 @@
 
 		<section class="productos content" id="productos" >	
 
-
 			<div class="categoriaModulo {{backCategory}}">
-				
-				<div class="transparencia">
-					<h3 class="titulosmain blanco">Productos</h3>
+
+				<div class="uten">
+					<i class="fas fa-utensils myIcon mini negro"></i>
 				</div>
 				<ul class="categoriaList row">
+
 
 					<li id="{{x.catId}}" data-wow-delay="0.2s" data-wow-duration="1200ms"   class=" wow fadeInLeft categoriaItem"   ng-click="showProducts(x.catId)" ng-repeat="x in categorias">
 						<!-- <div class="circle"></div> -->
@@ -168,10 +170,7 @@
 										<span class="badge badge-new" ng-show="p.celiaco">
 											<img class="celiaco" src="http://fumdellum.com/wp-content/uploads/2015/07/CELIACOS-FUM-LARGE.png">
 										</span>
-<!-- 										<span class="badge badge-new" ng-show="p.sal">
-											<img class="celiaco" src="https://image.flaticon.com/icons/png/512/114/114928.png">
-										</span>		 -->						
-										
+
 									</div>									
 								</div>
 							</article>
@@ -183,35 +182,45 @@
 
 		<div>
 
-
-
-
 		</div>
+
+		<section class="ferias" id="ferias">
+			<div class="transparencia"></div>
+			<div class="cabecera">
+				<i class="fas fa-store myIcon mini"></i>
+				<h3 class="titulosmain">Ferias</h3>				
+			</div>
+
+		</section>
+
 
 		</section>
 
 		<section class="contacto" id="contacto">
 			<div class="row">
 				<div class="emprende col-md-6 col-xs-12">
-					<i class="fas fa-store myIcon negro"></i>
-					<h3 class="blanco">Emprende con Chacinados</h3>
-					<p class="des">Sumate a nuestro proyecto, consultanos de que se trata!</p>
+					<!-- <i class="fas fa-store myIcon negro"></i> -->
+					<i class="fab fa-font-awesome-flag bigIcon"></i>
+					<i class="fab fa-font-awesome-flag myIcon negro"></i>
+					<h3>Emprende con Chacinados</h3>
+					<p class="des blanco">Sumate a nuestro proyecto, consultanos de que se trata!</p>
 					<div class="form-group">
-					  <label for="usr">nombre</label>
-					  <input type="text" class="form-control" id="usr" ng-model="myName">
+					  <!-- <label for="usr">nombre</label> -->
+					  <input placeholder="Dejanos tu nombre!" type="text" class="mailinput" class="form-control" id="usr" ng-model="myName">
 					</div>
-					<button ng-click="whatsapp(myName)" class="btn btn-dark btn-md"> Consultar por Whatsapp </button>
+					<button ng-click="whatsapp(myName)" class="btn btn-dark btn-md"> Consultar por  <i class="fab fa-whatsapp my-float"></i></button>
 										
 				</div>
 
 				<div class="newswrapper col-md-6 col-xs-12">
-						<i class="fas fa-store negro myIcon"></i>
+						<i class="far fa-newspaper myIcon negro"></i>
+						<i class="far fa-newspaper bigIcon"></i>
 						<!-- <i class="far fa-newspapper myIcon negro"></i> -->
 						<h3>Newsletter</h3>
 						<p class="des blanco">Suma tu mail a la base de chacinados asi recibis todas las novedades!</p>
-						<input class="mailinput" type="text" name="" placeholder="Dejanos tu email!">
+						<input class="mailinput" type="text"ng-model="myMail" placeholder="Dejanos tu email!">
 
-						<button ng-click="whatsapp()" class="btn btn-dark btn-md"> Consultar por Whatsapp </button>
+						<button ng-click="whatsapp(myMail)" class="btn btn-dark btn-block"> Enviar mail por  <i class="fab fa-whatsapp my-float"></i>  </button>
 					
 				</div>
 				

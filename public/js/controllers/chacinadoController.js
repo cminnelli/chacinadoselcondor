@@ -68,7 +68,7 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 		if(txt == ""){
 			alert("Insertar nombre");
 		}else{
-			var msg = "Hola, soy "+ txt + " me interesaria saber mas sobre como emprender en chacinados!"
+			var msg = "Hola, soy "+ txt + " me interesaria saber más acerca como emprender en Chacinados el Condor!"
 			window.location = "https://api.whatsapp.com/send?phone=5491136486047&text=" + msg;
 		}
 	}

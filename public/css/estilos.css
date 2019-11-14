@@ -91,7 +91,7 @@ div {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
 
@@ -332,8 +332,9 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 120px;
-  width: 120px;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoCabecera {
   text-align: left;
@@ -359,6 +360,7 @@ div {
 }
 .productos .productoModulo .productoList .productoItem.que .productoDes .descripcion {
   font-family: "Raleway";
+  padding: 0px;
   padding-top: 10px;
   font-size: 15px;
   color: #212529;
@@ -395,8 +397,9 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 120px;
-  width: 120px;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoCabecera {
   text-align: left;
@@ -422,6 +425,7 @@ div {
 }
 .productos .productoModulo .productoList .productoItem.vin .productoDes .descripcion {
   font-family: "Raleway";
+  padding: 0px;
   padding-top: 10px;
   font-size: 15px;
   color: #212529;
@@ -458,8 +462,9 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 120px;
-  width: 120px;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoCabecera {
   text-align: left;
@@ -485,6 +490,7 @@ div {
 }
 .productos .productoModulo .productoList .productoItem.emb .productoDes .descripcion {
   font-family: "Raleway";
+  padding: 0px;
   padding-top: 10px;
   font-size: 15px;
   color: #212529;
@@ -521,8 +527,9 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 120px;
-  width: 120px;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoCabecera {
   text-align: left;
@@ -548,6 +555,7 @@ div {
 }
 .productos .productoModulo .productoList .productoItem.fru .productoDes .descripcion {
   font-family: "Raleway";
+  padding: 0px;
   padding-top: 10px;
   font-size: 15px;
   color: #212529;
@@ -584,8 +592,9 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 120px;
-  width: 120px;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
 }
 .productos .productoModulo .productoList .productoItem.ext .productoCabecera {
   text-align: left;
@@ -611,6 +620,7 @@ div {
 }
 .productos .productoModulo .productoList .productoItem.ext .productoDes .descripcion {
   font-family: "Raleway";
+  padding: 0px;
   padding-top: 10px;
   font-size: 15px;
   color: #212529;
@@ -647,8 +657,9 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 120px;
-  width: 120px;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoCabecera {
   text-align: left;
@@ -674,6 +685,7 @@ div {
 }
 .productos .productoModulo .productoList .productoItem.oli .productoDes .descripcion {
   font-family: "Raleway";
+  padding: 0px;
   padding-top: 10px;
   font-size: 15px;
   color: #212529;
@@ -740,10 +752,17 @@ div {
 
 .ferias {
   height: 100vh;
+  background: url("/imagenes/web/ferias1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -200px 0px;
+  z-index: -999;
 }
 .ferias .cabecera {
+  color: whitesmoke;
   margin-top: 20px;
   text-align: center;
+  z-index: 99999 !important;
 }
 
 .contacto {
