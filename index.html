@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="theme-color" content="#26D0CE">
+		<meta name="theme-color" content="#27282B">
 
 
 		<link href='imagenes/web/LOGO3.png' rel='shortcut icon' type='image/png'>
@@ -165,11 +165,11 @@
 						<li data-wow-delay="0.2s" data-wow-duration="1200ms" class=" {{p.catId}} productoItem col-xs-12 col-md-4 col-lg-6 wow fadeInUp" ng-repeat="p in categoriasEleccion">
 
 							<article class="row">
-								<div class="col-3 prodImg">
+								<div class="col-2 prodImg">
 									<img src="{{p.img}}">
 								</div>
 
-								<div class="col-9">
+								<div class="col-10 productoItem">
 									<div class="productoCabecera">
 										<h3 class="productoNombre">{{p.nombre}} <span class="productoMarca">{{p.marca}}</span> </h3>
 																			
@@ -204,17 +204,17 @@
 			<i class="fas fa-store bigIcon"></i>
 
 			<div class="cabecera">
-				<i class="fas fa-store myIcon mini  wow rubberBand" data-wow-delay="1s" data-wow-duration="0.3s"></i>
-				<h3 class="titulosmain  wow fadeIn" data-wow-delay="0.4s" data-wow-duration="1s">Ferias</h3>				
+				<i class="fas fa-store myIcon mini  wow rubberBand" data-wow-delay="0.2s" data-wow-duration="1s"></i>
+				<h3 class="titulosmain  wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">Ferias</h3>				
 			</div>
 
 			<div class="cuerpo text-center">
-				<p class="des blanco wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">Veni a degustar nuestros productos caseros
+				<p class="des wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1s">Veni a degustar nuestros productos caseros
 				en las ferias que hacemos todos los findes de semana.</p>
 
 				<div class="direcciones">
 					<ul class="direccionesList">
-						<li class="direccionesWrapp wow fadeInLeft" data-wow-delay="0.5s" data-wow-duration="0.5s"  ng-repeat="d in direcciones">
+						<li class="direccionesWrapp wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1s"  ng-repeat="d in direcciones">
 							<div class="mapWrapp">
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36111.36285434645!2d-58.52577117848117!3d-34.51815867099191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca2dac2ebc53f%3A0x9392de0f6c407164!2sParque%20Del%20Palacio%20Municipal!5e0!3m2!1ses!2sar!4v1573754925828!5m2!1ses!2sar" width="450" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 							</div>
@@ -234,26 +234,27 @@
 
 		<section class="contacto" id="contacto">
 			<div class="row">
-				<div class="emprende col-md-6 col-xs-12">
+				<div class="emprende col-md-6 col-xs-12" data-wow-delay="0.3s" data-wow-duration="1s">	
 					<!-- <i class="fas fa-store myIcon negro"></i> -->
+
 					<i class="fas fa-cheese bigIcon"></i>
-					<i class="fab fa-font-awesome-flag myIcon negro wow rubberBand"></i>
+					<i class="fab fa-font-awesome-flag myIcon negro wow fadeInLeft"></i>
 					<h3 class="wow fadeIn">Emprende con Chacinados</h3>
-					<p class="des blanco wow fadeIn">Sumate a nuestro proyecto, consultanos de que se trata!</p>
+					<p class="des wow fadeIn">Sumate a nuestro proyecto, consultanos de que se trata!</p>
 					<div class="form-group">
 					  <!-- <label for="usr">nombre</label> -->
 					  <input placeholder="Dejanos tu nombre!" type="text" class="mailinput" class="form-control wow fadeInUp" id="usr" ng-model="myName">
 					</div>
-					<button ng-click="whatsapp(myName , 'emp')" class="btn btn-dark btn-md wow fadeIn"> Consultar por  <i class="fab fa-whatsapp my-float"></i></button>
-										
+					<button ng-click="whatsapp(myName , 'emp')" class="btn btn-dark btn-block wow fadeIn"> Consultar por  <i class="fab fa-whatsapp my-float"></i></button>
+					<!-- <div class="transparencia"></div>					 -->
 				</div>
 
-				<div class="newswrapper col-md-6 col-xs-12">
-						<i class="far fa-newspaper myIcon negro wow rubberBand"></i>
-						<i class="far fa-newspaper bigIcon"></i>
+				<div class="newswrapper col-md-6 col-xs-12" data-wow-delay="0.3s" data-wow-duration="1s" >
+						<i class="far fa-newspaper myIcon wow fadeIn"></i>
+						<i class="far fa-newspaper bigIcon wow fadeInLeft "></i>
 						<!-- <i class="far fa-newspapper myIcon negro"></i> -->
 						<h3 class="wow fadeIn">Newsletter</h3>
-						<p class="des blanco wow fadeIn">Suma tu mail a la base de chacinados asi recibis todas las novedades!</p>
+						<p class="des wow fadeIn">Suma tu mail a la base de chacinados asi recibis todas las novedades!</p>
 						<input class="mailinput wow fadeInUp" type="text"ng-model="myMail" placeholder="Dejanos tu email!">
 
 						<button ng-click="whatsapp(myMail , 'new')" class="btn btn-dark btn-block wow fadeIn"> Enviar mail por  <i class="fab fa-whatsapp my-float"></i>  </button>
@@ -267,12 +268,44 @@
 	
 
 		</section>
+<!-- 
+		<div class="footer wow fadeInUp">
 
-		<div class="footer">
-			<div class="map">
-				
-			</div>
-		</div>
+					<div class="footerWrapper"> -->
+						<!-- <div class="logoWrapper"> -->
+							<!-- <img class="logoImg wow rubberBand" src="/imagenes/web/LOGO4.png" /> -->
+<!-- 						</div>
+
+						<div class="social ">
+							<ul class="social-icons">
+								<li>
+									<a href="https://www.linkedin.com/company/ingenio-t%C3%A9cnico" target="_blank" class="wow fadeInUp">
+										<i class="fab fa-linkedin"></i>
+									</a>
+								</li>
+						
+							</ul>
+						</div>
+
+							<div class="textoFooter">
+								<p class="textoit"> <i class="fas fa-map-marker-alt"></i> <span>Gral. Lavalle 1349 , Vicente López (CP: 1638)
+									</span> Buenos Aires, Argentina</p>
+								<p class="textoit"><i class="far fa-copyright"></i> INGENIO TECNICO 2019</p>
+							</div>
+
+							
+						</div>
+						
+					<div class="broom">
+						<p class="textoit" onclick="contactMe()">DISEÑO POR BROOM LAB  <i class="far fa-copyright"></i> </p>
+					</div>
+
+						
+					</div>
+
+
+				</div>  -->
+
 
 
 

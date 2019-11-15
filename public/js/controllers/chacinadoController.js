@@ -11,7 +11,7 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 		var h = window.screen.height;
 		var y = window.scrollY;
 		console.log(y);
-		if (y -10 > (h*2) && y < (h*3)){
+		if (y > (h*2) && y < (h*3)){
 			console.log("arranca")
 			$(".categoriaModulo").addClass("myFix")
 			$(".productoModulo").addClass("myMargin")
