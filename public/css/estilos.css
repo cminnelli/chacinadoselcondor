@@ -92,7 +92,7 @@ div {
   width: 100%;
   top: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.65);
   z-index: -99;
 }
 
@@ -131,6 +131,7 @@ div {
 
 .portada {
   height: 100vh;
+  position: relative;
   background-image: url("https://images.unsplash.com/photo-1519411792752-25c2468cccb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=754&q=80");
   background-size: cover;
   background-repeat: no-repeat;
@@ -139,6 +140,9 @@ div {
   .portada {
     background-position: -100px 0px;
   }
+}
+.portada .transparencia {
+  z-index: 0 !important;
 }
 .portada .portadaWrapper {
   height: 100%;
@@ -151,8 +155,7 @@ div {
 }
 .portada .portadaWrapper .logoWrapp .logo {
   transition: 2s;
-  height: 230px;
-  opacity: 0.85;
+  height: 205px;
 }
 @media only screen and (min-width: 1200px) {
   .portada .portadaWrapper .logoWrapp .logo {
@@ -349,7 +352,7 @@ div {
   width: 100%;
   padding: 0px;
   border-radius: 10px;
-  max-height: 200px;
+  height: 155px !important;
   margin-bottom: 12px;
 }
 .productos .productoModulo .productoList .productoItem.que .prodImg {
@@ -357,7 +360,7 @@ div {
   overflow: hidden;
 }
 .productos .productoModulo .productoList .productoItem.que .prodImg img {
-  box-shadow: 6px 21px 26px -5px #999;
+  box-shadow: 5px 14px 15px -5px #999;
   position: absolute;
   top: 50%;
   left: 10px;
@@ -423,7 +426,7 @@ div {
   width: 100%;
   padding: 0px;
   border-radius: 10px;
-  max-height: 200px;
+  height: 155px !important;
   margin-bottom: 12px;
 }
 .productos .productoModulo .productoList .productoItem.vin .prodImg {
@@ -431,7 +434,7 @@ div {
   overflow: hidden;
 }
 .productos .productoModulo .productoList .productoItem.vin .prodImg img {
-  box-shadow: 6px 21px 26px -5px #999;
+  box-shadow: 5px 14px 15px -5px #999;
   position: absolute;
   top: 50%;
   left: 10px;
@@ -497,7 +500,7 @@ div {
   width: 100%;
   padding: 0px;
   border-radius: 10px;
-  max-height: 200px;
+  height: 155px !important;
   margin-bottom: 12px;
 }
 .productos .productoModulo .productoList .productoItem.emb .prodImg {
@@ -505,7 +508,7 @@ div {
   overflow: hidden;
 }
 .productos .productoModulo .productoList .productoItem.emb .prodImg img {
-  box-shadow: 6px 21px 26px -5px #999;
+  box-shadow: 5px 14px 15px -5px #999;
   position: absolute;
   top: 50%;
   left: 10px;
@@ -571,7 +574,7 @@ div {
   width: 100%;
   padding: 0px;
   border-radius: 10px;
-  max-height: 200px;
+  height: 155px !important;
   margin-bottom: 12px;
 }
 .productos .productoModulo .productoList .productoItem.fru .prodImg {
@@ -579,7 +582,7 @@ div {
   overflow: hidden;
 }
 .productos .productoModulo .productoList .productoItem.fru .prodImg img {
-  box-shadow: 6px 21px 26px -5px #999;
+  box-shadow: 5px 14px 15px -5px #999;
   position: absolute;
   top: 50%;
   left: 10px;
@@ -645,7 +648,7 @@ div {
   width: 100%;
   padding: 0px;
   border-radius: 10px;
-  max-height: 200px;
+  height: 155px !important;
   margin-bottom: 12px;
 }
 .productos .productoModulo .productoList .productoItem.ext .prodImg {
@@ -653,7 +656,7 @@ div {
   overflow: hidden;
 }
 .productos .productoModulo .productoList .productoItem.ext .prodImg img {
-  box-shadow: 6px 21px 26px -5px #999;
+  box-shadow: 5px 14px 15px -5px #999;
   position: absolute;
   top: 50%;
   left: 10px;
@@ -719,7 +722,7 @@ div {
   width: 100%;
   padding: 0px;
   border-radius: 10px;
-  max-height: 200px;
+  height: 155px !important;
   margin-bottom: 12px;
 }
 .productos .productoModulo .productoList .productoItem.oli .prodImg {
@@ -727,7 +730,7 @@ div {
   overflow: hidden;
 }
 .productos .productoModulo .productoList .productoItem.oli .prodImg img {
-  box-shadow: 6px 21px 26px -5px #999;
+  box-shadow: 5px 14px 15px -5px #999;
   position: absolute;
   top: 50%;
   left: 10px;

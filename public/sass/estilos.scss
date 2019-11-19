@@ -114,7 +114,7 @@ div{
 	width: 100%;
 	top:0px;
 	left:0px;
-	background-color:rgba(0,0,0,0.75);
+	background-color:rgba(0,0,0,0.65);
 	z-index: -99;
 
 
@@ -160,7 +160,7 @@ div{
 	width: 100%;
 	padding:0px;
 	border-radius: 10px;
-	max-height: 200px;
+	height: 155px !important;
 	margin-bottom: 12px;
 
 
@@ -169,7 +169,7 @@ div{
 		overflow: hidden;
 		img{
 
-		box-shadow: 6px 21px 26px -5px #999;	
+		box-shadow: 5px 14px 15px -5px #999;	
 		position: absolute;
 		top:50%;
 		left:10px;	
@@ -247,6 +247,7 @@ div{
 
 .portada{
 	height: 100vh;
+	position: relative;
 	//background-image:url("https://images.pexels.com/photos/543733/pexels-photo-543733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 	background-image:url("https://images.unsplash.com/photo-1519411792752-25c2468cccb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=754&q=80");	
 	background-size: cover;
@@ -255,6 +256,9 @@ div{
 		background-position: -100px 0px;
     }
 	
+	.transparencia{
+		z-index: 0 !important;
+	}
 
 	.portadaWrapper{
 		height: 100%;
@@ -266,8 +270,8 @@ div{
 
 			.logo{
 				transition:2s;
-				height: 230px;		
-				opacity: 0.85;
+				height: 205px;		
+				// opacity: 0.85;
 			    @media only screen and (min-width: $breaklg) {
 					height: 300px;
 			    }
