@@ -6,6 +6,28 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 	$scope.categoriasEleccion = [];
 	$scope.backCategory = "que"
 
+	$scope.menuTog = false;
+
+	  $scope.myMenu = function(){
+         if ($scope.menuTog == false){
+                         $(".menu").fadeIn(500);
+                         $scope.menuTog = true;
+         }else{
+                         $(".menu").fadeOut(500);
+                         $scope.menuTog = false;
+         }
+
+	  }
+
+	
+
+	  $scope.outMenu = function(){
+             setTimeout(function(){
+                 $(".menu").fadeOut(500);
+             },200)
+
+	  }
+
 	$scope.activateProd = function(){
 
 		var h = window.screen.height;

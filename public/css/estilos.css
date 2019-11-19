@@ -16,6 +16,10 @@ div {
   padding-left: 15px;
 }
 
+body {
+  position: relative;
+}
+
 .titulosmain {
   text-align: center;
   font-family: "Caveat";
@@ -39,13 +43,55 @@ div {
   font-weight: 700;
 }
 
+.menu {
+  z-index: 9999999999;
+  position: fixed;
+  background: #212529;
+  /* fallback for old browsers */
+  background-size: contain;
+  top: 0px;
+  left: 0px;
+  width: 80%;
+  display: none;
+  height: 100vh;
+  text-align: center;
+  opacity: 0.98;
+}
+.menu .menuList {
+  list-style: none;
+  margin-top: 50px;
+}
+.menu .menuList .menuItem {
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+}
+.menu .menuList .menuItem a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: "Raleway";
+}
+.menu img {
+  margin-top: 30px;
+  height: 110px;
+}
+
+.menuIcon {
+  font-size: 30px;
+  top: 30px;
+  right: 20px;
+  color: #F2C879;
+  position: fixed;
+  z-index: 99999999999999;
+}
+
 .bigIcon {
   position: absolute;
   font-size: 370px;
-  top: 50%;
-  left: 32%;
+  top: 20%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.1);
   z-index: -999;
 }
 
@@ -102,13 +148,16 @@ div {
   height: 60px;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
+  background-color: #9DE89D;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 999999;
+}
+.float i {
+  color: white;
 }
 
 .centerabs {
@@ -168,10 +217,9 @@ div {
   }
 }
 .portada .portadaWrapper .logoWrapp .slogan {
-  padding-top: 40px;
-  font-weight: 700;
+  padding-top: 50px;
   font-family: "Satisfy";
-  font-size: 30px;
+  font-size: 26px;
   color: whitesmoke;
   opacity: 0.9;
 }
@@ -179,14 +227,14 @@ div {
   opacity: 0.9;
   padding: 35px 0px;
   position: absolute !important;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-left: 0px;
 }
 @media only screen and (max-width: 500px) {
   .portada .portadaWrapper .social-icons {
-    top: 75%;
+    top: 70%;
   }
 }
 .portada .portadaWrapper .social-icons li {
@@ -341,6 +389,7 @@ div {
   overflow-y: scroll;
   list-style: none;
   padding: 0px;
+  padding-bottom: 50px;
 }
 @media only screen and (min-width: 1200px) {
   .productos .productoModulo .productoList {
@@ -409,7 +458,7 @@ div {
   padding-left: 5px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoItem .productoAtributos .badge-new {
-  background-color: #8e8e8e;
+  background-color: #e9a21c;
   color: whitesmoke;
   padding: 6px;
   font-size: 12px;
@@ -853,7 +902,7 @@ div {
   z-index: 99999 !important;
 }
 .ferias .cuerpo .des {
-  color: #F2CB05;
+  color: #F2C879;
   opacity: 0.9;
   font-family: "Raleway";
   line-height: 23px;
@@ -882,7 +931,7 @@ div {
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .lugar {
   font-size: 22px;
-  color: #C1C1C1;
+  color: #7D86E8;
   font-weight: 700;
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .localidad {
@@ -891,7 +940,7 @@ div {
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .horarios {
   font-size: 15px;
-  color: #FFC4B3;
+  color: #ABC7AC;
   font-style: italic;
 }
 
@@ -925,25 +974,39 @@ div {
   font-family: "Roboto";
   color: whitesmoke;
 }
+.contacto button {
+  margin-top: 60px;
+}
 .contacto .emprende {
   padding: 70px;
   background-color: #FFC4B3;
+  height: 100vh;
+  background: url("https://img.freepik.com/free-photo/boards-with-unfocused-background_1253-55.jpg?size=626&ext=jpg");
+  background-size: cover;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
   z-index: 99999 !important;
+}
+.contacto .emprende ::-webkit-input-placeholder {
+  color: #212529;
 }
 .contacto .emprende h3 {
   color: #212529;
 }
-.contacto .emprende p {
-  color: white;
-}
 .contacto .newswrapper {
   padding: 70px;
   background-color: #212529;
+  height: 100vh;
+  background: url("https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/000/681/812/000681812-673x6731253030045picadas.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
   z-index: 99999 !important;
+}
+.contacto .newswrapper ::-webkit-input-placeholder {
+  color: whitesmoke;
 }
 @media only screen and (min-width: 1200px) {
   .contacto .newswrapper {
@@ -951,70 +1014,75 @@ div {
     margin: 0 auto;
   }
 }
-.contacto .newswrapper button {
-  margin-top: 20px;
+
+html, body {
+  height: 100%;
 }
 
-.footer {
-  height: 400px;
+footer {
+  height: 700px;
+  display: block;
+  clear: both;
+  bottom: 0px;
+  left: 0px;
 }
-.footer .footerWrapper {
+footer .footerWrapper {
   padding: 40px;
-  height: auto;
+  height: 100%;
   background-color: black;
 }
-.footer .footerWrapper .logoWrapper {
+footer .footerWrapper .logoWrapper {
   text-align: center;
   width: 250px;
   margin: 0 auto;
   padding: 10px;
 }
-.footer .footerWrapper .logoWrapper .logoImg {
+footer .footerWrapper .logoWrapper .logoImg {
   width: 120px;
 }
-.footer .footerWrapper .social {
+footer .footerWrapper .social {
   text-align: center;
 }
-.footer .footerWrapper .social ul {
+footer .footerWrapper .social ul {
   width: 100%;
   background: none;
   display: inline-block !important;
   padding-left: 0px;
 }
-.footer .footerWrapper .social ul li {
+footer .footerWrapper .social ul li {
   padding: 10px;
   text-decoration: none;
   display: inline-block;
 }
-.footer .footerWrapper .social ul li a {
+footer .footerWrapper .social ul li a {
   color: whitesmoke;
   font-size: 30px;
   padding: 0px 5px;
 }
-.footer .footerWrapper .textoFooter {
+footer .footerWrapper .textoFooter {
   color: whitesmoke;
 }
-.footer .footerWrapper .textoFooter .textoit {
+footer .footerWrapper .textoFooter .textoit {
   color: whitesmoke;
   font-family: "Raleway";
 }
-.footer .footerWrapper .textoFooter p, .footer .footerWrapper .textoFooter span {
+footer .footerWrapper .textoFooter p, footer .footerWrapper .textoFooter span {
   margin-top: 0px;
   padding: 5px;
   text-align: center;
   color: whitesmoke;
 }
-.footer .broom {
+footer .broom {
   font-family: "Raleway";
   width: 100%;
   background-color: black;
   padding: 5px;
   color: white;
 }
-.footer .broom .textoit {
+footer .broom .textoit {
   color: white;
 }
-.footer .broom p {
+footer .broom p {
   text-align: center;
   opacity: 0.85;
 }

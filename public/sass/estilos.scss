@@ -5,7 +5,7 @@
 @import url('../css/animate.css');
 
 $titulos: #37363D;
-$queso:#C1C1C1;
+$queso:#F2C879;
 $embutidos: #FFC4B3;
 $frutos:#E8B697;
 $vino:#7A8ACC;
@@ -35,12 +35,15 @@ div{
     padding-left: 15px;
 }
 
+body{
+	position: relative;
+}
+
 .titulosmain{
 	text-align: center;
 	font-family: "Caveat";
 	font-weight: 800;
 	font-size:36px;
-	// margin:10px 0px;
 	z-index: 999999 !important;
 	&.blanco{
 		color:white;
@@ -60,13 +63,65 @@ div{
 
 }
 
+
+.menu{
+
+	z-index: 9999999999;
+	position: fixed;
+	background: $newblack;  /* fallback for old browsers */
+	// background:url("/web/menu1.jpg");
+	background-size: contain;
+	top:0px;
+	left:0px;
+	width:   80%;
+	display: none;
+	height: 100vh;
+	text-align: center;
+	opacity: 0.98;
+
+	.menuList{
+		list-style: none;
+		margin-top:50px;
+		.menuItem{
+			padding:10px;
+			text-align: left;
+			font-size: 20px;
+			a{
+				color:whitesmoke;
+				text-decoration: none;
+				font-family: "Raleway";
+			}
+		}
+
+	}
+
+	img{
+		margin-top:30px;
+		height: 110px;
+	}
+
+}
+
+ 
+
+.menuIcon{
+
+    font-size:30px;
+    top:30px;
+  	right:20px;
+    color:$queso;
+    position:fixed;
+    z-index: 99999999999999;
+
+}
+
 .bigIcon{
 	position: absolute;
 	font-size:370px;
-	top:50%;
-	left:32%;
+	top:20%;
+	left:50%;
 	transform: translate(-50%,-50%);
-	color:rgba(0,0,0,0.05);
+	color:rgba(0,0,0,0.1);
 	z-index: -999;
 
 }
@@ -127,13 +182,16 @@ div{
 	height:60px;
 	bottom:20px;
 	right:20px;
-	background-color:#25d366;
+	background-color:#9DE89D;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
     font-size:30px;
 	box-shadow: 2px 2px 3px #999;
  	z-index:999999;
+ 	i{
+ 		color:white;
+ 	}
 }
 
 .centerabs{
@@ -281,10 +339,10 @@ div{
 			}
 
 			.slogan{
-				padding-top:40px;
-				font-weight: 700;
+				padding-top:50px;
+				// font-weight: 700;
 				font-family: "Satisfy";
-				font-size: 30px;
+				font-size: 26px;
 				color:whitesmoke;
 				opacity: 0.9;
 			}
@@ -295,11 +353,11 @@ div{
 		opacity: 0.9;			
 		padding:35px 0px;
 		position: absolute !important;
-		top:80%;
+		top:75%;
 		left:50%;
 		transform: translate(-50%,-50%);					
 		@media only screen and  (max-width:$breaksm) {
-			top:75%;
+			top:70%;
 		}		
 		padding-left:0px;
 		li{
@@ -506,6 +564,7 @@ div{
 			overflow-y: scroll;
 			list-style: none;
 			padding:0px;
+			padding-bottom: 50px;
 
 		    @media only screen and (min-width: $breaklg) {
 				padding:20px 220px;
@@ -610,7 +669,7 @@ div{
 	}
 	.cuerpo{
 		.des{
-			color:$oliva;
+			color:$queso;
 			opacity: 0.9;
 			// font-weight: 700;
 			font-family: "Raleway";
@@ -641,7 +700,7 @@ div{
 					}
 					.lugar{
 						font-size: 22px;
-						color:$queso;
+						color:#7D86E8;
 						font-weight: 700;
 					}
 					.localidad{
@@ -650,7 +709,7 @@ div{
 					}
 					.horarios{
 						font-size: 15px;
-						color:$embutidos;
+						color:#ABC7AC;
 						font-style: italic;						
 					}
 				}
@@ -694,52 +753,71 @@ div{
 		color:whitesmoke;
 	}
 
+	button{
+		margin-top:60px;
+	}
+
 	.emprende{
 		padding:70px;
 		background-color: $embutidos;
-		// background:url("/imagenes/web/quesos.jpg");
-		// background-size: cover;
-		// background-attachment: fixed;		
+		height: 100vh;
+   		 background: url("https://img.freepik.com/free-photo/boards-with-unfocused-background_1253-55.jpg?size=626&ext=jpg");
+    	background-size: cover;
+		background-attachment: fixed;	
 
 		position: relative;
 		overflow: hidden;
 		z-index: 99999 !important;
+		::-webkit-input-placeholder {
+		color:$newblack;
+		}
 
 		h3{
 			color:$newblack;
 		}
 		p{
-			color:white;
+			// color:white;
 		}
 	}
 
 	.newswrapper{
 		padding:70px;
 		background-color: $newblack;
+		height: 100vh;
+   		 background: url("https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/000/681/812/000681812-673x6731253030045picadas.jpg");
+    	background-size: cover;
+		background-attachment: fixed;
 		position: relative;
 		overflow: hidden;
 		z-index: 99999 !important;
+
+		::-webkit-input-placeholder {
+		color:whitesmoke;
+		}
+
 	    @media only screen and (min-width: $breaklg) {
 			width: 45%;
 			margin:0 auto;
 	    }
 
 
-		button{
-			margin-top:20px;
-		}
 	}
 }
 
+html, body {
+  height: 100%;
+}
 
-
-
-.footer{
-	height: 400px;
+footer{
+	height: 700px ;
+	display: block;
+	clear:both;
+	bottom:0px;
+	left:0px;
 		
 	.footerWrapper{
 		padding:40px;
-		height: auto;
+		height: 100%;
 		background-color:darken($newblack , 45%);
 
 		.logoWrapper{
