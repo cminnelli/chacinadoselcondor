@@ -37,13 +37,14 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 			console.log("arranca")
 			$(".categoriaModulo").addClass("myFix")
 			$(".productoModulo").addClass("myMargin")
-			$(".titulosain").hide(1000); 
+			$(".menuIcon").fadeOut(400); 
+
 
 		}else{
 			// $(".categoriaModulo").height("0px");
 			$(".categoriaModulo").removeClass("myFix");
 			$(".productoModulo").removeClass("myMargin")
-			$(".titulosmain").show(1000); 
+			$(".menuIcon").fadeIn(400); 
 		}		
 	}
 
@@ -55,10 +56,12 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 
 	$scope.categorias = [ 
 	{nombre:"Quesos" , catId:"que" ,  img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
-	{nombre:"Bebidas" , catId:"vin" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
+	{nombre:"Bebidas" , catId:"vin" , img:"https://images.pexels.com/photos/301692/pexels-photo-301692.jpeg?cs=srgb&dl=alcohol-background-bar-301692.jpg&fm=jpg"},
 	{nombre:"Frutos" , catId:"fru" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
-	{nombre:"Extras" , catId:"ext" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
-	{nombre:"Oliva" , catId:"oli" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}
+	{nombre:"Embutidos" , catId:"ext" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
+	{nombre:"Oliva" , catId:"oli" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"},
+	{nombre:"Veganos" , catId:"veg" , img:"https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}
+
 	]
 
 	$scope.direcciones = [{lugar: "Plaza de las Carretas" , localidad: "Muñiz, San Miguel", direccion:"Av. Presidente peron esquina San José" , horario:"Sábado y Domingo 10:00hs-21:00hs" , mapUrl:"https://goo.gl/maps/N9RMAkzQpbtkMdTHA"},
@@ -103,7 +106,7 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 				msg = "Hola, soy "+ txt + " me interesaria saber más acerca como emprender en Chacinados el Condor!"
 			}
 
-			window.location = "https://api.whatsapp.com/send?phone=5491136486047&text=" + msg;
+			window.open("https://api.whatsapp.com/send?phone=5491136486047&text=" + msg);
 		}
 	}
 
@@ -126,11 +129,18 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 		}
 	}
 
-	$scope.showProducts= function(cat){
+	$scope.showProducts= function(cat, ind){
 		$scope.backCategory = cat;
 		$scope.categoriasEleccion = $scope.productos.filter(function(item){
 			return item.catId == cat;
 		})
+
+		$("svg").eq(ind).fadeIn(400);
+		setTimeout(function(item){
+			$("svg").eq(ind).fadeOut(400)
+		},3500)
+
+		// alert(ind)
 		console.log(cat)
 		console.log($scope.categoriasEleccion)
 	}

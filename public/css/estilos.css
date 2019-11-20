@@ -264,7 +264,7 @@ body {
 }
 .productos .categoriaModulo .categoriaList {
   text-align: center;
-  width: 90%;
+  width: 98%;
   margin: 0 auto !important;
   list-style: none;
   padding-top: 5px;
@@ -277,10 +277,11 @@ body {
   }
 }
 .productos .categoriaModulo .categoriaList svg {
-  top: -9.4px;
-  left: -8.5px;
-  height: 66.5px;
-  width: 66.5px;
+  display: none;
+  top: -8.5px;
+  left: -8px;
+  height: 63.84px;
+  width: 63.84px;
   position: absolute;
   fill: none;
   stroke: #8a3ab8;
@@ -296,10 +297,11 @@ body {
   }
 }
 .productos .categoriaModulo .categoriaList .categoriaItem {
+  cursor: pointer;
   position: relative;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 48px;
+  width: 48px;
   display: inline-block;
   padding: 0px 0px;
   position: relative;
@@ -312,12 +314,12 @@ body {
 }
 @media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList .categoriaItem {
-    height: 66.5px;
-    width: 66.5px;
+    height: 63.84px;
+    width: 63.84px;
   }
 }
 .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
-  font-size: 14px;
+  font-size: 12px;
   position: absolute;
   top: 140%;
   left: 50%;
@@ -359,15 +361,16 @@ body {
 }
 @media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList .categoriaItem .transparencia {
-    height: 66.5px;
-    width: 66.5px;
+    height: 63.84px;
+    width: 63.84px;
   }
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#que {
   background-image: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#vin {
-  background-image: url("https://images.pexels.com/photos/1545529/pexels-photo-1545529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-image: url("https://images.pexels.com/photos/301692/pexels-photo-301692.jpeg?cs=srgb&dl=alcohol-background-bar-301692.jpg&fm=jpg");
+  background-position: -100px -325px;
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#ext {
   background-image: url("https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
@@ -378,6 +381,9 @@ body {
 }
 .productos .categoriaModulo .categoriaList .categoriaItem#oli {
   background-image: url("https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+.productos .categoriaModulo .categoriaList .categoriaItem#veg {
+  background-image: url("https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
 }
 .productos .productoModulo {
   height: 100vh;
@@ -458,7 +464,7 @@ body {
   padding-left: 5px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoItem .productoAtributos .badge-new {
-  background-color: #e9a21c;
+  background-color: black;
   color: whitesmoke;
   padding: 6px;
   font-size: 12px;
@@ -902,7 +908,7 @@ body {
   z-index: 99999 !important;
 }
 .ferias .cuerpo .des {
-  color: #F2C879;
+  color: whitesmoke;
   opacity: 0.9;
   font-family: "Raleway";
   line-height: 23px;
@@ -921,17 +927,15 @@ body {
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp {
   margin-top: 40px;
 }
-.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .mapWrapp {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  overflow: hidden;
-  padding: 0px;
-  position: relative;
-  height: 0;
-}
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .lugar {
-  font-size: 22px;
-  color: #7D86E8;
+  text-decoration: none;
+  cursor: pointer;
+  color: #dd4a39;
+  font-weight: 700;
+}
+.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .lugar h3 {
+  cursor: pointer;
+  font-size: 20px;
   font-weight: 700;
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .localidad {
@@ -969,10 +973,13 @@ body {
   border-bottom: 3px solid #212529;
   outline: none;
 }
+.contacto .mailinput.blanco {
+  color: whitesmoke;
+}
 .contacto h3 {
   margin-bottom: 15px;
   font-family: "Roboto";
-  color: whitesmoke;
+  color: #FFC4B3;
 }
 .contacto button {
   margin-top: 60px;

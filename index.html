@@ -138,15 +138,12 @@
 
 			<div class="categoriaModulo {{backCategory}}">
 
-<!-- 				<div class="uten">
-					<i class="fas fa-utensils myIcon mini negro wow rubberBand"></i>
-				</div> -->
 				<ul class="categoriaList row">
 
 
-					<li id="{{x.catId}}" data-wow-duration="1200ms" data-wow-delay="0.5s"   class=" wow fadeInLeft categoriaItem"   ng-click="showProducts(x.catId)" ng-repeat="x in categorias">
-						<!-- <div class="circle"></div> -->
-						<svg viewbox="0 0 100 100">
+					<li id="{{x.catId}}" data-wow-duration="1200ms" data-wow-delay="0.5s"   class=" wow fadeInLeft categoriaItem"   ng-click="showProducts(x.catId , $index)" ng-repeat="x in categorias">
+		
+						<svg  viewbox="0 0 100 100">
 							<circle cx="50" cy="50" r="40"/>
 						</svg>
 
@@ -178,8 +175,6 @@
 								<div class="productoAtributos">
 
 									<span class="badge badge-new">{{p.um}}</span>
-									<span class="badge badge-new">{{p.curacion}}</span>
-									<span class="badge badge-new">{{p.color}}</span>
 									<span class="badge badge-new" ng-show="p.celiaco">
 										<img class="celiaco" src="http://fumdellum.com/wp-content/uploads/2015/07/CELIACOS-FUM-LARGE.png">
 									</span>
@@ -193,13 +188,9 @@
 
 			</div>	
 
-			<div>
-
-			</div>
+			</section>
 
 			<section class="ferias" id="ferias">
-
-				<!-- <i class="fas fa-store bigIcon"></i> -->
 
 				<div class="cabecera">
 					<i class="fas fa-store myIcon mini  wow rubberBand" data-wow-delay="0.2s" data-wow-duration="1s"></i>
@@ -213,10 +204,7 @@
 					<div class="direcciones">
 						<ul class="direccionesList">
 							<li class="direccionesWrapp wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1s"  ng-repeat="d in direcciones">
-								<div class="mapWrapp">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36111.36285434645!2d-58.52577117848117!3d-34.51815867099191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca2dac2ebc53f%3A0x9392de0f6c407164!2sParque%20Del%20Palacio%20Municipal!5e0!3m2!1ses!2sar!4v1573754925828!5m2!1ses!2sar" width="450" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-								</div>
-								<h3 class="lugar"> <i class="fas fa-map-marker-alt"></i> {{d.lugar}} </h3>
+								<a class="lugar" href="{{d.mapUrl}}" target="_blank"><h3> <i class="fas fa-map-marker-alt"></i> {{d.lugar}} </h3></a>
 								<h4 class="localidad">{{d.localidad + " " + d.direccion}}</h4>
 								<h4 class="horarios"><i class="far fa-clock"></i> {{d.horario}}  </h4>
 								<li>
@@ -241,7 +229,6 @@
 							<h3 class="wow fadeIn">Emprende con Chacinados</h3>
 							<p class="des wow fadeIn">Sumate a nuestro proyecto, consultanos de que se trata!</p>
 							<div class="form-group">
-								<!-- <label for="usr">nombre</label> -->
 								<input placeholder="Dejanos tu nombre!" type="text" class="mailinput" class="form-control wow fadeInUp" id="usr" ng-model="myName">
 							</div>
 							<button ng-click="whatsapp(myName , 'emp')" class="btn btn-dark btn-block wow fadeIn"> Consultar por  <i class="fab fa-whatsapp my-float"></i></button>
@@ -251,11 +238,9 @@
 						<div id="newsletter" class="newswrapper col-md-6 col-xs-12" data-wow-delay="0.3s" data-wow-duration="1s" >
 							<div class="transparencia"></div>
 							<i class="far fa-newspaper myIcon wow fadeIn"></i>
-							<!-- <i class="far fa-newspaper bigIcon wow fadeInLeft "></i> -->
-							<!-- <i class="far fa-newspapper myIcon negro"></i> -->
 							<h3 class="wow fadeIn">Newsletter</h3>
 							<p class="des blanco wow fadeIn">Suma tu mail a la base de chacinados asi recibis todas las novedades!</p>
-							<input class="mailinput wow fadeInUp" type="text"ng-model="myMail" placeholder="Dejanos tu email!">
+							<input class="mailinput blanco wow fadeInUp" type="text"ng-model="myMail" placeholder="Dejanos tu email!">
 
 							<button ng-click="whatsapp(myMail , 'new')" class="btn btn-outline-light btn-block wow fadeIn"> Enviar mail por  <i class="fab fa-whatsapp my-float"></i>  </button>
 
