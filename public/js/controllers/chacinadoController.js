@@ -64,8 +64,8 @@ app.controller("chacinadoController" , function($scope , $http , googleService ,
 
 	]
 
-	$scope.direcciones = [{lugar: "Plaza de las Carretas" , localidad: "Muñiz, San Miguel", direccion:"Av. Presidente peron esquina San José" , horario:"Sábado y Domingo 10:00hs-21:00hs" , mapUrl:"https://goo.gl/maps/N9RMAkzQpbtkMdTHA"},
-	{lugar: "Parque Palacio municipal " , localidad:"Malvinas Argentinas" , direccion:"Av Presidente. Juan Domingo Peron 4276" , horario:"Sábado y Domingo 10:00hs-21:00hs" , mapUrl:"https://goo.gl/maps/N9RMAkzQpbtkMdTHA"}
+	$scope.direcciones = [{lugar: "Plaza de las Carretas" , localidad: "Muñiz, San Miguel", direccion:"Av. Pte. Perón esq San José" , horario:"Sábado y Domingo 10:00 -21:00 "  , mapUrl:"https://goo.gl/maps/N9RMAkzQpbtkMdTHA"},
+	{lugar: "Parque Palacio municipal " , localidad:"Malvinas Argentinas" , direccion:"Av Pte. Juan Domingo Perón 4276" , horario:"Sábado y Domingo 10:00 - 21:00 "  , mapUrl:"https://goo.gl/maps/N9RMAkzQpbtkMdTHA"}
 	]
 
 	$scope.productos = [

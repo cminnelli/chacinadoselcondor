@@ -36,18 +36,31 @@ body {
   font-family: "Raleway";
   letter-spacing: 1;
   color: black;
-  margin: 20px 0px;
+  margin: 22px 0px;
 }
 .des.blanco {
   color: white;
   font-weight: 700;
 }
 
+.circulo {
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background: #212529;
+  color: white;
+  z-index: -99;
+  opacity: 0.95;
+}
+
 .menu {
   z-index: 9999999999;
   position: fixed;
   background: #212529;
-  /* fallback for old browsers */
   background-size: contain;
   top: 0px;
   left: 0px;
@@ -56,6 +69,7 @@ body {
   height: 100vh;
   text-align: center;
   opacity: 0.98;
+  box-shadow: 6px 21px 50px -5px rgba(0, 0, 0, 0.9);
 }
 .menu .menuList {
   list-style: none;
@@ -64,16 +78,18 @@ body {
 .menu .menuList .menuItem {
   padding: 10px;
   text-align: left;
-  font-size: 20px;
+  font-size: 25px;
 }
 .menu .menuList .menuItem a {
+  font-weight: 700;
   color: whitesmoke;
   text-decoration: none;
-  font-family: "Raleway";
+  font-family: "Caveat";
+  letter-spacing: 1.3px;
 }
 .menu img {
   margin-top: 30px;
-  height: 110px;
+  height: 120px;
 }
 
 .menuIcon {
@@ -121,7 +137,7 @@ body {
 .myFix {
   position: fixed !important;
   transition: 5s;
-  background-color: whitesmoke !important;
+  background-color: #f7dba7 !important;
   width: 100%;
   top: 0px;
   left: 0px;
@@ -318,6 +334,9 @@ body {
     width: 63.84px;
   }
 }
+.productos .categoriaModulo .categoriaList .categoriaItem article {
+  height: 100%;
+}
 .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
   font-size: 12px;
   position: absolute;
@@ -334,7 +353,6 @@ body {
 @media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
     border-radius: 0px;
-    top: 50%;
     color: #212529;
   }
 }
@@ -893,31 +911,32 @@ body {
 .ferias {
   padding-top: 20px;
   height: 100vh;
-  background: url("/imagenes/web/ferias4.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -200px 0px;
+  background: #F2C879;
   z-index: -999;
   position: relative;
+  overflow: hidden;
 }
 .ferias .cabecera {
-  color: whitesmoke;
+  color: #212529;
   margin-top: 20px;
   text-align: center;
   z-index: 99999 !important;
 }
 .ferias .cuerpo .des {
-  color: whitesmoke;
+  color: #212529;
   opacity: 0.9;
   font-family: "Raleway";
-  line-height: 23px;
+  line-height: 22px;
   text-align: center;
-  padding: 0px 15px;
-  font-size: 18px !important;
+  padding: 15px;
+  font-size: 17px !important;
 }
 .ferias .cuerpo .direcciones {
-  color: white;
+  color: #212529;
 }
 .ferias .cuerpo .direcciones .direccionesList {
   list-style: none;
@@ -925,61 +944,47 @@ body {
   padding-left: 20px;
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp {
-  margin-top: 40px;
+  padding: 15px;
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .lugar {
   text-decoration: none;
   cursor: pointer;
-  color: #dd4a39;
+  color: #212529;
   font-weight: 700;
+  font-family: "Caveat";
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .lugar h3 {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
 }
+.ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .lugar i {
+  color: #dd4a39;
+}
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .localidad {
-  font-size: 16px;
-  color: white;
+  font-size: 15px;
+  color: #212529;
+  padding: 5px;
 }
 .ferias .cuerpo .direcciones .direccionesList .direccionesWrapp .horarios {
-  font-size: 15px;
-  color: #ABC7AC;
+  font-size: 13.5px;
+  color: #91640e;
   font-style: italic;
 }
 
 .contacto {
-  height: 400px;
+  height: auto;
   width: 100%;
   text-align: center;
 }
 .contacto i {
   margin-top: 0px;
 }
-.contacto .mailinput {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  border: none;
-  border-style: none;
-  background-color: transparent;
-  border-bottom: 3px solid #212529;
-  color: #212529;
-  padding: 5px;
-  z-index: 999 !important;
-}
-.contacto .mailinput:focus {
-  transition: 1s;
-  border-bottom: 3px solid #212529;
-  outline: none;
-}
-.contacto .mailinput.blanco {
-  color: whitesmoke;
-}
 .contacto h3 {
   margin-bottom: 15px;
-  font-family: "Roboto";
+  font-family: "Abril Fatface";
   color: #FFC4B3;
+  letter-spacing: 1.3px;
 }
 .contacto button {
   margin-top: 60px;
@@ -988,18 +993,40 @@ body {
   padding: 70px;
   background-color: #FFC4B3;
   height: 100vh;
-  background: url("https://img.freepik.com/free-photo/boards-with-unfocused-background_1253-55.jpg?size=626&ext=jpg");
+  background: url("/imagenes/web/menu1.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
   z-index: 99999 !important;
 }
+.contacto .emprende input {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  border-bottom: 3px solid #F2C879;
+  color: whitesmoke;
+  padding: 5px;
+  z-index: 999 !important;
+  transition: 2s;
+}
+.contacto .emprende input:focus {
+  transition: 1s;
+  border-bottom: 3.5px solid #bf8313;
+  transition: 2s;
+  outline: none;
+}
 .contacto .emprende ::-webkit-input-placeholder {
-  color: #212529;
+  color: whitesmoke;
 }
 .contacto .emprende h3 {
-  color: #212529;
+  color: whitesmoke;
+}
+.contacto .emprende p {
+  color: #F2C879;
 }
 .contacto .newswrapper {
   padding: 70px;
@@ -1011,6 +1038,25 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 99999 !important;
+}
+.contacto .newswrapper input {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  border-bottom: 3px solid #FFC4B3;
+  color: whitesmoke;
+  padding: 5px;
+  z-index: 999 !important;
+  transition: 2s;
+}
+.contacto .newswrapper input:focus {
+  transition: 1s;
+  border-bottom: 3.5px solid #ff4d1a;
+  transition: 2s;
+  outline: none;
 }
 .contacto .newswrapper ::-webkit-input-placeholder {
   color: whitesmoke;
@@ -1027,16 +1073,12 @@ html, body {
 }
 
 footer {
-  height: 700px;
-  display: block;
-  clear: both;
-  bottom: 0px;
-  left: 0px;
+  height: auto;
 }
 footer .footerWrapper {
-  padding: 40px;
+  padding: 30px;
   height: 100%;
-  background-color: black;
+  background-color: #212529;
 }
 footer .footerWrapper .logoWrapper {
   text-align: center;
@@ -1045,7 +1087,7 @@ footer .footerWrapper .logoWrapper {
   padding: 10px;
 }
 footer .footerWrapper .logoWrapper .logoImg {
-  width: 120px;
+  width: 100px;
 }
 footer .footerWrapper .social {
   text-align: center;
@@ -1057,7 +1099,7 @@ footer .footerWrapper .social ul {
   padding-left: 0px;
 }
 footer .footerWrapper .social ul li {
-  padding: 10px;
+  padding: 3px;
   text-decoration: none;
   display: inline-block;
 }
@@ -1079,17 +1121,21 @@ footer .footerWrapper .textoFooter p, footer .footerWrapper .textoFooter span {
   text-align: center;
   color: whitesmoke;
 }
-footer .broom {
-  font-family: "Raleway";
+footer .brume {
+  font-family: "Caveat";
+  letter-spacing: 1.1px;
+  font-size: 16px;
   width: 100%;
-  background-color: black;
+  background-color: #0a0c0d;
   padding: 5px;
   color: white;
 }
-footer .broom .textoit {
+footer .brume .textoit {
   color: white;
+  padding: 20px;
+  margin-bottom: 0px;
 }
-footer .broom p {
+footer .brume p {
   text-align: center;
   opacity: 0.85;
 }

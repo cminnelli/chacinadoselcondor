@@ -55,7 +55,7 @@ body{
 	font-family: "Raleway";
 	letter-spacing: 1;
 	color:black;
-	margin:20px 0px;
+	margin:22px 0px;
 	&.blanco{
 		color:white;
 		font-weight: 700;
@@ -63,13 +63,25 @@ body{
 
 }
 
+.circulo{
+	top: 0px;
+	left:50%;
+	transform: translate(-50%,-50%);
+	border-radius:50%;
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	background: $newblack;
+	color:white;
+	z-index: -99;
+	opacity: 	0.95;
+}
 
 .menu{
 
 	z-index: 9999999999;
 	position: fixed;
-	background: $newblack;  /* fallback for old browsers */
-	// background:url("/web/menu1.jpg");
+	background: $newblack; 
 	background-size: contain;
 	top:0px;
 	left:0px;
@@ -78,6 +90,7 @@ body{
 	height: 100vh;
 	text-align: center;
 	opacity: 0.98;
+	box-shadow: 6px 21px 50px -5px rgba(0,0,0,0.9);
 
 	.menuList{
 		list-style: none;
@@ -85,11 +98,13 @@ body{
 		.menuItem{
 			padding:10px;
 			text-align: left;
-			font-size: 20px;
+			font-size: 25px;
 			a{
+				font-weight: 	700;
 				color:whitesmoke;
 				text-decoration: none;
-				font-family: "Raleway";
+				font-family: "Caveat";
+				letter-spacing: 1.3px;
 			}
 		}
 
@@ -97,7 +112,7 @@ body{
 
 	img{
 		margin-top:30px;
-		height: 110px;
+		height: 120px;
 	}
 
 }
@@ -151,7 +166,7 @@ body{
 .myFix{
 	position: fixed !important;
 	transition:5s;
-	background-color: whitesmoke !important;
+	background-color: lighten($queso,10%) !important;
 	// height: 250px;
     width: 100%;
     top: 0px;
@@ -387,8 +402,8 @@ body{
 	.categoriaModulo{
 		height: 120px;
 		padding:5% 3px;
-		// box-shadow: 6px 21px 23px -5px #999;
 		background-color: rgba(250,250,250,0.80);
+		// background: lighten($queso,10%);
 		transition: 1s;
 		background-size: cover;
 		position: relative;
@@ -453,7 +468,9 @@ body{
 					width: $storyheight *1.33 + px;
 				 }
 
-
+				 article{
+				 	height:100%;
+				 }
 
 
 				 .nombre{
@@ -461,7 +478,7 @@ body{
 				 	position: absolute;
 				 	top:140%;
 				 	left:50%;
-				 	transform: translate(-50% , -50%);
+				 	transform: translate(-50%,-50%);
 				 	width: 80%;
 				 	color:$newblack;
 				 	letter-spacing: 1;
@@ -470,7 +487,7 @@ body{
 				 	cursor:pointer;
 				 	 @media only screen and (min-width: $breaksm) {
 				 		border-radius: 0px;
-				 		top:50%;
+				 		
 				 		color:$newblack;
 				 	 }
 				 	&:hover{
@@ -640,64 +657,69 @@ body{
 .ferias{
 	padding-top:20px;
 	height: 100vh;
-	background:url("/imagenes/web/ferias4.jpg"); 
+	// background:url("/imagenes/web/quesos.jpg"); 
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: -200px 0px;
+	background: $queso;
 	z-index: -999;
 	position: relative;
+	overflow: hidden;
 	.cabecera{
-		color: whitesmoke;
+		color: $newblack;
 		margin-top:20px;
 		text-align: center;
 		z-index: 99999 !important;
 	}
 	.cuerpo{
 		.des{
-			color:whitesmoke;
+			color: $newblack;
 			opacity: 0.9;
 			// font-weight: 700;
 			font-family: "Raleway";
-			line-height:23px; 
+			line-height:22px; 
 			text-align: center;
-			padding:0px 15px;
-			font-size: 18px !important;
+			padding:15px;
+			font-size: 17px !important;
 		}
 
 		.direcciones{
-			color:white;
+			color: $newblack;
 			.direccionesList{
 				list-style: none;
 				text-align: left;
 				padding-left:20px;
 				.direccionesWrapp{
-					margin-top:40px;
+					padding:15px;
 
 
 					.lugar{
 
 						text-decoration: none;
 						cursor:pointer;
-						color:rgb(221, 74, 57);
+						color: $newblack;
 						font-weight: 700;
+						font-family: "Caveat";
 
 						h3{
 							cursor:pointer;
-							font-size: 20px;
+							font-size: 24px;
 							font-weight: 700;
 						}
+
 						i{
-							// color:#8B9098;
+							color:rgb(221, 74, 57);
 						}
 					}
 					.localidad{
-						font-size: 16px;
-						color:white;
+						font-size: 15px;
+						color: $newblack;
+						padding:5px;
 					}
 					.horarios{
-						font-size: 15px;
-						color:#ABC7AC;
+						font-size: 13.5px;
+						color:darken($queso,40%);
 						font-style: italic;						
 					}
 				}
@@ -706,42 +728,46 @@ body{
 	}
 }
 
+@mixin mailinput($colorline , $colortext){
+	width: 100%;
+	text-align: center;
+	margin-top:10px;
+	border:none;
+	border-style: none;
+	background-color: transparent;
+	border-bottom:3px solid $colorline;
+	color:$colortext;
+	padding:5px;
+	z-index: 999 !important;
+	transition: 2s;
+	&:focus{
+		transition: 1s;
+		border-bottom:3.5px solid darken($colorline,30%);	
+		transition: 2s;
+		outline: none;
+
+	}
+
+
+}
 
 //NEWSLETTER
 
 .contacto{
-	height: 400px;
+	height: auto;
 	width: 100%;
 	text-align: center;
 	i{
 		margin-top:0px;
 	}
-	.mailinput{
-		width: 100%;
-		text-align: center;
-		margin-top:10px;
-		border:none;
-		border-style: none;
-		background-color: transparent;
-		border-bottom:3px solid $newblack;
-		color:$newblack;
-		padding:5px;
-		z-index: 999 !important;
-		&:focus{
-			transition: 1s;
-			border-bottom:3px solid $newblack;	
-			outline: none;
-		}
-		&.blanco{
-			color:whitesmoke;
-		}
-	}
+
 
 
 	h3{
 		margin-bottom:15px;
-		font-family: "Roboto";
+		font-family: "Abril Fatface";
 		color:$embutidos;
+		letter-spacing: 1.3px;
 	}
 
 	button{
@@ -752,22 +778,26 @@ body{
 		padding:70px;
 		background-color: $embutidos;
 		height: 100vh;
-   		 background: url("https://img.freepik.com/free-photo/boards-with-unfocused-background_1253-55.jpg?size=626&ext=jpg");
+    	background:url("/imagenes/web/menu1.jpg"); 
     	background-size: cover;
 		background-attachment: fixed;	
-
 		position: relative;
 		overflow: hidden;
 		z-index: 99999 !important;
+
+		input{
+			@include mailinput($queso , whitesmoke);
+		}
+
 		::-webkit-input-placeholder {
-		color:$newblack;
+		color:whitesmoke;
 		}
 
 		h3{
-			color:$newblack;
+			color:whitesmoke;
 		}
 		p{
-			// color:white;
+			color:$queso;
 		}
 	}
 
@@ -775,12 +805,16 @@ body{
 		padding:70px;
 		background-color: $newblack;
 		height: 100vh;
-   		 background: url("https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/000/681/812/000681812-673x6731253030045picadas.jpg");
+   		background: url("https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/000/681/812/000681812-673x6731253030045picadas.jpg");
     	background-size: cover;
 		background-attachment: fixed;
 		position: relative;
 		overflow: hidden;
 		z-index: 99999 !important;
+
+		input{
+			@include mailinput($embutidos , whitesmoke);
+		}
 
 		::-webkit-input-placeholder {
 		color:whitesmoke;
@@ -800,24 +834,20 @@ html, body {
 }
 
 footer{
-	height: 700px ;
-	display: block;
-	clear:both;
-	bottom:0px;
-	left:0px;
+	height: auto;
 		
 	.footerWrapper{
-		padding:40px;
+		padding:30px;
 		height: 100%;
-		background-color:darken($newblack , 45%);
+		background-color:$newblack;
 
 		.logoWrapper{
-			    text-align: center;
+			text-align: center;
 			width:250px;
 			margin:0 auto;
 			padding:10px;
 			.logoImg{
-				width:120px;
+				width:100px;
 			}
 		}
 
@@ -830,7 +860,7 @@ footer{
 			padding-left:0px;
 	
 			li{
-				padding:10px;
+				padding:3px;
 				text-decoration: none;
 				display:inline-block;
 				a{
@@ -863,15 +893,20 @@ footer{
 		}
 	}
 	}
-	.broom{
-		font-family:"Raleway";
-	width:100%;
-	background-color:darken($newblack , 20%);
-	padding:5px;
-	color:white;
+	.brume{
+		font-family:"Caveat";
+		letter-spacing: 1.1px;
+		font-size: 16px;
+		width:100%;
+		background-color:darken($newblack , 10%);
+		padding:5px;
+		color:white;
 	.textoit{
 		color:white;
+		padding:20px;
+		margin-bottom: 0px;
 	}
+
 	p{
 		text-align: center;
 		opacity: 0.85;
