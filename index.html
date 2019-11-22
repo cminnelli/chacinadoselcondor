@@ -224,11 +224,14 @@
 						<div id="emprende" class="emprende col-md-6 col-xs-12" data-wow-delay="0.3s" data-wow-duration="1s">	
 
 							<div class="transparencia"></div>
-							<i class="fas fa-store myIcon wow fadeInLeft"></i>
+							<!-- <i class="fas fa-store myIcon wow fadeInDown"></i> -->
+
+
+							<i class="fas fa-cube  myIcon wow fadeDown"></i>
 							<h3 class="wow fadeIn">Emprende con Chacinados</h3>
 							<p class="des wow fadeIn">Sumate a nuestro proyecto, consultanos de que se trata!</p>
 							<div class="form-group">
-								<input placeholder="Dejanos tu nombre!" type="text" class="mailinput blanco" class="form-control wow fadeInUp" id="usr" ng-model="myName">
+								<input placeholder="Nombre" type="text" class="mailinput blanco" class="form-control wow fadeInUp" id="usr" ng-model="myName">
 							</div>
 							<button ng-click="whatsapp(myName , 'emp')" class="btn btn-dark btn-block wow fadeIn"> Consultar por  <i class="fab fa-whatsapp my-float"></i></button>
 							<!-- <div class="transparencia"></div>					 -->
@@ -237,9 +240,11 @@
 						<div id="newsletter" class="newswrapper col-md-6 col-xs-12" data-wow-delay="0.3s" data-wow-duration="1s" >
 							<div class="transparencia"></div>
 							<i class="far fa-newspaper myIcon wow fadeIn"></i>
+
+
 							<h3 class="wow fadeIn">Newsletter</h3>
 							<p class="des blanco wow fadeIn">Suma tu mail a la base de chacinados asi recibis todas las novedades!</p>
-							<input class="mailinput wow fadeInUp" type="text"ng-model="myMail" placeholder="Dejanos tu email!">
+							<input class="mailinput wow fadeInUp" type="text"ng-model="myMail" placeholder="E-mail">
 
 							<button ng-click="whatsapp(myMail , 'new')" class="btn btn-outline-light btn-block wow fadeIn"> Enviar mail por  <i class="fab fa-whatsapp my-float"></i>  </button>
 
