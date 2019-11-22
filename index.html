@@ -2,7 +2,7 @@
 	<html lang="es">
 
 	<head>
-		<title>Chacinados El Condor © 2020 </title>
+		<title>Chacinados El Condor © 2020 - La calidad es la escencia </title>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
@@ -92,6 +92,7 @@
 
 			<div class="transparencia"></div>
 			<div class="portadaWrapper">
+				<h1 hidden>Chacinados el Condor - Picadas , Quesos, Embutidos, Veganos</h1>
 				<div class="logoWrapp centerabslogo wow fadeIn" data-wow-delay="0.3s" data-wow-duration="1s">
 					<img class="logo" src="/imagenes/web/logo2.png">
 					<h3 class="slogan wow fadeIn"  data-wow-delay="0.4s" data-wow-duration="0.8s"> La calidad es la escencia</h3>
@@ -137,7 +138,7 @@
 		<section class="productos content" id="productos" >	
 
 			<div class="categoriaModulo {{backCategory}}">
-
+				<h3 class="titulosmain  wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">Productos</h3>	
 				<ul class="categoriaList row">
 
 
@@ -174,7 +175,7 @@
 								</div>
 								<div class="productoAtributos">
 
-									<span class="badge badge-new">{{p.um}}</span>
+									<span class="badge badge-new" ng-show="p.um != '' ">{{p.um}} {{umSeach(p.catId)}}</span>
 									<span class="badge badge-new" ng-show="p.celiaco">
 										<img class="celiaco" src="http://fumdellum.com/wp-content/uploads/2015/07/CELIACOS-FUM-LARGE.png">
 									</span>
@@ -273,14 +274,14 @@
 								</div>
 
 									<div class="textoFooter">
-										<p class="textoit wow fadeIn" data-wow-delay="0.5s"> <i class="fas fa-map-marker-alt"></i> <span>Gral. Lavalle 1349 , Vicente López (CP: 1638)
+										<p class="textoit wow fadeIn" data-wow-delay="0.5s"> <i class="fas fa-map-marker-alt"></i> <span>Alem 2748, San Miguel
 											</span> Buenos Aires, Argentina</p>
-										<p class="textoit wow fadeIn" data-wow-delay="0.6s"><i class="far fa-copyright"></i> CHACINADOS EL CONDOR 2019</p>
+										<p class="textoit wow fadeIn" data-wow-delay="0.6s"><i class="far fa-copyright"></i> Chacinados El Condor 2020</p>
 									</div>
 						</div>
 
 							<div class="brume wow fadeIn" data-wow-delay="0.7s">
-								<p class="textoit" onclick="contactMe()">DISEÑO POR BRUMELAB  <i class="far fa-copyright"></i> </p>
+								<p class="textoit" onclick="contactMe()">Diseño por BrumeLab  <i class="far fa-copyright"></i> </p>
 							</div>
 
 						</footer> 

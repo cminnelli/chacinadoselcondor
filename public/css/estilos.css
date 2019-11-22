@@ -32,8 +32,8 @@ body {
 }
 
 .des {
-  font-size: 16.5px;
-  font-family: "Raleway";
+  font-size: 18.5px;
+  font-family: "Cormorant Garamond";
   letter-spacing: 1;
   color: black;
   margin: 22px 0px;
@@ -266,8 +266,11 @@ body {
   color: white;
 }
 
+.productos {
+  height: auto;
+}
 .productos .categoriaModulo {
-  height: 120px;
+  height: 160px;
   padding: 5% 3px;
   background-color: rgba(250, 250, 250, 0.8);
   transition: 1s;
@@ -294,7 +297,7 @@ body {
 }
 .productos .categoriaModulo .categoriaList svg {
   display: none;
-  top: -8.5px;
+  top: -8.4px;
   left: -8px;
   height: 63.84px;
   width: 63.84px;
@@ -341,7 +344,7 @@ body {
   font-size: 12px;
   position: absolute;
   top: 140%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   width: 80%;
   color: #212529;
@@ -349,6 +352,7 @@ body {
   z-index: 9999999;
   transition: 1s;
   cursor: pointer;
+  text-align: center;
 }
 @media only screen and (min-width: 500px) {
   .productos .categoriaModulo .categoriaList .categoriaItem .nombre {
@@ -410,10 +414,12 @@ body {
 }
 .productos .productoModulo .productoList {
   height: 100vh;
-  overflow-y: scroll;
+  display: block;
+  overflow-y: scroll !important;
   list-style: none;
-  padding: 0px;
-  padding-bottom: 50px;
+  padding: 18px 0px;
+  width: 100%;
+  left: 0px;
 }
 @media only screen and (min-width: 1200px) {
   .productos .productoModulo .productoList {
@@ -421,12 +427,11 @@ body {
   }
 }
 .productos .productoModulo .productoList .productoItem.que {
+  background: whitesmoke;
   transition: 2s;
   width: 100%;
-  padding: 0px;
-  border-radius: 10px;
-  height: 155px !important;
-  margin-bottom: 12px;
+  padding: 10px 0px !important;
+  border-bottom: 1px dashed grey;
 }
 .productos .productoModulo .productoList .productoItem.que .prodImg {
   position: relative;
@@ -439,11 +444,11 @@ body {
   left: 10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoItem {
-  padding: 9px;
+  padding: 10px;
 }
 .productos .productoModulo .productoList .productoItem.que .productoItem .productoCabecera {
   text-align: left;
@@ -453,6 +458,7 @@ body {
   margin: 0px;
   font-family: "Raleway";
   font-weight: 800;
+  color: black;
   color: #colortext;
   font-size: 19px;
   letter-spacing: 1.2px;
@@ -471,9 +477,9 @@ body {
 }
 .productos .productoModulo .productoList .productoItem.que .productoItem .productoDes .descripcion {
   font-family: "Raleway";
-  padding: 8px 0px;
+  padding: 13px 0px;
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #212529;
   text-align: left;
 }
@@ -495,12 +501,11 @@ body {
   height: 11px;
 }
 .productos .productoModulo .productoList .productoItem.vin {
+  background: whitesmoke;
   transition: 2s;
   width: 100%;
-  padding: 0px;
-  border-radius: 10px;
-  height: 155px !important;
-  margin-bottom: 12px;
+  padding: 10px 0px !important;
+  border-bottom: 1px dashed grey;
 }
 .productos .productoModulo .productoList .productoItem.vin .prodImg {
   position: relative;
@@ -513,11 +518,11 @@ body {
   left: 10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoItem {
-  padding: 9px;
+  padding: 10px;
 }
 .productos .productoModulo .productoList .productoItem.vin .productoItem .productoCabecera {
   text-align: left;
@@ -527,6 +532,7 @@ body {
   margin: 0px;
   font-family: "Raleway";
   font-weight: 800;
+  color: #222c58;
   color: #colortext;
   font-size: 19px;
   letter-spacing: 1.2px;
@@ -545,9 +551,9 @@ body {
 }
 .productos .productoModulo .productoList .productoItem.vin .productoItem .productoDes .descripcion {
   font-family: "Raleway";
-  padding: 8px 0px;
+  padding: 13px 0px;
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #212529;
   text-align: left;
 }
@@ -569,12 +575,11 @@ body {
   height: 11px;
 }
 .productos .productoModulo .productoList .productoItem.emb {
+  background: whitesmoke;
   transition: 2s;
   width: 100%;
-  padding: 0px;
-  border-radius: 10px;
-  height: 155px !important;
-  margin-bottom: 12px;
+  padding: 10px 0px !important;
+  border-bottom: 1px dashed grey;
 }
 .productos .productoModulo .productoList .productoItem.emb .prodImg {
   position: relative;
@@ -587,11 +592,11 @@ body {
   left: 10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoItem {
-  padding: 9px;
+  padding: 10px;
 }
 .productos .productoModulo .productoList .productoItem.emb .productoItem .productoCabecera {
   text-align: left;
@@ -601,6 +606,7 @@ body {
   margin: 0px;
   font-family: "Raleway";
   font-weight: 800;
+  color: #e63300;
   color: #colortext;
   font-size: 19px;
   letter-spacing: 1.2px;
@@ -619,9 +625,9 @@ body {
 }
 .productos .productoModulo .productoList .productoItem.emb .productoItem .productoDes .descripcion {
   font-family: "Raleway";
-  padding: 8px 0px;
+  padding: 13px 0px;
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #212529;
   text-align: left;
 }
@@ -643,12 +649,11 @@ body {
   height: 11px;
 }
 .productos .productoModulo .productoList .productoItem.fru {
+  background: whitesmoke;
   transition: 2s;
   width: 100%;
-  padding: 0px;
-  border-radius: 10px;
-  height: 155px !important;
-  margin-bottom: 12px;
+  padding: 10px 0px !important;
+  border-bottom: 1px dashed grey;
 }
 .productos .productoModulo .productoList .productoItem.fru .prodImg {
   position: relative;
@@ -661,11 +666,11 @@ body {
   left: 10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoItem {
-  padding: 9px;
+  padding: 10px;
 }
 .productos .productoModulo .productoList .productoItem.fru .productoItem .productoCabecera {
   text-align: left;
@@ -675,6 +680,7 @@ body {
   margin: 0px;
   font-family: "Raleway";
   font-weight: 800;
+  color: #934c20;
   color: #colortext;
   font-size: 19px;
   letter-spacing: 1.2px;
@@ -693,9 +699,9 @@ body {
 }
 .productos .productoModulo .productoList .productoItem.fru .productoItem .productoDes .descripcion {
   font-family: "Raleway";
-  padding: 8px 0px;
+  padding: 13px 0px;
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #212529;
   text-align: left;
 }
@@ -717,12 +723,11 @@ body {
   height: 11px;
 }
 .productos .productoModulo .productoList .productoItem.ext {
+  background: whitesmoke;
   transition: 2s;
   width: 100%;
-  padding: 0px;
-  border-radius: 10px;
-  height: 155px !important;
-  margin-bottom: 12px;
+  padding: 10px 0px !important;
+  border-bottom: 1px dashed grey;
 }
 .productos .productoModulo .productoList .productoItem.ext .prodImg {
   position: relative;
@@ -735,11 +740,11 @@ body {
   left: 10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
 }
 .productos .productoModulo .productoList .productoItem.ext .productoItem {
-  padding: 9px;
+  padding: 10px;
 }
 .productos .productoModulo .productoList .productoItem.ext .productoItem .productoCabecera {
   text-align: left;
@@ -749,6 +754,7 @@ body {
   margin: 0px;
   font-family: "Raleway";
   font-weight: 800;
+  color: black;
   color: #colortext;
   font-size: 19px;
   letter-spacing: 1.2px;
@@ -767,9 +773,9 @@ body {
 }
 .productos .productoModulo .productoList .productoItem.ext .productoItem .productoDes .descripcion {
   font-family: "Raleway";
-  padding: 8px 0px;
+  padding: 13px 0px;
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #212529;
   text-align: left;
 }
@@ -791,12 +797,11 @@ body {
   height: 11px;
 }
 .productos .productoModulo .productoList .productoItem.oli {
+  background: whitesmoke;
   transition: 2s;
   width: 100%;
-  padding: 0px;
-  border-radius: 10px;
-  height: 155px !important;
-  margin-bottom: 12px;
+  padding: 10px 0px !important;
+  border-bottom: 1px dashed grey;
 }
 .productos .productoModulo .productoList .productoItem.oli .prodImg {
   position: relative;
@@ -809,11 +814,11 @@ body {
   left: 10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoItem {
-  padding: 9px;
+  padding: 10px;
 }
 .productos .productoModulo .productoList .productoItem.oli .productoItem .productoCabecera {
   text-align: left;
@@ -823,6 +828,7 @@ body {
   margin: 0px;
   font-family: "Raleway";
   font-weight: 800;
+  color: #2a2301;
   color: #colortext;
   font-size: 19px;
   letter-spacing: 1.2px;
@@ -841,9 +847,9 @@ body {
 }
 .productos .productoModulo .productoList .productoItem.oli .productoItem .productoDes .descripcion {
   font-family: "Raleway";
-  padding: 8px 0px;
+  padding: 13px 0px;
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #212529;
   text-align: left;
 }
@@ -905,7 +911,7 @@ body {
   padding-bottom: 5px;
 }
 .nosotros .nosotrosWrapper .textDiv p {
-  text-align: justify;
+  text-align: left;
 }
 
 .ferias {
@@ -1074,6 +1080,7 @@ html, body {
 
 footer {
   height: auto;
+  box-shadow: 6px 21px 50px -5px rgba(0, 0, 0, 0.9);
 }
 footer .footerWrapper {
   padding: 30px;
@@ -1113,7 +1120,8 @@ footer .footerWrapper .textoFooter {
 }
 footer .footerWrapper .textoFooter .textoit {
   color: whitesmoke;
-  font-family: "Raleway";
+  font-family: "Quicksand";
+  padding: 5px;
 }
 footer .footerWrapper .textoFooter p, footer .footerWrapper .textoFooter span {
   margin-top: 0px;
@@ -1122,17 +1130,18 @@ footer .footerWrapper .textoFooter p, footer .footerWrapper .textoFooter span {
   color: whitesmoke;
 }
 footer .brume {
-  font-family: "Caveat";
+  font-family: "Quicksand";
   letter-spacing: 1.1px;
-  font-size: 16px;
+  padding: 12px !important;
+  box-shadow: 6px 21px 50px -5px rgba(0, 0, 0, 0.9);
+  font-size: 14px;
   width: 100%;
   background-color: #0a0c0d;
-  padding: 5px;
+  border: none !important;
   color: white;
 }
 footer .brume .textoit {
   color: white;
-  padding: 20px;
   margin-bottom: 0px;
 }
 footer .brume p {
